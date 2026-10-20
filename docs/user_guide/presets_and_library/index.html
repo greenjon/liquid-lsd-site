@@ -1,0 +1,1738 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Liquid LSD real-time graphics and audio workstation.">
+      
+      
+      
+        <link rel="canonical" href="https://liquid-lsd.greenjon.com/docs/user_guide/presets_and_library/">
+      
+      
+        <link rel="prev" href="../modulation/">
+      
+      
+        <link rel="next" href="../output_and_recording/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Presets & Library - Liquid LSD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/docs-clips.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#presets-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liquid LSD" class="md-header__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liquid LSD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Presets & Library
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liquid LSD" class="md-nav__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Liquid LSD
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../your_workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual_sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets & Library
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets & Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-a-preset-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a preset contains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-a-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving a preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-onto-a-deck-with-unsaved-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading onto a deck with unsaved changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-lsd-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The .lsd format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-settings-between-decks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying settings between decks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsaved-changes-the-auto-vj-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unsaved changes &amp; the Auto-VJ queue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-library-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Library Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Library Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#library-view-mode-sources-fx-transitions-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library View Mode ([ Sources ] / [ FX ] / [ Transitions ] / [ Macros ])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unified-sources-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unified Sources Browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unified-fx-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unified FX Browser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Unified FX Browser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bundled-stock-fx-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundled Stock FX Chains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fx-playlists-lsdfxplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FX Playlists (.lsdfxplay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ab-fx-queues-ab-and-bg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A/B FX Queues (A/B and BG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-setlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playlists (Setlists)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ab-queue-auto-vj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The A/B Queue (Auto-VJ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bg-queue-deck-bg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BG Queue (Deck BG)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-transitions-suite-transition-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curated Transitions Suite &amp; Transition Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Curated Transitions Suite &amp; Transition Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-unified-transition-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unified Transition Browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-macros-tab-macro-banks-and-perform-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Macros Tab (Macro Banks and Perform Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-presets-lsdtrans-playlists-lsdtransplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition Presets (.lsdtrans) &amp; Playlists (.lsdtransplay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drag-drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag &amp; Drop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midi-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MIDI Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midi-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Learn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output_and_recording/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output & Recording
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros_and_rack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Controls & the Perform View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_broadcast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Broadcast
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Usage & Startup Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-a-preset-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a preset contains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-a-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving a preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-onto-a-deck-with-unsaved-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading onto a deck with unsaved changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-lsd-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The .lsd format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-settings-between-decks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying settings between decks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsaved-changes-the-auto-vj-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unsaved changes &amp; the Auto-VJ queue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-library-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Library Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Library Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#library-view-mode-sources-fx-transitions-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library View Mode ([ Sources ] / [ FX ] / [ Transitions ] / [ Macros ])
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unified-sources-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unified Sources Browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unified-fx-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unified FX Browser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Unified FX Browser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bundled-stock-fx-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundled Stock FX Chains
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fx-playlists-lsdfxplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FX Playlists (.lsdfxplay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ab-fx-queues-ab-and-bg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A/B FX Queues (A/B and BG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playlists-setlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playlists (Setlists)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ab-queue-auto-vj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The A/B Queue (Auto-VJ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bg-queue-deck-bg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BG Queue (Deck BG)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-transitions-suite-transition-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curated Transitions Suite &amp; Transition Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Curated Transitions Suite &amp; Transition Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-unified-transition-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unified Transition Browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-macros-tab-macro-banks-and-perform-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Macros Tab (Macro Banks and Perform Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-presets-lsdtrans-playlists-lsdtransplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition Presets (.lsdtrans) &amp; Playlists (.lsdtransplay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drag-drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag &amp; Drop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midi-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MIDI Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midi-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Learn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="presets-library">Presets &amp; Library</h1>
+<p>Presets are the core unit of work in Liquid LSD. A preset captures the complete state of a deck — every parameter, every modulation connection, every note you've added — into a single <code>.lsd</code> file. The library and playlist tools are built around organizing and performing with those files.</p>
+<div class="tour-clips">
+<p class="tour-clips-head">Watch: <strong>Library and presets</strong> &mdash; <a href="../../../tour/">open the guided tour</a></p>
+<div class="tour-clips-grid">
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/library/browse.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/library/browse.mp4"></video><figcaption><a href="../../../tour/#library/browse">Browsing the Library</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/library/load.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/library/load.mp4"></video><figcaption><a href="../../../tour/#library/load">Loading onto a deck</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/library/save.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/library/save.mp4"></video><figcaption><a href="../../../tour/#library/save">Saving presets</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/library/queues.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/library/queues.mp4"></video><figcaption><a href="../../../tour/#library/queues">Queues</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/library/pair.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/library/pair.mp4"></video><figcaption><a href="../../../tour/#library/pair">The pair view</a></figcaption></figure>
+</div>
+</div>
+
+<hr />
+<h2 id="presets">Presets</h2>
+<h3 id="what-a-preset-contains">What a preset contains</h3>
+<ul>
+<li>All visual parameter values (geometry, colour, view, feedback)</li>
+<li>Every modulation setup (LFOs, audio connections, sequencer patterns, MIDI assignments)</li>
+<li>Preset notes and per-parameter notes (if you've added any)</li>
+</ul>
+<h3 id="saving-a-preset">Saving a preset</h3>
+<ul>
+<li><strong><code>Ctrl+S</code></strong> — Saves the active deck's preset to disk immediately. If the deck doesn't have a saved file yet, it opens a <strong>Save As</strong> dialog instead.</li>
+<li><strong><code>Shift+Ctrl+S</code></strong> — Always opens the Save As dialog, even for already-saved presets. The suggested name gets <code>_copy</code> appended so you don't accidentally overwrite the original.</li>
+</ul>
+<p>When you modify a loaded preset, a <code>*</code> appears next to the deck name to show there are unsaved changes. A generator you picked without loading a preset is tracked the same way: tweak it and the deck shows <code>*</code>. Editing a knob's label or its targets counts as a change; turning a knob does not.</p>
+<h3 id="loading-onto-a-deck-with-unsaved-changes">Loading onto a deck with unsaved changes</h3>
+<p>Loading a preset, picking a generator, ejecting, or using Copy / Move / Swap onto a deck that has unsaved changes asks first: <strong>Save</strong>, <strong>Discard</strong> or <strong>Cancel</strong>. Tick <strong>Don't ask again</strong> on the prompt to always discard from then on (Ctrl+Z still undoes preset and generator loads). You can change this in <strong>Preferences → General → Manual Load Dirty Behavior</strong>:</p>
+<ul>
+<li><strong>Prompt</strong> (default) — Ask each time.</li>
+<li><strong>Discard</strong> — Overwrite without asking.</li>
+<li><strong>Auto-Save</strong> — Save the deck's preset first, then load.</li>
+</ul>
+<p>Press <strong>Ctrl+Z</strong> after loading a preset or changing a generator to put back the previous deck, its knobs and its preset name. Picking or clearing an FX slot, FX chain or the mixer transition in the Edit bay can be undone the same way. Eject, Copy / Move / Swap and Library loads of FX or transitions can't be undone yet. Copy, Move and Swap carry the knobs along, so the knobs on the target deck control the copied parameters. A preset saved without knobs gets the generator's default knobs.</p>
+<h3 id="the-lsd-format">The <code>.lsd</code> format</h3>
+<p>Presets are plain JSON files stored in <code>library/presets/</code> (and subfolders). You can open them in any text editor, back them up, share them, or paste them as JSON using <strong>Copy Preset JSON</strong> / <strong>Paste Preset JSON</strong> from the right-click context menu.</p>
+<h3 id="copying-settings-between-decks">Copying settings between decks</h3>
+<p>Right-clicking in the <strong>VALUE</strong> column (or in Deck Controls) gives you copy and paste options to clone parameters from one deck to another. You can also copy individual modulator cells and paste them onto other parameters — see the <a href="../modulation/">Modulation</a> page for details. You can also use the keyboard shortcuts CTRL-c and CTRL-v to copy and paste (or Command-c and -v on Macs)</p>
+<h3 id="unsaved-changes-the-auto-vj-queue">Unsaved changes &amp; the Auto-VJ queue</h3>
+<p>The prompt above is for loads you start yourself. If Auto-VJ switches presets while a deck has unsaved changes, you can control what happens in <strong>Preferences → General</strong>:</p>
+<ul>
+<li><strong>Skip</strong> — Don't load the next preset until changes are saved or discarded.</li>
+<li><strong>Auto-Save</strong> — Automatically save the current state before switching.</li>
+<li><strong>Auto-Discard</strong> — Discard changes and switch immediately.</li>
+</ul>
+<hr />
+<h2 id="the-library-panel">The Library Panel</h2>
+<p>The Library panel spans the left and middle columns. That column has four views:</p>
+<ul>
+<li><strong>Perform</strong> — The Performance rows sit above the Library, which fills the rest of the window. This is the everyday view for playing a set.</li>
+<li><strong>Edit</strong> — Open a row's <strong>Edit</strong> and the Library goes away completely. That row and its parameters fill the column, so you have room to fine-tune presets and FX. Press <strong>Esc</strong> or click the row's <strong>Collapse</strong> button to get back to Perform.</li>
+<li><strong>Pair view</strong> — Click a deck's source badge, an FX chain name or slot, a preview monitor or the transition name and the Library goes away too: that deck's SRC and FX rows (or Master's, or Transitions and Clock) stay on screen with the same browser below (same tabs, toolbar and queues), applying to the half you last touched. Press <strong>Esc</strong> or <strong>Back</strong> to return to Perform; <strong>Parameters</strong> opens that half's full editor.</li>
+<li><strong>Library</strong> — The Library fills the whole column and the Performance rows are hidden. Use this when you're building or editing playlists and queues.</li>
+</ul>
+<p>Press <strong><code>Space</code></strong> (when the cursor isn't in a text field) or the button at the right of the Library's title bar to switch between Perform and Library. From Edit, <code>Space</code>, <code>Ctrl+F</code> or <code>/</code> closes Edit (cancelling any armed Add Target or Learn) and brings the Library back.</p>
+<p>The Performance rows have a fixed height, so the Library gets whatever window height they leave: a taller window means a taller Library.</p>
+<h3 id="library-view-mode-sources-fx-transitions-macros">Library View Mode (<code>[ Sources ]</code> / <code>[ FX ]</code> / <code>[ Transitions ]</code> / <code>[ Macros ]</code>)</h3>
+<p>Toggle between sources, FX, transitions and banks (macro banks and Perform pages) using the segmented mode button in the top-left of the Library menu bar. Sources, FX and Trans share one three-part browser:</p>
+<ul>
+<li><strong>Folder tree</strong> (left) — <strong>All</strong>, <strong>Favorites</strong> (FX), the kind's sections (Sources: stock sources, saved presets and live external video; FX: stock filters, saved single FX and saved chains; Trans: stock transitions and saved transitions), and a <strong>Playlists</strong> group with one entry per playlist. Each entry shows how many rows it holds. Click one to list it. A playlist is just another tree entry: select it to see and edit its rows.</li>
+<li><strong>List</strong> (middle) — The rows of the selected tree entry, with a search box on top (<code>Ctrl+F</code> or <code>/</code> focuses it) and a <strong><code>[+]</code></strong> button for the kind's "new" action.</li>
+<li><strong>Queues tab</strong> — All five queues side by side: A/B, A/B FX, BG, BG FX and Transition, in that order (which the crossfader advances through automatically). Items get in from the other tabs (<code>Q</code>, <code>Shift+Q</code>, the toolbar buttons, the row menu or drag-and-drop); this tab is where you watch, reorder and play them.</li>
+</ul>
+<p>The mode buttons pick what the three parts show:</p>
+<ul>
+<li><strong><code>[ Sources ]</code></strong>: stock visual sources and saved full deck presets (<code>.lsd</code>, in <code>library/presets/</code>); setlists (<code>.lsdplay</code>) live in <code>library/playlists/</code>.</li>
+<li><strong><code>[ FX ]</code></strong>: stock ISF filters, saved single-slot FX presets (<code>.lsdfx</code>, in <code>library/fx/</code>) and saved 3-slot FX chains (<code>.lsdfxchain</code>, in <code>library/fx_chains/</code>); curated FX playlists (<code>.lsdfxplay</code>) live in <code>library/fx_playlists/</code>.</li>
+<li><strong><code>[ Transitions ]</code></strong>: stock ISF transition shaders and saved transition presets (<code>.lsdtrans</code>, in <code>library/transitions/</code>); setlists (<code>.lsdtransplay</code>) live in <code>library/transition_playlists/</code>.</li>
+</ul>
+<p>The same browser opens under the pair view's two rows; there a click applies to that deck's source, slot, chain or the mixer transition.</p>
+<h3 id="the-unified-sources-browser">The Unified Sources Browser</h3>
+<p>The <code>[ Sources ]</code> list shows two kinds of row side by side, each marked with its own icon:</p>
+<ul>
+<li><strong>Stock Sources</strong> — The 8 bundled built-in visual sources: Mandala, Dynamic Spiral, Icosa H3, Domain Warp Fluid, Gyroid Hyperspace, Celestial Engine, Hyper Slice, and Chladni Cymatics (plus external video streams and any custom sources dropped into your configured shader directories). They load straight to a deck's source stage with their shader's default parameters; they can't be added to a playlist or queue.</li>
+<li>
+<p><strong>Saved Presets (<code>.lsd</code>)</strong> — A full deck preset: the visual source plus every parameter value, modulation connection, and note.</p>
+</li>
+<li>
+<p><strong>External Video</strong> — Live Spout, Syphon or PipeWire streams running right now, one row each in the <strong>External video</strong> folder (empty when none is active). Load one like a stock source; it appears and disappears as the stream starts and stops. Streams are not files, so they have no favorites, playlists or queues and cannot be saved as presets.</p>
+</li>
+</ul>
+<p>Pick a section in the folder tree to show only stock sources, saved presets or live streams. Use <strong><code>[+]</code></strong> to eject a deck to blank so you can build a new preset on it (see <a href="#saving-a-preset">Saving a preset</a> below).</p>
+<ul>
+<li><strong>Search</strong> — Type to filter by name, tag, or (for stock sources) category. <code>Ctrl+F</code> or <code>/</code> jumps focus to the search box of the open tab (Sources, FX or Transitions) from anywhere in the app.</li>
+<li><strong>Multi-Selection (Shift-Click &amp; Ctrl/Cmd-Click)</strong>:</li>
+<li><strong>Click</strong> — Selects a single preset, clearing existing selections.</li>
+<li><strong>Ctrl+Click</strong> (or <strong>Cmd+Click</strong> on macOS) — Toggles selection of an individual item without affecting others.</li>
+<li><strong>Shift+Click</strong> — Extends selection from the anchor/lead item to the clicked item across all visible rows.</li>
+<li><strong>Batch Queueing</strong> — When multiple presets are selected, pressing <code>Q</code> (or the row menu's <em>Add to A/B Queue</em>) enqueues all selected presets in order into the A/B Queue. Pressing <code>Shift+Q</code> (or <em>Add to BG Queue</em>) enqueues them into the BG Queue. The hotkeys and row menu act on the tab you picked the item on: in the FX tab they feed the FX queues, and in the Trans tab <code>Q</code> feeds the transition queue (there is no background queue for transitions).</li>
+<li><strong>Batch Context Menu</strong> — Right-clicking with multiple items selected presents options like <strong>Add N Presets to Playlist</strong>, <strong>Add N Presets to Queue</strong>, and <strong>Delete N Presets...</strong>.</li>
+<li><strong>Multi-Item Drag &amp; Drop</strong> — Dragging any item from a multi-selection carries all selected presets simultaneously into Playlists or Queues.</li>
+<li><strong>Batch Deletion</strong> — Pressing <code>Delete</code> or selecting Delete from the context menu opens a confirmation modal detailing the exact count and list of presets to be deleted.</li>
+<li><strong>Double-click</strong> — Loads the item into whichever deck is currently inactive on the crossfader. For a stock source this replaces only the deck's visual source, leaving its FX chain untouched; for a saved preset it loads the full deck state.</li>
+<li><strong>Right-click or ⋮ (saved presets)</strong> — Rename, retag, duplicate, load to a specific deck, add to a queue or playlist, or delete.</li>
+<li><strong>Right-click or ⋮ (stock sources)</strong> — <strong>Load to Deck A/B/BG/PV</strong> only. Stock sources have no persisted parameter state, and their bundled defaults and Metaknob auto-mappings haven't all been individually audited yet, so they're intentionally left out of playlists and the live/background queues — an unattended queue firing an unverified default has no performer there to catch it. Loading straight to a deck is fine, since you're present to dial it in.</li>
+<li><strong>Drag-and-drop</strong> — Drag any row (or multi-selection) onto a deck's monitor in the Mixer panel or onto its row in the Performance Matrix to load it (source-only for stock rows, full preset for saved rows). Saved presets can also be dragged into the playlist in the tree or a queue; stock sources can't, for the same reason the context menu omits those options.</li>
+<li><strong><code>[!]</code> badge</strong> — Appears when a saved preset uses a subsystem that's currently offline (e.g. MIDI or audio). The preset still loads fine; hover the badge to see what's missing.</li>
+</ul>
+<h3 id="the-unified-fx-browser">The Unified FX Browser</h3>
+<p>The <code>[ FX ]</code> list shows three kinds of row side by side, each marked with its own icon:</p>
+<ul>
+<li><strong>Stock ISF Filters</strong> — Built-in filters with no saved parameters. A deck or Master has several FX chain slots, so a bare stock filter is ambiguous without knowing which slot it targets — double-click and drag-and-drop resolve this by loading into the first vacant slot, and the right-click menu lets you pick a specific slot explicitly (<strong>Load to Deck/Master &gt; Slot 1–3</strong>). That same ambiguity is why stock filters can't be added to a playlist or live queue: there's no interactive slot-picker available when a queued item gets applied automatically later.</li>
+<li><strong>Favorites</strong> — Right-click a stock filter and choose <strong>Add to Favorites</strong> (or <strong>Remove from Favorites</strong>) to star it. Starred filters show a ★ in the list, and the <strong>Favorites</strong> folder in the tree lists only them. They are the same favorites the inline FX picker and the slot shortlist use.</li>
+<li><strong>Saved Single FX Presets (<code>.lsdfx</code>)</strong> — One FX slot's full parameter state, captured from a deck.</li>
+<li><strong>Saved FX Chains (<code>.lsdfxchain</code>)</strong> — A complete 3-slot FX pipeline, captured from a deck's or Master's FX chain. Loading a chain replaces all 3 slots on the target chain.</li>
+</ul>
+<p>Pick a section in the folder tree to show only stock filters, singles or chains. Use <strong><code>[+]</code></strong> to save the current FX state of any deck or Master FX slot (or all 3 slots as a chain) into a new preset.</p>
+<ul>
+<li><strong>Drag-and-Drop</strong>: Drag a saved single or chain onto Slot 1–3 in a deck's Edit <code>FX</code> subtab, onto an FX playlist in the tree, or onto a A/B FX Queue.</li>
+<li><strong>Double-click</strong>: Loads into the dominant deck's first vacant slot (singles) or overwrites all 3 slots (chains). If all 3 slots are full, a single effect asks which slot to overwrite. FX always goes to the deck the crossfader is on (it is audible now); presets and generators go to the other deck (the next look). At exactly the middle of the crossfader, FX goes to Deck A and presets to Deck B.</li>
+<li><strong>Right-click menu</strong>: <code>Load to &gt; Deck [A|B|BG|PV] / Master FX &gt; Slot [1|2|3]</code> (stock filters and singles) or <code>Load to Deck [A|B|BG|PV] / Master FX</code> (chains), plus <strong>Add to A/B FX Queue (A/B)</strong>, <strong>Add to BG FX Queue</strong>, <strong>Add to '<playlist>' Playlist</strong>, Rename, Clone, Delete, and Reveal in File Manager.</li>
+</ul>
+<h4 id="bundled-stock-fx-chains">Bundled Stock FX Chains</h4>
+<p>Liquid LSD includes 16 pre-calibrated 3-slot FX chains in <code>library/fx_chains/</code> designed for live club and festival VJ performance:</p>
+<ol>
+<li><strong>Hyperspace Trip</strong> (<code>hyperspace_trip.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>kaleidoscope</code> → <code>feedback</code> → <code>gradient_map</code></li>
+<li><em>Vibe</em>: Classic psychedelic trance / festival tunnel breakdown with multi-axis kaleidoscopic folding, dithered zoom burst, and filmic Oklab contrast roll-off.</li>
+<li><strong>The Drop Weapon</strong> (<code>the_drop_weapon.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>radial_blur</code> → <code>video_strobe</code> → <code>rgb_split</code></li>
+<li><em>Vibe</em>: High-intensity EDM/bass music drop impact with directional motion streaks, rhythmic beat flash gating, and chromatic aberration impact.</li>
+<li><strong>Cyberpunk 1984</strong> (<code>cyberpunk_1984.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>pixelate</code> → <code>retro_crt</code> → <code>rgb_split</code></li>
+<li><em>Vibe</em>: Retro-futuristic dystopian terminal aesthetic with honeycomb pixel lattice, curved CRT phosphor scanlines, and duotone cyberpunk neon grading.</li>
+<li><strong>Liquid Mercury</strong> (<code>liquid_mercury.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>luma_displace</code> → <code>fluid_smear</code> → <code>bloom</code></li>
+<li><em>Vibe</em>: Viscous organic fluid and metallic chrome distortion with concentric liquid ripples, curl advection smearing, and surface normal refraction.</li>
+<li><strong>Neon Wireframe</strong> (<code>neon_wireframe.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>neon_edge</code> → <code>directional_blur</code> → <code>feedback</code></li>
+<li><em>Vibe</em>: Glowing electric neon vector graphics with orientation-to-hue Sobel edge glow, spherical optical lens bulging, and soft high-pass bloom.</li>
+<li><strong>Wormhole Flight</strong> (<code>wormhole_flight.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>polar_tunnel</code> → <code>pinch_bulge</code> → <code>bloom</code></li>
+<li><em>Vibe</em>: Deep space infinite warp portal with aspect-preserving log-polar vortex, zoom burst trails, and recursive feedback rotation.</li>
+<li><strong>FLIR Predator Vision</strong> (<code>flir_predator_vision.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>thermal_scanner</code> → <code>retro_crt</code> → <code>video_strobe</code></li>
+<li><em>Vibe</em>: Military reconnaissance and sci-fi tactical optics with FLIR Ironbow heat mapping, sensor noise grain, horizontal smear, and quantized block mosaic.</li>
+<li><strong>Liquid Chrome Dimension</strong> (<code>liquid_chrome_dimension.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>wave_displace</code> → <code>mirror_sphere</code> → <code>color_levels</code></li>
+<li><em>Vibe</em>: 3D raytraced floating chrome orb reflecting the scene with liquid surface turbulence and punchy high-contrast color grading.</li>
+<li><strong>2D to 3D Elevation with Feedback</strong> (<code>2d_to_3d_elevation_with_feedback.lsdfxchain</code>):</li>
+<li><em>Slots</em>: <code>3d_elevation</code> → <code>feedback</code> → <code>bloom</code></li>
+<li><em>Vibe</em>: The iconic Liquid LSD topological displacement chain featuring heightmap mesh rendering, recursive rotation feedback, and ACES filmic grading.</li>
+<li><strong>Laser Concert Anamorphic</strong> (<code>laser_concert_anamorphic.lsdfxchain</code>):<ul>
+<li><em>Slots</em>: <code>anamorphic_streak</code> → <code>bloom</code> → <code>color_levels</code></li>
+<li><em>Vibe</em>: Ultra-widescreen concert stage lighting with horizontal laser glare, soft volumetric bloom, and high-contrast filmic punch.</li>
+</ul>
+</li>
+<li><strong>Pop-Art Comic Print</strong> (<code>pop_art_comic_print.lsdfxchain</code>):<ul>
+<li><em>Slots</em>: <code>neon_edge</code> → <code>halftone</code> → <code>gradient_map</code></li>
+<li><em>Vibe</em>: Authentic Roy Lichtenstein / vintage comic book print with black ink contours, 4-plate CMYK dot rosettes, and duotone pop grading.</li>
+</ul>
+</li>
+<li><strong>Grindhouse VHS Bootleg</strong> (<code>grindhouse_vhs_bootleg.lsdfxchain</code>):<ul>
+<li><em>Slots</em>: <code>vhs_glitch</code> → <code>retro_crt</code> → <code>color_levels</code></li>
+<li><em>Vibe</em>: Gritty 80s horror / VHS bootleg tape with magnetic tracking jitter, head-switching bars, phosphor scanlines, and tape saturation.</li>
+</ul>
+</li>
+<li><strong>Prismatic Crystal Kaleidoscope</strong> (<code>prismatic_crystal_kaleidoscope.lsdfxchain</code>):<ul>
+<li><em>Slots</em>: <code>faceted_glass</code> → <code>kaleidoscope</code> → <code>rgb_split</code></li>
+<li><em>Vibe</em>: Shattered diamond prism reflection with polyhedral symmetry and spectral dispersion.</li>
+</ul>
+</li>
+<li><strong>Cosmic Black Hole Vortex</strong> (<code>cosmic_black_hole_vortex.lsdfxchain</code>):<ul>
+<li><em>Slots</em>: <code>vortex_swirl</code> → <code>luma_displace</code> → <code>polar_tunnel</code></li>
+<li><em>Vibe</em>: Gravitational accretion singularity with logarithmic space swirl, surface normal marbling, and infinite log-polar warp.</li>
+</ul>
+</li>
+<li><strong>Subtle Optical Warmth</strong> (<code>subtle_optical_warmth.lsdfxchain</code> — the default Master FX):<ul>
+<li><em>Slots</em>: <code>color_levels</code> → <code>retro_crt</code> → <code>bloom</code></li>
+<li><em>Vibe</em>: Gentle tape/phosphor warming with contrast roll-off, subtle enough to leave on the master all night.</li>
+</ul>
+</li>
+<li><strong>Digital Bitcrush Mosaic</strong> (<code>digital_bitcrush_mosaic.lsdfxchain</code>):<ul>
+<li><em>Slots</em>: <code>pixelate</code> → <code>rgb_split</code> → <code>video_strobe</code></li>
+<li><em>Vibe</em>: Lattice quantization and spectral glitch.</li>
+</ul>
+</li>
+</ol>
+<p>On a fresh install, Master FX starts with <em>Subtle Optical Warmth</em>, Deck A with <em>Liquid Mercury</em>, Deck B with <em>Liquid Chrome Dimension</em>, Deck BG with <em>Hyperspace Trip</em>, and Deck PV with <em>Prismatic Crystal Kaleidoscope</em>.</p>
+<h3 id="fx-playlists-lsdfxplay">FX Playlists (<code>.lsdfxplay</code>)</h3>
+<p>FX playlists are entries under <strong>Playlists</strong> in the FX tree. Select one to edit it like a preset playlist: drag singles/chains in from the list to insert them, drag rows to reorder, and double-click an entry to apply it. Missing files show the same red <code>[!] (missing)</code> indicator as preset playlists.</p>
+<h3 id="ab-fx-queues-ab-and-bg">A/B FX Queues (A/B and BG)</h3>
+<p>On the <strong>Queues</strong> tab the two FX columns are independent <strong>live FX queues</strong> — volatile, RAM-only sequences of FX singles/chains you can improvise with mid-set:</p>
+<ul>
+<li><strong><code>&lt;</code> / <code>&gt;</code></strong> — Step to the previous/next queued FX item and apply it.</li>
+<li><strong>🔁 Repeat</strong> — Cycle back to the start when the bottom of the queue is reached.</li>
+<li><strong>🔀 Shuffle</strong> — Play items in random order.</li>
+<li><strong>⤓ Export</strong> (download icon) — Save the current live queue as a new <code>.lsdfxplay</code> playlist.</li>
+<li><strong>🗑 Clear</strong> (trash icon) — Empty the queue.</li>
+<li><strong>Drag-and-drop</strong> — Reorder items within a queue, or drag a preset/chain from the list to append or insert it.</li>
+<li><strong>Double-click</strong> an item to jump straight to it. Pressing the MIDI controller's accept on a queue item does the same: it moves the queue position, fades to the loaded deck and advances the transition queue.</li>
+</ul>
+<p>The <strong>A/B queue</strong> applies to whichever of Deck A/B is currently dominant on the crossfader; the <strong>BG queue</strong> always applies to Deck BG.</p>
+<hr />
+<h2 id="playlists-setlists">Playlists (Setlists)</h2>
+<p>Playlists are where you build your setlist; they appear under <strong>Playlists</strong> in the Sources folder tree. Playlists are <code>.lsdplay</code> files — simple ordered lists of presets.</p>
+<ul>
+<li><strong>Switch between playlists</strong> — Click another playlist in the tree.</li>
+<li><strong>Reorder</strong> — Drag and drop presets within the list. Changes save automatically.</li>
+<li><strong>Playlist actions (⋮ menu)</strong>:</li>
+<li><strong>Play Now</strong> — Replaces the live queue with this playlist and starts playback.</li>
+<li><strong>Insert After Current</strong> — Slides the playlist into the live queue right after the currently playing preset.</li>
+<li><strong>Add to Bottom</strong> — Appends it to the end of the queue.</li>
+</ul>
+<p>If a playlist references a preset that's been moved or deleted, the row appears in red with a <code>[!] (missing)</code> indicator. Right-click it to remove the dead link.</p>
+<hr />
+<h2 id="the-ab-queue-auto-vj">The A/B Queue (Auto-VJ)</h2>
+<p>The play queue drives the main crossfader automatically, sequencing through presets with transitions between Deck A and Deck B.</p>
+<ul>
+<li><strong>Transport controls</strong> — <code>&lt;</code> (previous), <code>▶/⏸</code> (play/pause), <code>&gt;</code> (next).</li>
+<li><strong>Loop / Shuffle</strong> — <code>🔁</code> for continuous looping, <code>🔀</code> for random order.</li>
+<li><strong>Add to queue</strong> — Select a preset in the browser and press <code>Q</code>, or right-click and choose <strong>Add to Queue</strong>.</li>
+<li><strong>Export / Clear</strong> — The download icon saves an improvised live queue as a permanent playlist file; the trash icon empties the queue. Every queue column has the same header: a small caption naming the queue, then one row of icon buttons (hover for a tooltip).</li>
+</ul>
+<p>When the queue is playing, the crossfader moves automatically between decks as presets transition. Grabbing the crossfader manually immediately pauses Auto-VJ so you have direct control.</p>
+<hr />
+<h2 id="bg-queue-deck-bg">BG Queue (Deck BG)</h2>
+<p>The BG Queue works the same way as the main queue but drives Deck BG independently. Add presets with <code>Shift+Q</code>. Background transitions use dip-to-black fades — double-click or right-click a queued item to choose between an instant cut or a fade.</p>
+<hr />
+<h2 id="curated-transitions-suite-transition-presets">Curated Transitions Suite &amp; Transition Presets</h2>
+<p>Liquid LSD features a curated suite of 8 club-grade ISF transition shaders designed for high-impact live mixing between Deck A and Deck B:</p>
+<ol>
+<li><strong>Linear Crossfade (<code>linear_crossfade.fs</code>)</strong> — Pristine, transparent dissolve with Perceptual Cosine S-curve, Linear, or Equal Power curve modes.</li>
+<li><strong>Luminous Flash (<code>luminous_flash.fs</code>)</strong> — Midpoint exposure flare and Gaussian bloom overdrive with tunable color temperature (-1.0 icy strobe to +1.0 warm amber) and spread, designed for high-energy beat drops.</li>
+<li><strong>Film Burn (<code>film_burn.fs</code>)</strong> — 35mm celluloid burn with multi-octave procedural fractal noise erosion and glowing chromatic combustion contours (Fiery Ember, Electric Violet, Acid Green).</li>
+<li><strong>Noise Dissolve (<code>noise_dissolve.fs</code>)</strong> — Multi-octave domain-warped fractal noise erosion with soft feathered contours and chromatic fringing.</li>
+<li><strong>Liquid Displacement (<code>liquid_displacement.fs</code>)</strong> — Interactive cross-deck vector morphing where Deck A and Deck B dynamically displace each other's UV coordinates based on luminance gradient fields.</li>
+<li><strong>Kinetic Zoom (<code>kinetic_zoom.fs</code>)</strong> — High-speed camera crash zoom with multi-tap radial velocity streak blur, edge chromatic dispersion, and exponential acceleration curves.</li>
+<li><strong>Vortex Swirl (<code>vortex_swirl.fs</code>)</strong> — Gravitational singularity twisting Deck A into a spiraling vortex at the frame center, peaking at midpoint, and unwinding into Deck B with chromatic flare.</li>
+<li><strong>Cyber Datamosh (<code>cyber_datamosh.fs</code>)</strong> — Digital video compression breakdown emulating I-frame/P-frame corruption, macroblock displacement, horizontal sync tear, and chromatic shear.</li>
+</ol>
+<h3 id="the-unified-transition-browser">The Unified Transition Browser</h3>
+<p>The <code>[ Transitions ]</code> list shows two kinds of row side by side, each marked with its own icon:</p>
+<ul>
+<li><strong>Stock ISF Transition Shaders</strong> — The curated suite above, plus any custom <code>.fs</code> transitions found in your configured shader directories. Unlike FX, there's only ever one active transition — no chain of slots to disambiguate — so a bare stock transition id is a complete, unambiguous instruction. Combined with sane bundled defaults, that makes them safe to apply, queue, or add to a playlist just like saved presets.</li>
+<li><strong>Saved Transition Presets (<code>.lsdtrans</code>)</strong> — A dialed-in transition configuration (parameters, dry/wet, modulators) captured from the mixer.</li>
+</ul>
+<p>Pick a section in the folder tree to show only stock shaders or only saved presets. Use <strong><code>[+]</code></strong> to save the mixer's current transition as a new preset.</p>
+<ul>
+<li><strong>Double-click</strong>: Applies the transition to the mixer immediately.</li>
+<li><strong>Keyboard</strong>: <strong>Enter</strong> applies the selected transition; the <em>Add to A/B Queue</em> shortcut (<strong>Q</strong> by default, rebindable in Preferences → Shortcuts) adds it to the transition queue.</li>
+<li><strong>Failures</strong>: a transition or FX file that can't be loaded or applied now shows a toast instead of failing silently.</li>
+<li><strong>Right-click menu</strong>: <strong>Apply to Mixer</strong>, <strong>Add to A/B Queue</strong>, <strong>Add to '<playlist>' Playlist</strong>, plus Rename/Clone/Delete for saved presets (stock shaders have no file to rename or delete).</li>
+</ul>
+<h3 id="the-macros-tab-macro-banks-and-perform-pages">The Macros Tab (Macro Banks and Perform Pages)</h3>
+<p>The <strong><code>[ Macros ]</code></strong> tab has two lists, switched with the <strong>Banks</strong> / <strong>Pages</strong> radio buttons. It has no playlists or queues, so it uses the whole Library width.</p>
+<ul>
+<li><strong>Banks</strong> lists the saved macro banks (<code>.knobpreset.json</code> files in <code>library/knobpresets</code>). <strong>Save bank from...</strong> saves the knobs of a deck, Master or Transition row under a name you choose. Right-click a bank to <strong>Apply to</strong> one of those rows (deck banks retarget to the deck they land on; targets that row can't take are dropped, and a toast says if parameters were missing) or <strong>Delete</strong> it. FX banks are rewritten from the FX chain, so they can't be saved or applied here. This is the same as the bank kebab menu in the Edit row, without the file browser.</li>
+<li><strong>Pages</strong> lists the Perform pages with where each comes from (built-in, user, or user override). Click a page to show it in Perform. Right-click for <strong>Hide from / Show in tab strip</strong>, <strong>Copy to user file</strong> (built-ins) or <strong>Delete user file</strong>. Editing a page's rows stays in <strong>Preferences → MIDI Controls</strong>.</li>
+</ul>
+<h3 id="transition-presets-lsdtrans-playlists-lsdtransplay">Transition Presets (<code>.lsdtrans</code>) &amp; Playlists (<code>.lsdtransplay</code>)</h3>
+<ul>
+<li><strong>Transition Presets (<code>.lsdtrans</code>)</strong>: Stored in <code>library/transitions/</code>. Save dialed-in transition configurations (including parameter values, dry/wet, and modulators) from the Mixer's TRANS tab (<strong>[⋮] &gt; Save Transition As...</strong>), from the <strong>Save current as preset...</strong> button under the transition list in Browse, or with the <strong>[+]</strong> button above the Trans list or right-clicking in the Mixer panel.</li>
+<li><strong>Transition Playlists (<code>.lsdtransplay</code>)</strong>: Stored in <code>library/transition_playlists/</code>. Group transitions into ordered setlists for the Transition Queue. A factory playlist, <code>festival_elite.lsdtransplay</code>, is bundled out of the box.</li>
+<li><strong>AutoVJ Integration</strong>: The Transition Queue automatically advances to the next staged transition preset or stock transition shader each time the crossfader cycles between decks.</li>
+</ul>
+<hr />
+<h2 id="drag-drop">Drag &amp; Drop</h2>
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sources list (saved preset)</td>
+<td>Playlist (between items)</td>
+<td>Inserts at that position</td>
+</tr>
+<tr>
+<td>Sources list (saved preset)</td>
+<td>Empty space at playlist bottom</td>
+<td>Appends to the end</td>
+</tr>
+<tr>
+<td>Playlist item</td>
+<td>Up / down in the same playlist</td>
+<td>Reorders</td>
+</tr>
+<tr>
+<td>Sources list (saved preset) or Playlist</td>
+<td>Queue</td>
+<td>Adds to the live queue</td>
+</tr>
+<tr>
+<td>Sources list row (stock or saved)</td>
+<td>Deck monitor (Mixer) or deck row (Performance Matrix)</td>
+<td>Loads source (stock) or full preset (saved) to that deck</td>
+</tr>
+<tr>
+<td>FX Preset (<code>.lsdfx</code>)</td>
+<td>FX Slot 1–3 in Parameters</td>
+<td>Loads into target slot</td>
+</tr>
+<tr>
+<td>Stock FX filter</td>
+<td>FX Slot in Parameters or the Performance Matrix</td>
+<td>Loads into that slot</td>
+</tr>
+<tr>
+<td>FX Preset (<code>.lsdfx</code>)</td>
+<td>Deck badge in the Performance Matrix</td>
+<td>Loads into the first vacant slot (a toast says so if all 3 are full; drop on a slot instead)</td>
+</tr>
+<tr>
+<td>FX Chain (<code>.lsdfxchain</code>)</td>
+<td>FX Slot / Chain in Parameters, or the deck badge</td>
+<td>Overwrites 3-slot chain</td>
+</tr>
+</tbody>
+</table>
+<p>A deck's monitor takes presets and generators only, not FX.
+| FX list row                 | FX playlist in the tree        | Inserts/appends to playlist |
+| FX list row                 | A/B FX Queue (A/B or BG)      | Appends/inserts into that queue |
+| A/B FX Queue item          | Up / down in the same queue    | Reorders                 |
+| Transition list row         | Transition playlist in the tree | Inserts/appends to playlist |
+| Transition list row         | Transition Queue          | Appends/inserts into the queue |</p>
+<hr />
+<h2 id="midi-mapping">MIDI Mapping</h2>
+<blockquote>
+<p>MIDI is disabled by default. Enable it in <strong>Preferences → MIDI Controls</strong> ("Enable MIDI Subsystem") or via the <strong>⋮</strong> kebab menu next to Edit's column headers ("MIDI Column").</p>
+</blockquote>
+<p>Liquid LSD keeps hardware controller maps separate from visual presets, so you can swap physical controllers without touching your preset files.</p>
+<p><strong>There are two levels of MIDI mapping:</strong></p>
+<ol>
+<li>
+<p><strong>Hardware Profile</strong> (stored in <code>library/midi/default.json</code>) — Maps physical knobs and faders to global controls like the master crossfader, deck gain, and level faders. These mappings follow you regardless of which preset is loaded.</p>
+</li>
+<li>
+<p><strong>Grid Cell Modulators</strong> (stored inside each <code>.lsd</code> file) — Maps MIDI CC numbers to specific parameters as dynamic modulation sources in the CV grid. These travel with the preset.</p>
+</li>
+</ol>
+<h3 id="midi-learn">MIDI Learn</h3>
+<ol>
+<li>Click the <strong>MIDI Learn</strong> button in the Parameters header or next to any parameter slider.</li>
+<li>Move a knob, fader, or button on your controller.</li>
+<li>Liquid LSD captures the CC and confirms the mapping automatically.</li>
+<li>To remove a mapping, right-click the mapped control and choose <strong>Clear MIDI Mapping</strong>.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://liquid-lsd.greenjon.com/sitemap.xml

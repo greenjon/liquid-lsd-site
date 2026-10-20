@@ -1,0 +1,1932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Liquid LSD real-time graphics and audio workstation.">
+      
+      
+      
+        <link rel="canonical" href="https://liquid-lsd.greenjon.com/docs/user_guide/macros_and_rack/">
+      
+      
+        <link rel="prev" href="../performance_controls/">
+      
+      
+        <link rel="next" href="../hardware/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Macro Controls & the Perform View - Liquid LSD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/docs-clips.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#macro-controls-the-perform-view" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liquid LSD" class="md-header__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liquid LSD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Macro Controls & the Perform View
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liquid LSD" class="md-nav__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Liquid LSD
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../your_workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual_sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presets_and_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets & Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output_and_recording/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output & Recording
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Controls & the Perform View
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Controls & the Perform View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#macro-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macro Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-targets-to-a-knob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding targets to a knob
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing a target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked-fields-visual-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locked fields &amp; Visual Indicators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-your-knob-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving your knob layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fx-rack-per-deck-fx-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FX Rack (per-deck FX tabs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FX Rack (per-deck FX tabs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-wins-when-several-things-drive-the-same-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who wins when several things drive the same value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-super-knob-effect-metaknobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chain Super Knob &amp; effect Metaknobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Super Knob &amp; effect Metaknobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-metaknobs-links-and-knob-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing a Metaknob's links and knob order
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-control-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware control note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-perform-view-44-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Perform View (4×4 Matrix)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Perform View (4×4 Matrix)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-layout-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The layout tabs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-controls-side-wing-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Controls &amp; Side-Wing Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midi-learn-in-the-performance-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Learn in the Performance Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interacting-with-knobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interacting with knobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-modular-rack-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Modular Rack: Edit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browse-picking-a-generator-fx-or-transition-in-the-pair-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browse: picking a generator, FX or transition in the pair view
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-knob-labels-and-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up knob labels and targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macro-banks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Banks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-fx-defaults-save-as-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generator &amp; FX Defaults ("Save as Default")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generator &amp; FX Defaults (&#34;Save as Default&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-generator-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Generator Defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-isf-fx-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicit ISF FX Defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_broadcast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Broadcast
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Usage & Startup Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#macro-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macro Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-targets-to-a-knob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding targets to a knob
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing a target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locked-fields-visual-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locked fields &amp; Visual Indicators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-your-knob-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving your knob layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fx-rack-per-deck-fx-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FX Rack (per-deck FX tabs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FX Rack (per-deck FX tabs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-wins-when-several-things-drive-the-same-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who wins when several things drive the same value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-super-knob-effect-metaknobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chain Super Knob &amp; effect Metaknobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain Super Knob &amp; effect Metaknobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-metaknobs-links-and-knob-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing a Metaknob's links and knob order
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-control-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware control note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-perform-view-44-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Perform View (4×4 Matrix)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Perform View (4×4 Matrix)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-layout-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The layout tabs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-controls-side-wing-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Controls &amp; Side-Wing Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midi-learn-in-the-performance-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Learn in the Performance Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interacting-with-knobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interacting with knobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-modular-rack-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Modular Rack: Edit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browse-picking-a-generator-fx-or-transition-in-the-pair-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browse: picking a generator, FX or transition in the pair view
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-knob-labels-and-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up knob labels and targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macro-banks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Banks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-fx-defaults-save-as-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generator &amp; FX Defaults ("Save as Default")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generator &amp; FX Defaults (&#34;Save as Default&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-generator-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Generator Defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-isf-fx-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicit ISF FX Defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="macro-controls-the-perform-view">Macro Controls &amp; the Perform View</h1>
+<p>Macro Controls give you a small number of physical-style knobs that each drive several
+parameters at once — the fast, tactile layer you reach for live instead of hunting through
+parameter grids. The Perform view builds on the same macro system to give you a 4×4 knob matrix
+purpose-built for live performance, with Edit underneath for everything else.</p>
+<hr />
+<h2 id="macro-controls">Macro Controls</h2>
+<p>Macro knobs live in the <strong>Perform view 4×4 matrix</strong>, and they are edited in place. The right-hand column
+shows only the Mixer; there is no separate MACROS tab.</p>
+<p>In the <strong>Edit</strong> view, select a macro knob in an expanded row. That row's left side switches to the
+<strong>target strip</strong>:</p>
+<ul>
+<li><strong>Line 1</strong> — the knob's name (double-click to rename), its live value, <strong>Add Target</strong> / <strong>Cancel</strong>,
+  one chip per target (1–4), a kebab menu (⋮), and a close button.</li>
+<li><strong>Line 2</strong> — the selected target's settings (name, Min/Max, Curve, Link, Invert, Enabled).</li>
+</ul>
+<p>FX rows show a read-only strip instead: FX knobs have a fixed role per mode (Super Knob + 3
+Metaknobs, or Metaknob + 3 parameters when a slot is focused), so the strip names the role rather
+than offering targets.</p>
+<h3 id="adding-targets-to-a-knob">Adding targets to a knob</h3>
+<ol>
+<li>Click <strong><code>Add Target</code></strong> on a macro knob. It starts pulsing to show it's armed, and a banner
+   appears: <em>"ADD TARGET: Click any parameter slider or modulator property."</em></li>
+<li>Click the target:</li>
+<li>A parameter slider in a Edit <strong>parameter grid</strong> becomes a target through that
+     parameter's base value.</li>
+<li>A modulator control in Edit's <strong>Modulation</strong> column — e.g. an LFO's Subdivision or
+     Morph slider, or an envelope's Attack/Decay — becomes a target directly.
+     This lets a macro knob speed up an LFO or shorten an envelope's decay, not just move a value.</li>
+<li>A toast confirms the target (e.g. <em>"Added target: Knob 3 → Zoom [LFO 1 Morph]"</em>) and Add Target
+   turns itself off.</li>
+</ol>
+<p>A knob can only target parameters in <strong>its own deck and section</strong>:</p>
+<ul>
+<li>Deck A <strong>SRC</strong> knobs target Deck A's SRC parameters only.</li>
+<li><strong>FX</strong> knobs (each deck's and Master's) follow their FX chain automatically and take no manual targets;
+  the editors show them as "Driven by the FX chain".</li>
+<li><strong>Master</strong> and <strong>Transition</strong> knobs take Mixer parameters only, and <strong>FX Send</strong> knobs take the per-deck FX send only.</li>
+<li><strong>Global</strong> knobs can target anything.</li>
+</ul>
+<p>If you click a parameter outside that section, the banner says <em>"Cannot add target…"</em> and Add Target stays
+armed, so you can click the right one. If you move to another section while Add Target is armed, it
+is cancelled. That includes Edit's SRC/FX tabs and the side rail. Master knobs aren't
+limited this way, and Transitions knobs can't be learned (they follow the active transition).</p>
+<p>Each knob can hold up to <strong>4 targets</strong>, so one knob can drive several parameters (or modulator
+properties) simultaneously — with independent settings per target.</p>
+<h3 id="editing-a-target">Editing a target</h3>
+<p>Selecting a knob shows its targets in the target strip (Edit view) and in the Modulation
+editor of the open Edit. For each target you can set:</p>
+<ul>
+<li><strong>Min / Max</strong> — the travel range the target maps onto, independent of the target's own range.</li>
+<li><strong>Curve</strong> — Linear, Exponential, Logarithmic, S-Curve, or Step (quantized into a fixed number
+  of positions).</li>
+<li><strong>Link</strong> — which zone of the knob's travel this target responds to (Mixxx-style parameter
+  linking). Instead of a plain dropdown, this is controlled via an intuitive <strong>vector transfer curve
+  button</strong> displaying the exact response curve on the button face, with an adjacent <strong><code>[±]</code></strong> invert toggle:</li>
+<li><strong>Full (0-100%)</strong> <code>[  /  ]</code> — tracks the entire knob travel.</li>
+<li><strong>1st Half (0-50%)</strong> <code>[ / ‾ ]</code> — sweeps 0→1 across the first half of the turn, then holds at 1.0 for
+    the rest of the travel.</li>
+<li><strong>2nd Half (50-100%)</strong> <code>[ _ / ]</code> — holds at 0.0 for the first half, then sweeps 0→1 across the second.</li>
+<li><strong>Triangle (Peak)</strong> <code>[ /\ ]</code> — sweeps 0→1 up to center, then back down to 0 — useful for a target that
+    should peak mid-turn and fall off at either extreme.</li>
+<li><strong>Bipolar (Center-0)</strong> <code>[ \/ ]</code> — 0.0 at center, rising to 1.0 at either end — useful for a target that
+    should stay neutral at rest and react to turning the knob in <em>either</em> direction.</li>
+<li><strong>Invert Toggle <code>[±]</code></strong> — dynamically flips the direction and mirrors the vector glyph geometry.</li>
+</ul>
+<p>Left-click the link button to cycle through the modes; right-click to open a context menu and select directly.
+  A common pattern: give one knob two targets, one on <strong>1st Half</strong> and one on <strong>2nd
+  Half</strong>, to crossfade or choreograph between them from a single knob turn.
+- <strong>Live Value Meter Knob</strong> — on the second row of each target (to the left of Min/Max, Link Mode, and Curve), a rotary meter knob (the same crisp knob widget used in the parameter grid) displays the live evaluated output value in relation to the macro knob position. If you use a Triangle ramp (peak) curve or a half-turn zone, moving the macro knob from 0 to 1 lets you see the binding sweep (e.g. 0 → 1 → 0) in real time. Hovering over the knob displays exact numerical readouts.
+- <strong>Enabled</strong> — toggling a target off immediately hands the target field back to normal
+  manual/mouse editing; toggling it back on resumes macro control.</p>
+<p>The <strong>target name</strong> (e.g. <code>Deck A/Mandala/L1</code>) is a clickable link. Clicking it opens the
+corresponding deck's (or the Mixer's) Edit on the right sub-tab with the parameter selected,
+so you can immediately reach the parameter being controlled without hunting for it manually.</p>
+<h3 id="locked-fields-visual-indicators">Locked fields &amp; Visual Indicators</h3>
+<p>Any parameter base value or modulator property that is the target of an enabled macro knob
+receives distinct visual cues in Edit:</p>
+<ul>
+<li><strong>Parameter grid</strong>:</li>
+<li>The row displays an <strong>Electric Cyan left-accent border</strong> and a subtle cyan background tint.</li>
+<li>An inline badge such as <strong><code>[K1]</code></strong> appears beside the parameter name, and the name is
+    tinted Electric Cyan.</li>
+<li>The "VAL" meter cell is outlined with a cyan border.</li>
+<li>Hovering over the row or value cell shows a contextual tooltip identifying the controlling
+    macro (e.g. <code>Locked: Driven by Knob 1 (WARP) [K1]</code>).</li>
+<li>
+<p><strong>Clicking the row label, badge, or VAL cell</strong> selects that macro control and shows its
+    target strip.</p>
+</li>
+<li>
+<p><strong>Modulation &amp; Sliders</strong>:</p>
+</li>
+<li>An Electric Cyan <strong>bounding box and background highlight</strong> frames the entire slider row.</li>
+<li>The variable label displays the <strong><code>[K1]</code></strong> badge in cyan.</li>
+<li>The slider track and dynamic indicator dot glow Electric Cyan instead of their default color.</li>
+<li>Numeric input text boxes are outlined in cyan and set to read-only to prevent fighting the
+    engine.</li>
+<li>Hovering over the slider track, handle, or text box displays a tooltip indicating the controlling
+    macro knob.</li>
+<li>Clicking the variable label or badge selects the controlling macro and shows its target strip.</li>
+</ul>
+<h3 id="saving-your-knob-layout">Saving your knob layout</h3>
+<p>Macro banks are bundled directly into <code>.lsd</code> / <code>.lsdplay</code> preset files — they load and save with
+the preset automatically, with no extra file to manage. If you want to reuse a favorite knob
+layout across unrelated presets, use the <strong>kebab menu (⋮)</strong> on the target strip: <strong>Export Macro Bank...</strong> saves the whole bank
+(all 4 knobs) as a standalone <code>.knobpreset.json</code> (default folder <code>library/knobpresets</code>), and <strong>Import
+Macro Bank...</strong> loads one into the bank you're editing. Targets that don't exist on the deck it lands on
+are skipped and counted in the status message. Importing onto a deck bank points its targets at that deck
+to that deck, like a preset load; the Master bank keeps targets as saved. The same menu
+has <strong>Rename</strong> (double-clicking the name also works). FX banks have no menu.</p>
+<h3 id="hardware-control">Hardware control</h3>
+<p>Macro Knobs sit at the top of the MIDI/OSC input hierarchy:</p>
+<ul>
+<li>Right-click any knob in the <strong>Perform view 4×4 matrix</strong> (see below) to arm hardware MIDI
+  Learn for it — the next CC your controller sends is mapped to that knob. Hardware MIDI Learn is
+  Performance-Mode-only; the target strip's <code>Add Target</code> button chooses what a knob controls, not
+  which controller moves it.</li>
+<li>Turn on the OSC server in <strong>Preferences → OSC Controls</strong>, and <code>/macro/knob/1</code>–<code>/macro/knob/8</code>
+  send and receive live updates.</li>
+</ul>
+<hr />
+<h2 id="fx-rack-per-deck-fx-tabs">FX Rack (per-deck FX tabs)</h2>
+<p>Each deck and Master now has its own <strong>independent FX chain</strong>. Selecting <strong>A FX</strong>, <strong>B FX</strong>,
+<strong>BG FX</strong>, <strong>PV FX</strong>, or <strong>MST FX</strong> (the FX mode of a Performance row) shows a
+dedicated <strong>FX Rack</strong> view — a Traktor/Mixxx-style Super Knob + Metaknob strip for that deck's
+own FX chain. Unlike the old shared FX1/FX2 banks, each deck's FX chain is always available
+regardless of what the other decks are doing.</p>
+<p>Edit and the macro strip always point at the same deck and section:</p>
+<ul>
+<li>Opening a deck's Edit anywhere (its row's <code>[EDIT]</code>, the side rail, the <strong>SRC / FX</strong> tabs)
+  focuses that deck and section.</li>
+</ul>
+<p>The same applies to the other decks and Master (<strong>MST</strong>, <strong>TRANS</strong> and <strong>MST FX</strong> match Edit's
+Mixer <strong>CTRL</strong>, <strong>TRANS</strong> and <strong>FX</strong> tabs).</p>
+<h3 id="who-wins-when-several-things-drive-the-same-value">Who wins when several things drive the same value</h3>
+<p>A parameter's base value can be driven from several places. From strongest to weakest:</p>
+<ol>
+<li><strong>A macro knob target</strong> locks the value. Sliders are read-only, and any MIDI or OSC mapping on it is <strong>suspended</strong> (its row in Preferences shows "Suspended: driven by ...") and works again when you release the target.</li>
+<li><strong>An effect Metaknob link</strong> (including the Super Knob, which moves linked Metaknobs) owns the effect parameter it is aimed at. A macro knob can't be added to that parameter ("driven by its Metaknob"), and an existing macro target on it is ignored while the link is enabled. The parameter's VAL cell shows the same lock highlight as a macro target, and its VAL panel is read-only. Disable the Metaknob link (right-click the Metaknob) to use a macro knob there instead. MIDI and OSC mappings on it are suspended as well.</li>
+<li><strong>Direct edits, MIDI and OSC mappings</strong> on an unlocked value: the last one to move wins.</li>
+<li><strong>Modulators (LFO, sequencer, audio)</strong> never compete. They are always added on top of whatever value results from 1-3.</li>
+</ol>
+<h3 id="chain-super-knob-effect-metaknobs">Chain Super Knob &amp; effect Metaknobs</h3>
+<ul>
+<li><strong>Super Knob</strong> — one knob that sweeps every <strong>linked</strong> slot's own Metaknob together.</li>
+<li><strong>Metaknob</strong> (one per slot) — the effect's single macro control. For a hand-curated effect
+  (the bundled filters) it's tuned to feel right out of the box. For any other ISF shader —
+  including the thousands available from third-party shader packs — it's auto-mapped the first
+  time the shader loads, using the shader's own declared <code>IDENTITY</code>/parameter metadata, or a
+  Dry/Wet fallback if nothing better is found. You never get a dead knob.</li>
+<li><strong>Slot cells</strong> — on a Performance row in FX mode, each Metaknob has no caption; the slot cell
+  right under it names the effect in that slot. Only the Super Knob keeps its <code>SUPER</code> caption.</li>
+<li><strong>Link</strong> (per slot) — toggles whether that slot's Metaknob follows the Super Knob. Turning Link
+  back on doesn't snap the Metaknob to wherever the Super Knob currently sits — it waits until you
+  move the Super Knob far enough for it to reach the Metaknob's current position first (soft
+  pickup), the same behavior used for hardware MIDI/OSC takeover elsewhere in the app.</li>
+<li><strong>Focus Mode</strong> (per slot) — focuses on an individual effect slot across the Performance Matrix FX rows.</li>
+<li><strong>Knob 1</strong>: The focused slot's Metaknob. The slot's <strong>Dry/Wet</strong> is the <code>Wet</code> slider in the chain header (middle-click resets to 100%).</li>
+<li><strong>Knobs 2–4</strong>: Retargeted to the focused effect's top parameters on the active page, with parameter paging (<code>[◀ P1/N ▶]</code>) when more than 3 parameters exist. A parameter the Metaknob already drives is left out, since knob 1 moves it, unless you set the slot's own knob order (see <em>Editing a Metaknob's links and knob order</em> below).</li>
+<li><strong>Parameter Cells (<code>FxParamCell</code>)</strong>: Display parameter values with a reset-to-default button (counter-clockwise arrow).</li>
+<li><strong>Hardware MIDI</strong>: Physical controllers mapped to <code>Macro/&lt;bankId&gt;/knob_1..4</code> keep their paths; in Focus Mode they control the focused slot's Metaknob and parameters. The layout is fixed per mode (Mixxx-style), so a mapped CC changes meaning when you toggle focus.</li>
+<li>Click <code>[◀ CHAIN]</code> in the header, or the active slot pill, to return to standard Group Mode.</li>
+<li><strong>Right-click a Metaknob</strong> to replace all its links with a single parameter (or the Dry/Wet safety net),
+  save the current links as the effect's default, or reset to the auto-mapped default.</li>
+</ul>
+<h4 id="editing-a-metaknobs-links-and-knob-order">Editing a Metaknob's links and knob order</h4>
+<p>A Metaknob can drive several parameters at once, each with its own response.</p>
+<ul>
+<li><strong>In the Edit view</strong>, select a slot's Metaknob. The row strip shows one numbered chip per link, <strong>Add Target</strong>
+  (pick from the parameters that aren't linked yet, or Dry/Wet) and the selected link's controls: the enable
+  checkbox, link mode (full range, first half, second half, triangle, bipolar, invert), response curve
+  (linear, exponential, logarithmic, S-curve, step with a step count), a range bar with draggable handles, Min and
+  Max, and delete. Right-click the link-mode button for the full list.</li>
+<li><strong>In the Edit bay</strong>, each slot has a <strong>Metaknob links</strong> block with the same controls for every link and an
+  <strong>Add link</strong> menu.</li>
+<li><strong>Knobs</strong> (also in the Edit bay) lists the parameters on focus-mode knobs 2-4, three per page. Move a parameter
+  up or down, take it off the knobs, bring it back from <em>Hidden</em>, or <strong>Reset order</strong>. A lock beside a parameter
+  means the Metaknob drives it, so its knob does nothing while the link is enabled.</li>
+<li>Links and knob order are saved with the slot and chain. Changing them in one chain never changes another
+  chain or the stock effect; <strong>Save as Default</strong> makes your links and order the starting point for new copies of
+  that effect. Ctrl+Z undoes a change, and a drag on a range handle is a single step.</li>
+</ul>
+<h3 id="hardware-control-note">Hardware control note</h3>
+<p>Every knob in the strip (Super Knob, each Metaknob, and each focused-mode parameter row) supports
+the same right-click <strong>Learn MIDI</strong> / <strong>Learn OSC</strong> as any other slider in the app — each has its
+own fixed control path. <strong>This means a physical knob you've mapped to a slot's Metaknob in Group
+Mode will <em>not</em> automatically control that slot's parameters once you switch to Focus Mode</strong> (and
+vice versa) — they're different paths, so you'd map the physical knob again for the focused view
+if you want it there too. A true Traktor/Mixxx hardware unit keeps the same 4 physical knobs
+mapped regardless of focus state; matching that exactly would need new plumbing this pass didn't
+build. If this turns out to matter in practice for your hardware workflow, it's a known follow-up.</p>
+<hr />
+<h2 id="the-perform-view-44-matrix">The Perform View (4×4 Matrix)</h2>
+<p>The Perform view is the app's main view: a <strong>4×4 Macro Knob Matrix</strong> — 16 knobs arranged in 4
+rows across 4 columns, color-coded by deck — on the left, with the Mixer column and
+Library dock alongside. (Earlier versions also had a "Classic" Parameters/Properties view,
+toggled with <code>F4</code>; everything it did now lives in Edit, below.)</p>
+<p>The active tab is remembered between sessions in application preferences.</p>
+<h3 id="the-layout-tabs">The layout tabs</h3>
+<p>Each tab shows up to 4 rows of 4 knobs, mapped to different banks:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tab</th>
+<th style="text-align: left;">Row 1</th>
+<th style="text-align: left;">Row 2</th>
+<th style="text-align: left;">Row 3</th>
+<th style="text-align: left;">Row 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>A/B</strong></td>
+<td style="text-align: left;">Deck A source</td>
+<td style="text-align: left;">Deck A FX</td>
+<td style="text-align: left;">Deck B source</td>
+<td style="text-align: left;">Deck B FX</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>BG/PV</strong></td>
+<td style="text-align: left;">Deck BG source</td>
+<td style="text-align: left;">Deck BG FX</td>
+<td style="text-align: left;">Deck PV source</td>
+<td style="text-align: left;">Deck PV FX</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MIXER</strong></td>
+<td style="text-align: left;">Master MIX</td>
+<td style="text-align: left;">Master FX</td>
+<td style="text-align: left;">Transitions</td>
+<td style="text-align: left;">Clock (knob 13)</td>
+</tr>
+</tbody>
+</table>
+<p>Every deck and Master row shows one half (source or FX), so a knob never changes meaning under you.
+Opening a deck in Edit shows the row for the Edit tab you are on (SRC or FX).</p>
+<ul>
+<li><strong>Per-Deck Insert FX &amp; Flexible Routing</strong>: Every deck (A, B, BG, PV) now owns its own dedicated 3-slot <code>FxChain</code> running post-generator and pre-crossfader, completely decoupled from other decks.</li>
+<li><strong>Deck Rows Are Split into a Source Row and an FX Row</strong>: Each deck has a <strong>source row</strong> (<code>[ SRC ]</code> pill, kebab, generator/preset badge, Save, queue navigation, eject; its knobs are the source's macros) and an <strong>FX row</strong> (<code>[ FX ]</code> pill, kebab, chain name, Save, queue navigation, slot pills <code>1 2 3</code>; its knobs are the chain's Super Knob and three Metaknobs). The right wing of the FX row has the <code>[ BYPASS / FX ON ]</code> button. The source row's right wing has the randomize die (Source and FX).</li>
+<li><strong>Master Rows Are Split Too</strong>: The <strong>Master MIX row</strong> (<code>[ MIX ]</code> pill) has the deck-levels badge, with the four knobs on the deck levels and the master level. The <strong>Master FX row</strong> (<code>[ FX ]</code> pill) has the Master FX chain header (<code>[◀] Name • [▶] [Save] [⋮]</code>) and its <code>[ BYPASS / FX ON ]</code> button, with the knobs on the Master FX Super Knob + 3 Metaknobs. The crossfader sits on the Transitions row.</li>
+<li>The Transitions row carries the transition picker (opens the pair view's Browse — see below) and queue prev/next controls. Its four knobs are fixed: <strong>knob 1 is the crossfader</strong> (it follows auto-fades and the slider, and turning it takes over like the slider does), and <strong>knobs 2-4 are the active transition's first three sliders</strong>, relabelled whenever you change transition. Transitions with fewer than three sliders leave the spare knobs blank. The row's second line has <code>A</code> / <code>B</code> snap buttons, <code>AUTO</code> and the fade time; there is no crossfader slider on the row (use knob 1 or the Mixer panel's slider). These knobs cannot be re-learned; Dry/Wet stays in the Edit bay.</li>
+</ul>
+<p>Each row is color-coded to its deck or target (blue for Deck A, orange for Deck B, amber for Deck BG, mint for Deck PV, violet for Transitions, crimson for Master, teal for FX) and starts with a title badge spanning both control lines: a large <strong>A</strong>, <strong>B</strong>, <strong>BG</strong> or <strong>PV</strong> on deck rows (the <code>[SRC]</code>/<code>[FX]</code> pills beside it show which the knobs control), and <strong>MASTER</strong>, <strong>TRANS</strong> and <strong>CLOCK</strong> on the MIXER tab. No row has a header bar over its knobs, so MIXER-tab knobs are the same size as deck knobs.</p>
+<h3 id="performance-controls-side-wing-layout">Performance Controls &amp; Side-Wing Layout</h3>
+<p>To maximize vertical space in the matrix and keep the knobs comfortably clustered together:
+- <strong>Row Titles &amp; Side-Wing Controls</strong>: Row group titles (e.g. <code>DECK A</code>, <code>DECK A (FX)</code>) sit at the top-left of the row, level with the top of the knobs. The left- and right-wing controls sit below the title, with their bottom edge lined up with the bottom of the knobs, so short rows never push the controls up into the title. Every wing control (buttons, badges, generator/preset badge) is the same height.
+- <strong>Row Height</strong>: Every row has the same fixed height, whatever the window size, so knobs never resize and nothing scrolls. The Library fills the window height below the rows.
+- <strong>Deck Rows (Deck A, B, BG, PV)</strong>:
+  - <strong>Left Wing (Info &amp; Deck Controls)</strong>:
+    - <strong>Row 1 (SRC)</strong>:
+      - <strong><code>[ SRC ]</code> Pill</strong>: Labels the source row, whose 4 on-screen macro knobs are the deck's Visual Generator.
+      - <strong>Generator / Preset Badge</strong>: One control, not two -- a preset is just a generator with its parameter values saved under a name. Shows the active preset's name (with a dirty marker <code>*</code>) or, if nothing's been saved, the generator's own name. Click to open the pair view with Browse listing stock generator types and saved presets together; right-click for source defaults.
+      - <strong>Eject Button (<code>⏏</code>)</strong>: Resets the deck to defaults with dirty-state safety guard.
+      - <strong>Queue Navigation</strong>: Deck A and Deck B connect to <code>PlayQueueManager</code> (<code>&lt; N/Total &gt;</code>), Deck BG connects to <code>BgQueueManager</code> (<code>&lt; N/Total &gt;</code>), and Deck PV features a quick Preview focus button.
+      - <strong>Save Button</strong>: Saves current visual source and parameters as a preset.
+      - <strong>Kebab Menu (<code>⋮</code>)</strong>: Source operations (Browse, Save As, defaults).
+    - <strong>Row 2 (FX)</strong>:
+      - <strong><code>[ FX ]</code> Knob Pill</strong>: Assigns the row's 4 on-screen macro knobs to the deck's insert FX chain (Super Knob + 3 Metaknobs).
+      - <strong>Dedicated Chain Controls</strong>: Step through chains (<code>◀</code> / <code>▶</code>), active chain name with dirty dot (<code>•</code>) — click it to open the pair view on the whole-chain list — <code>[Save]</code> button, and kebab menu (<code>[⋮]</code>) for Save As, Revert, Copy/Paste, and Resync.
+  - <strong>Knob Columns</strong>: The 4 macro knobs are uniformly spaced across the center area between the control wings, sharing the exact same column pitch and horizontal alignment whether assigned to <code>SRC</code> or <code>FX</code>. When assigned to <code>FX</code>, each of knobs 2–4 gets two stacked buttons on its left: a link button (<code>Icons.LINK</code>/<code>Icons.UNLINK</code>) that links/unlinks its Metaknob to the Super Knob, and a power button that bypasses just that effect. Interactive FX slot cells showing the effect name appear beneath knobs 2–4; hover a cell to show its <code>◀</code> / <code>▶</code> shortlist arrows.
+  - <strong>Macro Knob Ergonomics &amp; Display Modes</strong>:
+    - <strong>Dual-Axis Drag &amp; Shift Fine-Tuning</strong>: Drag vertically or horizontally (up/right increases, down/left decreases). Holding <strong>Shift</strong> engages 6x fine-tuning resolution (1200px full sweep) for high-precision decimal tuning without cursor jumps on Shift toggle. Cursor locking (<code>lockCursorOnKnobDrag</code>) prevents the mouse from leaving the window on large sweeps.
+    - <strong>Bipolar &amp; Endless Modes</strong>: Knobs adapt their visual geometry to the underlying parameter's <code>MeterType</code>:
+      - <em>Monopolar</em> (standard 7:30 to 4:30 sweep).
+      - <em>Bipolar</em> (12 o'clock center detent, sweeping left for negative or right for positive; middle-click resets to 0.5 center). Focused FX and Deck parameters with negative ranges (e.g. shifts, pans, zooms) render in bipolar mode.
+      - <em>Endless</em> (continuous 360° circle where 0 and 1 meet at 6 o'clock straight down, sweeping continuous angles for rotation and hue).
+    - <strong>Double-Click Direct Numeric Entry</strong>: Double-click any macro knob face to open an inline text entry box. Type exact numerical values (e.g. <code>0.25</code>, <code>-1.5</code>, <code>42</code>) and press <code>Enter</code> to commit, or <code>Escape</code> to cancel. The typed value is what the parameter receives, so the knob's curve, invert and link mode are taken into account (the readout shows the same value). For stepped or half-range bindings the knob snaps to the nearest position that gets closest.
+    - <strong>In-Face Readouts</strong>: Hovering or dragging over a targetless or group-mode knob displays a subtle real-time value readout in the center of the knob face.
+  - <strong>Right Wing</strong>:
+    - <strong>Randomize Die Button (<code>🎲</code>)</strong>: Instantly randomizes that deck's modulators &amp; base values across both Visual Source and Insert FX with undo support (when randomization is enabled). Positioned on Row 1 directly above the BYPASS button.
+    - <strong><code>[ BYPASS / FX ON ]</code></strong>: Dedicated insert FX kill switch, positioned on Row 2 aligned with the FX row.
+  - <strong>Drag-and-Drop</strong>: Dropping a deck preset (<code>.patch</code>, <code>.lsd</code>, <code>.json</code>) loads the visual preset; dropping a <code>.lsdfxchain</code> loads that FX chain onto the deck.
+- <strong>Whole-Rig Randomize (<code>[ ALL 🎲 ]</code>)</strong>: Positioned at the top right of the performance matrix tab strip, pushing undo state and invoking <code>mixer.randomizeAll()</code> across all decks simultaneously.
+- <strong>Master FX row</strong>: Left wing: the <code>FX</code>-captioned <code>M</code> badge, the chain name box and the chain controls line, as on a deck FX row; right wing: Master FX <code>[ BYPASS / FX ON ]</code>. Dropping a <code>.lsdfxchain</code> onto the <code>MASTER</code> badge loads it into Master FX.
+- <strong>Level faders on the deck tiles</strong> (the thin strip beside each preview badge) share their value with the Master MIX knobs: move the fader and the knob follows, turn the knob and the fader follows, last mover wins. A fader drag also mutes non-MIDI modulation on it and makes a Soft Takeover MIDI/OSC mapping on it pick up again instead of jumping. The handle line marks the fader's own value; the filled bar is the live level after modulation.
+- <strong>Master MIX row</strong>: The <code>M</code> badge carries a <code>MIX</code> caption. Line 1 is the <code>Deck Levels &amp; Master</code> box (click to inspect in Edit, right-click for level resets) and a <code>100%</code> reset button; the knobs are the Deck A / B / BG and Master levels. The crossfader is not here: it lives on the Transitions row (knob 1) and the Mixer panel.
+- <strong>Transitions (Row 2 in MASTER)</strong>: Left wing features a Transition Picker button displaying the active transition with modified indicator (<code>*</code>) — click it to open the pair view on the transition list — and Transition Queue stepping controls (<code>&lt;</code>, <code>N/Total</code>, <code>&gt;</code>); right wing hosts the transition randomize die button (<code>🎲</code>) on Row 1 (matching the deck rows). Transition presets (<code>.lsdtrans</code>) and shaders (<code>.fs</code>/<code>.isf</code>) can be dropped directly onto the picker button.
+- <strong>Clock &amp; Global (Row 4 in MASTER)</strong>: The two lines beside the <code>CLOCK</code> badge have the tempo controls from Preferences &gt; Tempo &amp; Sync, placed here for use mid-set:
+  - <strong><code>[ MAN ]</code> / <code>[ AUDIO ]</code></strong>: clock source (manual tempo or the audio beat tracker).
+  - <strong><code>[ LINK n ]</code></strong>: shown while Ableton Link is on, with the peer count. Click it to open Tempo &amp; Sync preferences.
+  - <strong>BPM readout</strong>: click it to open Tempo &amp; Sync preferences.
+  - <strong>4 beat dots</strong>: bar phase; the downbeat is cyan.
+  - <strong><code>[ TAP ]</code></strong>: tap tempo. Right-click for MIDI Learn. In Audio mode it nudges the detected tempo and phase.
+  - <strong><code>[ RESYNC ]</code></strong>: snaps the beat phase to the downbeat.
+  - <strong>Twister clock knob</strong>: knob 13 on a Midi Fighter Twister pulses its LED on the beat (orange on the downbeat), shows the tempo on its ring and taps tempo when pushed. See <a href="../performance_controls/#twister-lights">Rings and LEDs</a>.
+  - <strong><code>[ /2 ]</code> <code>[ x2 ]</code></strong>: halve or double the tempo.
+  - <strong><code>[ - ]</code> <code>[ + ]</code></strong>: nudge the tempo by 0.5 BPM.</p>
+<p>The BPM is deliberately not a knob, since one bump would shift the whole show. The row has no macro knobs; a configurable row of free "global" knobs that can target any parameter is planned for a later release.</p>
+<h3 id="midi-learn-in-the-performance-matrix">MIDI Learn in the Performance Matrix</h3>
+<p>Right-click any knob to arm it for MIDI Learn — a cyan pulsing ring appears around the knob,
+identical to the Learn ring on Parameter rows. Send a CC message from any connected controller to map
+it immediately. Right-click again while armed to cancel.</p>
+<p>Interactive header controls in the Performance Matrix also support right-click MIDI &amp; OSC Learn:
+- <strong>Deck A and Deck B Badges</strong>: Right-click to Learn MIDI (<code>Global/snapDeckA</code>, <code>Global/snapDeckB</code>) or Learn OSC (<code>Mixer/snapDeckA</code>, <code>Mixer/snapDeckB</code>) to instantly snap the crossfader left or right.
+- <strong>Auto-Fade Button <code>[ AUTO ]</code> &amp; Fade Speed Badge</strong>: Right-click to Learn MIDI (<code>Global/autoFade</code>, <code>Mixer/xfadeSpeed</code>) or Learn OSC (<code>Mixer/xfadeSpeed</code>).
+- <strong>PlayQueue &amp; BG Queue <code>&lt;</code> and <code>&gt;</code></strong>: Right-click to Learn MIDI (<code>Global/queuePrev</code>, <code>Global/queueNext</code>, <code>Global/bgQueuePrev</code>, <code>Global/bgQueueNext</code>).
+- <strong>Transition Queue <code>&lt;</code> and <code>&gt;</code></strong>: Right-click to Learn MIDI (<code>Global/transQueuePrev</code>, <code>Global/transQueueNext</code>) or Learn OSC (<code>Mixer/transQueuePrev</code>, <code>Mixer/transQueueNext</code>).
+Controls actively armed for MIDI learn display a pulsing cyan highlight border. Active MIDI assignments are shown in tooltips.</p>
+<h3 id="interacting-with-knobs">Interacting with knobs</h3>
+<ul>
+<li><strong>Drag</strong> (up/down or left/right) to adjust the knob value. Dragging up or right increases the value; dragging down or left decreases it — the standard DAW/synth convention. Horizontal dragging makes it easy to adjust knobs located near the top edge of the screen or display boundary.</li>
+<li><strong>Mouse wheel</strong> to fine-adjust (Shift for finer, Ctrl+Shift for coarser).</li>
+<li><strong>Hover/drag highlight</strong>: the knob body tints toward the row's accent color on hover, and more
+  strongly while you're dragging it, so the knob under your pointer is easy to spot.</li>
+<li><strong>Right-click</strong> arms hardware MIDI Learn for that knob — the knob pulses cyan while armed, and
+  the next CC message from your controller is mapped to it. Right-click again to cancel.</li>
+</ul>
+<p>Knobs in the 4×4 matrix, the target strip and the hardware controller all read from and
+write to the <strong>same underlying <code>MacroEngine</code> banks</strong> — changes in one are immediately visible in the others.</p>
+<h3 id="the-modular-rack-edit">The Modular Rack: Edit</h3>
+<p>Every deep-editable row group in the 4×4 matrix (Deck A/B/BG/PV, the FX row, Master, Transitions)
+has a small <strong><code>[EDIT]</code> button</strong> in its top-right corner (the Clock row has no knobs and no button). Clicking it toggles that row
+between two disclosure tiers, without leaving the Perform view:</p>
+<ol>
+<li><strong>Faceplate</strong> (collapsed, the default) — just the 4 knobs, exactly like the plain 4×4 matrix
+   above. The <code>[EDIT]</code> button has a dark fill and off-white text. Clicking a knob selects it (electric cyan focus card, glowing rim, cyan label), shows
+   its current value (<code>Val: 0.00</code>) beneath the label, and reveals a compact <code>[Add Target]</code> / <code>[Cancel]</code>
+   button for adding a target on the spot.</li>
+<li><strong>Edit</strong> — click <code>[EDIT]</code> to open the comprehensive Edit bay below the top macro row.
+   The <code>[EDIT]</code> button turns green with black text while active.
+   The bay is arranged into a 3-column layout:</li>
+<li><strong>5-Channel Side Rail</strong> on the left: color-coded buttons (<code>[MIX]</code>, <code>[A]</code>, <code>[B]</code>, <code>[BG]</code>, <code>[PV]</code>)
+     allowing instant 1-click navigation between all major sections of the app without closing Edit.
+     Selecting a side tab switches both the parameter editor below and the top macro row above.</li>
+<li><strong>Parameter Grid</strong> in the center: displays the full <strong>VAL / MIDI / LFO / SEQ / AUD</strong> parameter grid
+     with section subtabs across the top. All 5 sections feature a uniform 3-tab layout with <strong><code>FX</code> in the center</strong>:<ul>
+<li><strong><code>MIX</code></strong>: <code>[ CTRL ]  [ FX ]  [ TRANS ]</code> (Master controls, the Master FX chain's 3 ISF slots, and Transitions)</li>
+<li><strong><code>A</code></strong>, <strong><code>B</code></strong>, <strong><code>BG</code></strong>, <strong><code>PV</code></strong>: <code>[ SRC ]  [ FX ]</code> (visual generator with Gain/Zoom/Rotate Z, and the insert FX chain)
+ Switching between <code>SRC</code>/<code>CTRL</code> and <code>FX</code> in Edit shows the matching row (source or FX) above the editor, so its on-screen macro knobs follow: visual source controls or insert/master FX macros (<code>Super Knob + 3 Metaknobs</code>).</li>
+</ul>
+</li>
+<li><strong>Modulation Editor</strong> on the right: side-by-side per-parameter CV detail editor (LFO period/phase/morph/hold/slew, MIDI, SEQ, AUD, curves, and modulators) of whichever cell is selected.</li>
+</ol>
+<p>If the deck is <strong>empty</strong>, Edit shows the empty-deck card instead: <strong>Add Source</strong> (opens
+   the pair view's Browse, see below, including external video), <strong>Load Preset</strong>, and <strong>Open Library Panel</strong>.</p>
+<h3 id="browse-picking-a-generator-fx-or-transition-in-the-pair-view">Browse: picking a generator, FX or transition in the pair view</h3>
+<p>Clicking a generator/preset badge, an FX chain's name, an FX slot's name, or the active transition's
+name (or a preview monitor) opens the <strong>pair view</strong>: that deck's SRC and FX rows (Master's MIX and
+FX rows, or Transitions and Clock) stay on screen, every other row hides, and the Browse list fills
+the space below. Nothing covers the mixer or the deck/master monitors; you keep watching the show
+while you pick. <strong>Back</strong> or <strong>Esc</strong> returns to Perform; <strong>Parameters</strong> opens the full editor for the half you last touched.</p>
+<ul>
+<li><strong>Instant apply, list stays open</strong>: clicking an item in the list applies it immediately and the
+  list doesn't close, so you can try several generators, effects, or chains back-to-back. <code>Ctrl+Z</code>
+  undoes any one pick. Changing a deck's source while a named/dirty preset is loaded still prompts
+  the usual confirmation before discarding it.</li>
+<li><strong>The half you touched picks the list</strong>: click a row's source badge, chain name, an effect cell or
+  the transition name, or turn a knob on that row, and Browse applies to that target (a deck's source,
+  a chain, one FX slot, the transition). Master's MIX row and the Clock row have nothing to browse.</li>
+<li><strong>Gen Browse lists generators and presets together</strong>: stock generator types and saved presets
+  always appear in the same list — a preset is just a generator with its parameter values saved
+  under a name. Saved-preset rows get a "⋮" menu for <strong>Rename / Edit Tags</strong>, <strong>Duplicate</strong>, and
+  <strong>Delete</strong>, and a floppy-disk <strong>Save / Save As</strong> button sits above the list — the same save flow
+  as the Mixer's Save button and <code>Ctrl+Shift+S</code> — so managing presets no longer requires the Library.</li>
+<li><strong>FX Browse</strong> applies to either a whole chain (the saved <code>.lsdfxchain</code> files) or one slot's effect
+  (stock filters, ★ favorites, saved single-FX presets), each opening on its usual folder.</li>
+<li><strong>The same browser as the Library</strong>: it has the Library's own <strong>Sources / FX / Transitions / Macros</strong> tabs,
+  folder tree, list and queue columns. The header line shows a chip such as "● Deck A · FX 1" (the
+  slot, chain or transition you are editing): on that tab a click applies, the row that is
+  applied shows a ●, and the list shows only what the target can take. Pick another tab and the chip
+  greys out ("paused"): it is the plain Library again (double-click loads to the inactive deck).
+  Each target remembers the folder you last used there. Search with <code>Ctrl+F</code> or <code>/</code>. <strong>Clear Slot</strong> /
+  <strong>Clear Chain</strong> empties the target.
+  The Sources tree also has an <strong>External video</strong> folder listing the live video streams running right now.</li>
+</ul>
+<p><strong>Keyboard shortcuts in Edit</strong>: <code>Ctrl+C</code> / <code>Ctrl+V</code> (copy/paste a cell or row), <code>Delete</code> /
+<code>Backspace</code> (clear the cell's modulators, or reset the parameter), and <code>Ctrl+S</code> / <code>Shift+Ctrl+S</code>
+(save / save-as the deck being edited) act on the open Edit. Copy/paste/clear only fire while the
+Perform view has focus, so <code>Delete</code> in the Library doesn't also reset a parameter. <code>Ctrl+Z</code>
+(undo) works anywhere in the Perform view, with or without Edit open.</p>
+<p><strong>While in Edit</strong>, the top macro row renders the macro controls corresponding to the active channel and subtab,
+reserving the freed vertical space for the side rail and parameter bay. The row keeps the same knob size and control
+positions it has in the four-row view; it only grows by one line under each knob for the value readout (and the
+<strong>Add Target</strong> button under the selected knob). There's no separate title above the parameters, since the row says which
+deck and section you're editing.
+Collapsing back to Faceplate brings the rest of the 4×4 grid, and the Library, back. While
+Edit is open the Library is hidden completely (the <strong>Edit</strong> view — see
+<a href="../your_workspace/">Your Workspace</a>).</p>
+<p>Click <strong><code>[EDIT]</code></strong> again (or press Esc) to fold back to the Faceplate.</p>
+<p><strong>Opening Edit from Confidence Monitors</strong>:
+In addition to the row's <code>[EDIT]</code> button, clicking any preview monitor in the Mixer column (Deck A, Deck B, Deck BG, Deck PV, or Main Output Master) will immediately open the pair view on that deck (or Master). Use its <strong>Parameters</strong> button, or the row's <code>[EDIT]</code>, for the full editor.</p>
+<p><strong>One Edit at a time</strong>: opening a row's Edit collapses any other open one. To move
+between decks, use the Edit side rail (<strong>MIX / A / B / BG / PV</strong>) rather than opening
+rows side by side.</p>
+<p><strong>Esc</strong> collapses every expanded row back to the Faceplate — unless a Learn is currently
+armed (Add Target, MIDI Learn or OSC Learn), in which case Esc cancels every armed Learn at once instead (a second Esc then collapses the rack). A
+row whose own knob has an armed Add Target is also exempt from the auto-collapse, so it can't
+be accidentally folded away mid-way; a <strong>"Adding target: ‹name› — Esc to cancel"</strong> indicator stays
+visible in the toolbar the whole time Add Target is armed, even if you've expanded a different row.
+<strong>View → Close Edit</strong> does the same as the row's <code>[EDIT]</code> button.</p>
+<p>Expanding or collapsing a row is purely a display change — it never re-syncs the Super Knob/Metaknob mapping.</p>
+<h3 id="setting-up-knob-labels-and-targets">Setting up knob labels and targets</h3>
+<p>Targets are edited in the <strong>Edit</strong> view, in the target strip described above (rename,
+target chips, Min/Max/Curve/Invert/Link/Enabled) and in the Modulation editor of the open Edit.
+Clicking a target's name opens that deck's (or the Mixer's) Edit on the right sub-tab
+with the parameter selected.</p>
+<ul>
+<li><strong>From the 4×4 matrix</strong>: click a knob to select it, then click <strong><code>Add Target</code></strong> (on the target strip,
+  or the inline button in the Perform view). This arms Add Target and opens that row's
+  <strong>Edit</strong> <em>Params</em> — click a target parameter and set Min/Max/Curve as desired. The target
+  must be in the knob's own deck and section (see <em>Adding targets to a knob</em> above).</li>
+</ul>
+<p>The change is live immediately everywhere, since all views share the same <code>MacroEngine</code> banks.</p>
+<hr />
+<h2 id="macro-banks">Macro Banks</h2>
+<p>There are 12 always-resident canonical macro banks (4 knobs each, conforming to the 4-column performance grid):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Scope</th>
+<th style="text-align: left;">Bank</th>
+<th style="text-align: left;">Knobs</th>
+<th style="text-align: left;">Canonical ID</th>
+<th style="text-align: left;">Smart Defaults</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Deck Generators</strong></td>
+<td style="text-align: left;">Deck A</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckA</code></td>
+<td style="text-align: left;">Blank</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Deck B</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckB</code></td>
+<td style="text-align: left;">Blank</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Deck BG</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckBG</code></td>
+<td style="text-align: left;">Blank</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Deck PV</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckPV</code></td>
+<td style="text-align: left;">Blank</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Per-Deck Insert FX</strong></td>
+<td style="text-align: left;">Deck A FX</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckA_fx</code></td>
+<td style="text-align: left;">Super Knob + 3 Metaknobs</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Deck B FX</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckB_fx</code></td>
+<td style="text-align: left;">Super Knob + 3 Metaknobs</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Deck BG FX</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckBG_fx</code></td>
+<td style="text-align: left;">Super Knob + 3 Metaknobs</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Deck PV FX</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>deckPV_fx</code></td>
+<td style="text-align: left;">Super Knob + 3 Metaknobs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mixer &amp; Transitions</strong></td>
+<td style="text-align: left;">Transitions</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>trans</code></td>
+<td style="text-align: left;">Crossfade, Type, Speed, Next</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Master</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>master</code></td>
+<td style="text-align: left;">Level A, Level B, Master Level, Crossfader</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Master FX</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>masterFx</code></td>
+<td style="text-align: left;">Super Knob + 3 Metaknobs</td>
+</tr>
+</tbody>
+</table>
+<p>Deck generator banks initialize from their generator's default preset. Master, Transitions, and FX banks initialize with pre-mapped smart defaults. The five FX banks target their chain's <code>Deck A/FX/...</code> … <code>Master/FX/...</code> parameters and re-sync automatically whenever that chain's contents change (loading a chain, swapping a slot, restoring a session) — FX knobs are fixed (Super + 3 Metaknobs, or Metaknob + 3 parameters when focused) and can't be retargeted per knob; change what a Metaknob controls with its <strong>Retarget</strong> menu. Sessions saved with hand-retargeted FX knobs lose those targets on load. All 12 canonical banks are preserved in <code>last_session.json</code> and session files.</p>
+<p>Banks are saved in <code>last_session.json</code> and bundled into preset files automatically.</p>
+<hr />
+<h2 id="generator-fx-defaults-save-as-default">Generator &amp; FX Defaults ("Save as Default")</h2>
+<p>Similar to Ableton's default presets, you can configure your favorite parameter starting points and 4-knob macro layouts for any visual generator or ISF FX filter, and save them as that device's permanent default.</p>
+<h3 id="visual-generator-defaults">Visual Generator Defaults</h3>
+<p>When swapping visual sources on any deck (via the generator badge or launchpad), the incoming generator's default configuration is resolved across three tiers:
+1. <strong>User Default</strong>: Custom parameter baselines, <code>globalAlpha</code>, and 4-knob macro layout saved in <code>library/generator_defaults/&lt;sourceId&gt;.json</code>.
+2. <strong>Curated Stock Default</strong>: Hand-curated 4-knob macro targets for bundled generators (<code>mandala</code>, <code>dynamic_spiral</code>, <code>icosa_h3</code>, <code>domain_warp_fluid</code>, <code>gyroid_hyperspace</code>, <code>celestial_engine</code>, <code>hyper_slice</code>, <code>chladni_cymatics</code>, <code>mandelbox</code>, <code>kifs</code>, <code>mandelbulb</code>, <code>pseudo_kleinian</code>, <code>apollonian</code>, <code>escape_time</code>, <code>nebula_volume</code>, <code>reaction_diffusion</code>, <code>fluid_ink</code>, <code>lenia</code>, <code>quasicrystal</code>, <code>thin_film</code>, <code>tunnel_scenes</code>, <code>video_feedback</code>, <code>hyperbolic_tiling</code>, <code>cyclic_ca</code>, <code>metaballs</code>, <code>wave_ripples</code>, <code>harmonograph</code>, <code>aurora_ribbons</code>, <code>isometric_voxels</code>, <code>halftone_matrix</code>, <code>kali_set</code>, <code>girih_stars</code>, <code>glitch_blocks</code>, <code>voronoi_cells</code>).
+3. <strong>Automated Heuristic Fallback</strong>: For third-party ISF shaders, continuous floats (e.g. speed, rate, zoom, scale, morph, depth, detail) are prioritized, discrete stepped selectors are filtered out, and speed/frequency parameters are shaped with exponential response curves.</p>
+<p><strong>Bank Replacement Behavior</strong>: Applying a default replaces the resident 4-knob deck bank wholesale, identical to preset loading. Stored <code>Deck/*</code> targets are dynamically remapped to the target deck slot (e.g., <code>Deck A</code>, <code>Deck B</code>). Knobs are positioned via inverse-curve mapping so parameter values do not jump on load. Hardware MIDI mappings are stripped on save to avoid duplicate hardware CC collisions across decks.</p>
+<p><strong>How to Save or Reset Generator Defaults</strong>:
+- <strong>Right-click the generator badge</strong> on any deck row in the Perform view to open the context menu:
+  - <code>Save as Default for &lt;Generator&gt;</code>: Saves current parameters, alpha, and 4-knob macro layout as the generator default.
+  - <code>Apply Default Now</code>: Reapplies the default layout and parameters to the current deck.
+  - <code>Reset to Factory Default</code>: Deletes the user default file and restores curated/heuristic factory defaults.
+- Alternatively, open the <strong>Save menu</strong> in Edit's monitor toolbar and select <code>Save as Default for &lt;Generator&gt;</code>.</p>
+<h3 id="explicit-isf-fx-defaults">Explicit ISF FX Defaults</h3>
+<p>In the FX Chain Macro Strip (and Edit FX views), slot Metaknobs and parameters can be customized and explicitly saved:
+- Tweaking parameters or re-targeting Metaknobs during performance is purely temporary and does <strong>not</strong> silently overwrite defaults on disk.
+- <strong>Right-click any Metaknob</strong> in the FX strip:
+  - Select any parameter from the list (or <code>Target Dry/Wet (safety net)</code>) to retarget the Metaknob.
+  - Choose <code>Save as Default for &lt;Filter&gt;</code> to persist the current Metaknob targets and parameter baseline into <code>library/isf_overrides/&lt;contentHash&gt;.json</code>.
+  - When a user default is present, choose <code>Reset to Factory Default</code> to revert to stock curated/heuristic targets.</p>
+<hr />
+<h2 id="shortcuts">Shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Esc</code></td>
+<td>Cancel every armed Learn (Add Target, MIDI, OSC), or (if none is armed) collapse every expanded Rack row back to Faceplate</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

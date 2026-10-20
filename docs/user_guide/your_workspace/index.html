@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Liquid LSD real-time graphics and audio workstation.">
+      
+      
+      
+        <link rel="canonical" href="https://liquid-lsd.greenjon.com/docs/user_guide/your_workspace/">
+      
+      
+        <link rel="prev" href="../../getting_started/">
+      
+      
+        <link rel="next" href="../visual_sources/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Your Workspace - Liquid LSD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/docs-clips.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#your-workspace" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liquid LSD" class="md-header__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liquid LSD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Your Workspace
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liquid LSD" class="md-nav__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Liquid LSD
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your Workspace
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-library-what-it-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Library &amp; What It Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-decks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Decks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-performance-panel-left-middle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Performance Panel (Left &amp; Middle)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Themes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mixer-right-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Mixer (Right Panel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual_sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presets_and_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets & Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output_and_recording/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output & Recording
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros_and_rack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Controls & the Perform View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_broadcast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Broadcast
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Usage & Startup Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-library-what-it-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Library &amp; What It Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-decks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Decks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-performance-panel-left-middle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Performance Panel (Left &amp; Middle)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Themes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mixer-right-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Mixer (Right Panel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="your-workspace">Your Workspace</h1>
+<p>Liquid LSD has a lot going on, but it's organized around a handful of core ideas. Once those click, everything else makes sense.</p>
+<div class="tour-clips">
+<p class="tour-clips-head">Watch: <strong>Overview</strong> &mdash; <a href="../../../tour/">open the guided tour</a></p>
+<div class="tour-clips-grid">
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/pipeline.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/pipeline.mp4"></video><figcaption><a href="../../../tour/#overview/pipeline">How it fits together</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/window.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/window.mp4"></video><figcaption><a href="../../../tour/#overview/window">The window</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/decks.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/decks.mp4"></video><figcaption><a href="../../../tour/#overview/decks">Decks and sources</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/perform.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/perform.mp4"></video><figcaption><a href="../../../tour/#overview/perform">Knobs and crossfaders</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/fx.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/fx.mp4"></video><figcaption><a href="../../../tour/#overview/fx">FX chains</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/edit.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/edit.mp4"></video><figcaption><a href="../../../tour/#overview/edit">Edit view</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/overview/library.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/overview/library.mp4"></video><figcaption><a href="../../../tour/#overview/library">Library and themes</a></figcaption></figure>
+</div>
+</div>
+
+<hr />
+<h2 id="the-library-what-it-controls">The Library &amp; What It Controls</h2>
+<p>The Library panel spans the left and middle columns of the app. That column has four views:</p>
+<ul>
+<li><strong>Perform</strong> — The Performance rows sit above the Library, which fills the rest of the window. This is the everyday view for playing a set.</li>
+<li><strong>Edit</strong> — Open a row's <strong>Edit</strong> and the Library goes away completely. That row and its parameters fill the column, so you have room to fine-tune presets and FX. To swap a deck's source or FX, click its source badge, chain name or slot (this opens the pair view, described in Presets &amp; Library) or use the controls on the row itself. Press <strong>Esc</strong> or click the row's <strong>Collapse</strong> button to get back to Perform.</li>
+<li><strong>Pair view</strong> — Click a deck's source badge, an FX chain name or slot, a preview monitor or the transition name and the Library goes away too: that deck's SRC and FX rows stay on screen with the browser below. Press <strong>Esc</strong> or <strong>Back</strong> to return to Perform. See Presets &amp; Library.</li>
+<li><strong>Library</strong> — The Library fills the whole column and the Performance rows are hidden. Use this when you're building or editing playlists and queues.</li>
+</ul>
+<p>Press <strong><code>Space</code></strong> (when the cursor isn't in a text field) or the button at the right of the Library's title bar to switch between Perform and Library. From Edit, <code>Space</code>, <code>Ctrl+F</code> or <code>/</code> closes Edit (cancelling any armed Add Target or Learn) and brings the Library back.</p>
+<p>The Performance rows have a fixed height, so the Library gets whatever window height they leave: a taller window means a taller Library.</p>
+<p>The Library contains your <strong>Presets</strong>, <strong>Playlists</strong>, and <strong>A/B Queues</strong> — not shaders (those are managed separately under <strong>Preferences → Shader Locations</strong>).</p>
+<hr />
+<h2 id="the-four-decks">The Four Decks</h2>
+<p>Liquid LSD uses four independent rendering decks — think of them like channels on a mixer, each running its own visual independently:</p>
+<ul>
+<li>
+<p><strong>Deck A &amp; Deck B</strong> — Your two main stage decks. These go through the crossfader and blend modes, so you can mix between them in real time.</p>
+</li>
+<li>
+<p><strong>Deck BG (Background)</strong> — Renders behind Decks A and B. Good for subtle textures or dark ambient fields that sit underneath your main visuals.</p>
+</li>
+<li>
+<p><strong>Deck PV (Preview)</strong> — A fully independent audition deck that <em>never</em> outputs to the master. Use it to quietly load and preview a preset on your monitor before pushing it live. It runs the complete visual and modulation chain, so what you see is exactly what you'll get.</p>
+</li>
+</ul>
+<p>Each deck is completely independent — its own visual source, its own 3-slot effects chain, and its own modulation.</p>
+<hr />
+<h2 id="signal-flow">Signal Flow</h2>
+<p>Here's how audio becomes visuals:</p>
+<ol>
+<li><strong>Audio in</strong> → The DSP engine analyses your track in real time, splitting it into frequency bands and tracking the beat.</li>
+<li><strong>CV modulation</strong> → Those audio signals become control voltages that can drive any visual parameter.</li>
+<li><strong>Visual generators</strong> → Each deck runs a visual source (Mandala, a shader, external video, etc.) using those CV signals to shape what renders.</li>
+<li><strong>FX chain</strong> → Each deck runs its source through a chain of three effect slots, left to right. Feedback (the trails that layer the image over time) is one of the effects you can put in a slot.</li>
+<li><strong>Mixer</strong> → Deck A and B blend together through the crossfader and the current transition. Deck BG fills in behind them, wherever their mix is transparent.</li>
+<li><strong>Master FX</strong> → The mixed image runs through a final chain of three effect slots.</li>
+<li><strong>Output</strong> → The master output goes to your screen, projector, or other apps.</li>
+</ol>
+<hr />
+<h2 id="the-performance-panel-left-middle">The Performance Panel (Left &amp; Middle)</h2>
+<p>The top of the left and middle columns is the <strong>Perform view</strong>: a 4×4 grid of macro knobs,
+one row per deck or section, with tabs across the top (A/B, BG/PV and MIXER). Click a deck row's generator badge to change its visual source.</p>
+<p>For full control, open a row's <strong>Edit</strong> (the chevron on the row, or click a deck monitor in
+the Mixer and press <strong>Parameters</strong>). Edit has three columns:</p>
+<ul>
+<li><strong>Side rail</strong> — <code>[MIX] [A] [B] [BG] [PV]</code> to jump between channels.</li>
+<li><strong>Parameter grid</strong> — every row is a visual parameter (like "Lobes", "Zoom", or "Hue") and each
+  column is a modulation source (manual value, MIDI, LFO, sequencer, audio). Click a cell to
+  configure that connection. See <a href="../modulation/">Modulation</a> for the full guide.</li>
+<li><strong>Modulation</strong> — the details of the selected cell: waveform controls for LFOs, band selectors
+  for audio, step patterns for the sequencer, etc., with a live oscilloscope of the signal going
+  to the parameter.</li>
+</ul>
+<p>See <a href="../macros_and_rack/">Macro Controls &amp; the Perform View</a> for the knobs and Edit in detail.</p>
+<hr />
+<h2 id="themes">Themes</h2>
+<p>Liquid LSD has two color themes: <strong>Grey Acid</strong> (dark, the default) and <strong>Orange Sunshine</strong> (light). Switch between them in <strong>Preferences → General → Theme</strong> (<code>Ctrl+P</code>); the choice is remembered between sessions.</p>
+<hr />
+<h2 id="the-mixer-right-panel">The Mixer (Right Panel)</h2>
+<p>The right panel shows:
+- Live previews of each deck
+- The crossfader between Deck A and Deck B
+- Level controls for each deck
+- Master output monitor
+- Blend mode selector</p>
+<p>Clicking a deck monitor opens that deck's pair view (its SRC and FX rows plus the browser); clicking the master monitor does the same for Master. Press <strong>Parameters</strong> there for the full Edit.</p>
+<p>Macro knobs are edited in the Performance rows' Edit view, where each knob gets a target strip for choosing what it controls. See <a href="../macros_and_rack/">Macro Controls &amp; the Perform View</a>.</p>
+<hr />
+<h2 id="the-library">The Library</h2>
+<p>The Library spans the lower portion of the left and middle columns and holds your Presets, Playlists, and A/B Queues. See <a href="../presets_and_library/">Presets &amp; Library</a> for the full guide.</p>
+<hr />
+<h2 id="global-shortcuts">Global Shortcuts</h2>
+<p>A few keyboard shortcuts work anywhere in the app:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Space</code></td>
+<td>Switch the Library between Half (Perform) and Full; from Edit, close it and bring the Library back (when cursor isn't in a text field)</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>Output View — hides the UI, pure video output</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Exit Output View</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td>Toggle fullscreen for the main window (UI stays visible)</td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td>Toggle background video rendering behind the UI</td>
+</tr>
+<tr>
+<td><code>Ctrl+Z</code></td>
+<td>Undo the last parameter/modulator change (30-step history)</td>
+</tr>
+<tr>
+<td><code>Ctrl+S</code></td>
+<td>Save the preset of the deck open in Edit</td>
+</tr>
+<tr>
+<td><code>Ctrl+R</code></td>
+<td>Start / stop recording</td>
+</tr>
+<tr>
+<td><code>Ctrl+P</code></td>
+<td>Open Preferences</td>
+</tr>
+<tr>
+<td><code>Ctrl+F</code> or <code>/</code></td>
+<td>Jump to the search box of the open Library tab</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>Tap tempo</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+O</code></td>
+<td>Toggle OSC map mode (click any OSC-learnable control to map it)</td>
+</tr>
+<tr>
+<td><code>Ctrl+-</code> / <code>Ctrl+=</code></td>
+<td>Make the Library preset names smaller / larger</td>
+</tr>
+<tr>
+<td><code>Caps Lock</code></td>
+<td>Toggle the touch console controller</td>
+</tr>
+<tr>
+<td><code>Q</code> / <code>Shift+Q</code></td>
+<td>Add the selected Library item to the A/B queue / BG queue</td>
+</tr>
+<tr>
+<td><code>Up</code> / <code>Down</code></td>
+<td>Move the selection in the Library lists and queues</td>
+</tr>
+<tr>
+<td><code>Delete</code></td>
+<td>Delete the selected user preset, or remove the selected queue item</td>
+</tr>
+<tr>
+<td><code>Ctrl+C</code> / <code>Ctrl+V</code></td>
+<td>Copy / paste a modulation cell or row in Edit</td>
+</tr>
+</tbody>
+</table>
+<p>Every shortcut except <code>Caps Lock</code> and <code>Space</code> can be rebound in <strong>Preferences → Shortcuts</strong>. Shortcuts are ignored while you are typing in a text field.</p>
+<h2 id="glossary">Glossary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source</strong></td>
+<td>A stock ISF shader or an external video input. External video can't be saved as a preset.</td>
+</tr>
+<tr>
+<td><strong>Preset</strong></td>
+<td>A Source you configured, named and saved.</td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td>The parameter editor for one row: parameter grid, modulators and Modulation.</td>
+</tr>
+<tr>
+<td><strong>Bank</strong></td>
+<td>A saved set of macro knob targets (Library → Macros → Banks). Perform pages (Library → Macros → Pages) are saved row layouts.</td>
+</tr>
+<tr>
+<td><strong>A/B Queue / BG Queue</strong></td>
+<td>The auto-VJ queues feeding Decks A/B and the Background deck. FX and Transitions have their own queues.</td>
+</tr>
+<tr>
+<td><strong>Level</strong></td>
+<td>A deck's or the Master's output opacity.</td>
+</tr>
+<tr>
+<td><strong>XF</strong></td>
+<td>Crossfader row: the crossfade and transition shader.</td>
+</tr>
+<tr>
+<td><strong>W/D</strong></td>
+<td>Per-deck FX chain wet/dry.</td>
+</tr>
+<tr>
+<td><strong>Mapping</strong></td>
+<td>A hardware (MIDI/OSC) control tied to a parameter. A macro knob's <strong>targets</strong> are the parameters it drives (no hardware involved).</td>
+</tr>
+<tr>
+<td><strong>Bypass / Mute</strong></td>
+<td>Bypass turns off an FX chain or shader; Mute turns off a modulator.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

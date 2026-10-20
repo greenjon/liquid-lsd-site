@@ -1,0 +1,236 @@
+WEBVTT
+
+00:00:01.400 --> 00:00:08.300
+Liquid LSD plays up to three video sources at once, each on its own deck: A, B and BG.
+
+00:00:08.300 --> 00:00:13.600
+Every deck runs its video through a chain of three effects.
+
+00:00:13.600 --> 00:00:20.100
+A transition mixes Deck A and Deck B. The crossfader moves between them.
+
+00:00:20.100 --> 00:00:25.600
+Deck BG fills in behind them, wherever their mix is transparent.
+
+00:00:25.600 --> 00:00:31.900
+The mix then runs through three master effects, and out to your audience.
+
+00:00:31.900 --> 00:00:41.100
+Three decks reach the audience. A fourth, Deck PV, is your private preview, with its own effects.
+
+00:00:41.100 --> 00:00:49.100
+Every deck works the same way. Most of the time a deck plays a generator, a shader that draws video live.
+
+00:00:49.100 --> 00:00:55.900
+Dozens come with the app, and you can add your own: they use ISF, an open shader format.
+
+00:00:55.900 --> 00:01:03.100
+A deck can also show live video from another app, over Spout, Syphon or PipeWire.
+
+00:01:03.100 --> 00:01:10.400
+Each generator has its own parameters. Wave Ripples has Sources, Wavelength and Wave Speed.
+
+00:01:10.400 --> 00:01:14.100
+Metaballs has Balls, Ball Size and Merge.
+
+00:01:14.100 --> 00:01:17.500
+Tunnel Scenes has Scene, Sides and Twist.
+
+00:01:17.500 --> 00:01:28.100
+Any parameter can be turned with an on-screen knob, or driven by audio, an LFO, a sequencer or a hardware controller.
+
+00:01:28.100 --> 00:01:34.600
+Effects work the same way. Kaleidoscope has Segments, Rotation and Zoom.
+
+00:01:34.600 --> 00:01:39.800
+The next slot has its own effect, with its own parameters.
+
+00:01:39.800 --> 00:01:48.400
+Order matters: Pixelate before Kaleidoscope looks different from Pixelate after it.
+
+00:01:48.400 --> 00:01:54.400
+Transitions have parameters too. Vortex Swirl has Rotations and Radius.
+
+00:01:54.400 --> 00:01:59.400
+Film Burn has its own, controlled the same way.
+
+00:01:59.400 --> 00:02:03.000
+And the master chain works just like a deck's.
+
+00:02:03.000 --> 00:02:07.000
+Now let's see where all of this lives in the app.
+
+00:02:08.500 --> 00:02:14.500
+The big screen on the right is the master output: what your audience sees.
+
+00:02:14.500 --> 00:02:20.000
+Below it, a preview of each of the four decks: A, B, BG and PV.
+
+00:02:20.000 --> 00:02:26.000
+A and B are the main decks. The crossfader mixes between them.
+
+00:02:26.000 --> 00:02:30.500
+BG is the background deck: it is drawn behind A and B.
+
+00:02:30.500 --> 00:02:36.900
+Its level starts at zero. Drag its fader up and BG appears behind deck A.
+
+00:02:36.900 --> 00:02:42.900
+Deck A draws only part of the frame, so BG fills in around it.
+
+00:02:42.900 --> 00:02:48.900
+PV is the preview deck. Try things out here: the audience never sees it.
+
+00:02:48.900 --> 00:02:55.900
+On the left is the Perform view: rows of knobs, grouped into pages. This is the A/B page.
+
+00:02:55.900 --> 00:03:02.000
+The BG/PV page holds the BG and PV decks.
+
+00:03:02.000 --> 00:03:10.100
+MIXER holds the deck levels, the master FX chain, transitions and the clock.
+
+00:03:10.100 --> 00:03:19.000
+Back to A/B. Perform is one of three views; the other two are Edit (Ch. 6 at 6:46) and Library (Ch. 7 at 7:35).
+
+00:03:19.000 --> 00:03:26.000
+Every deck has two rows. The top row, SRC, is its source: the shader that draws the picture.
+
+00:03:26.000 --> 00:03:31.000
+The row below is the deck's FX chain. Here it is switched off.
+
+00:03:31.000 --> 00:03:38.500
+BYPASS turns the whole chain on or off. Click it, and the picture runs through the effects.
+
+00:03:38.500 --> 00:03:42.000
+More on FX in Ch. 5 at 5:12. Sources first.
+
+00:03:42.000 --> 00:03:48.000
+Click the source name to browse sources and presets for that deck.
+
+00:03:48.000 --> 00:03:55.600
+Click a source in the list and it loads straight into the deck.
+
+00:03:55.600 --> 00:04:01.400
+Each click swaps the deck's source. Watch deck A's preview and the output.
+
+00:04:01.400 --> 00:04:03.900
+And back to Kifs.
+
+00:04:03.900 --> 00:04:09.900
+Save stores the deck's source and all its settings as a preset.
+
+00:04:09.900 --> 00:04:15.900
+The gear opens the Edit view with every parameter of the row (Ch. 6 at 6:46).
+
+00:04:15.900 --> 00:04:21.900
+The FX row below is the deck's effect chain (Ch. 5 at 5:12).
+
+00:04:21.900 --> 00:04:27.900
+Every row has four knobs, mapped to that row's most useful parameters.
+
+00:04:27.900 --> 00:04:32.100
+Drag up or right to turn a knob up...
+
+00:04:32.100 --> 00:04:36.100
+...and down or left to turn it down.
+
+00:04:36.100 --> 00:04:43.100
+Hold Shift while dragging for fine control. Double-click a knob to type a value.
+
+00:04:43.100 --> 00:04:55.100
+Under the output is the crossfader. It blends deck A into deck B.
+
+00:04:55.100 --> 00:05:01.100
+The same crossfader is the first knob of the Transitions row on the MIXER page.
+
+00:05:01.100 --> 00:05:06.100
+Turn it and the crossfader under the output follows.
+
+00:05:06.100 --> 00:05:13.000
+The other knobs shape the transition: how deck A becomes deck B.
+
+00:05:13.000 --> 00:05:19.000
+Every deck has an FX chain with three slots. The master has one too.
+
+00:05:19.000 --> 00:05:25.000
+The picture flows through the slots from left to right: slot 1, then 2, then 3.
+
+00:05:25.000 --> 00:05:33.500
+So order matters. Here Kaleidoscope folds the image, then Polar Tunnel wraps the result into a tunnel.
+
+00:05:33.500 --> 00:05:40.500
+Swap them, and the tunnel is folded instead. Same effects, a very different picture.
+
+00:05:40.500 --> 00:05:47.000
+Drag a slot onto another to reorder the chain.
+
+00:05:47.000 --> 00:05:54.700
+The power button switches one slot off without removing it.
+
+00:05:54.700 --> 00:06:01.200
+Each slot's knob is that effect's Metaknob: one knob that drives its main parameters.
+
+00:06:01.200 --> 00:06:07.300
+The Super Knob turns the Metaknobs of every linked slot at once.
+
+00:06:07.300 --> 00:06:13.300
+A slot joins in when the Super Knob passes its current value, so nothing jumps.
+
+00:06:13.300 --> 00:06:21.300
+The link button above a slot adds it to the Super Knob or takes it out. Click to unlink Polar Tunnel.
+
+00:06:21.300 --> 00:06:27.800
+Now the Super Knob moves only the linked slots. Polar Tunnel stays put.
+
+00:06:27.800 --> 00:06:31.600
+Click again to link it back.
+
+00:06:31.600 --> 00:06:38.000
+The link beside the Super Knob links or unlinks all slots at once.
+
+00:06:38.000 --> 00:06:46.500
+The master FX chain on the MIXER page works the same way. It runs after the crossfader, on the final mix.
+
+00:06:46.500 --> 00:06:51.400
+The gear on a row opens the Edit view.
+
+00:06:51.400 --> 00:06:57.400
+Edit lists every parameter of the deck's source, not only the four on the knobs.
+
+00:06:57.400 --> 00:07:03.400
+K1 to K4 mark the parameters that sit on the row's four knobs.
+
+00:07:03.400 --> 00:07:09.400
+VAL sets a parameter's value. LFO and the other columns add modulation.
+
+00:07:09.400 --> 00:07:16.400
+Click a parameter to see and edit its properties.
+
+00:07:16.400 --> 00:07:23.400
+The FX tab shows the deck's chain: wet/dry, the Super Knob and every slot's parameters.
+
+00:07:23.400 --> 00:07:29.400
+These checkboxes are another way to choose which slots follow the Super Knob.
+
+00:07:29.400 --> 00:07:35.900
+The tabs on the far left jump to the other decks and to the mixer.
+
+00:07:35.900 --> 00:07:42.300
+The Library view fills the screen with your sources, effects and presets.
+
+00:07:42.300 --> 00:07:48.300
+Tabs switch between sources, FX, transitions, queues and macros.
+
+00:07:48.300 --> 00:07:56.800
+Search finds items by name, tag or folder.
+
+00:07:56.800 --> 00:08:01.800
+Preferences, under General, has the theme.
+
+00:08:01.800 --> 00:08:08.300
+There are two: dark, and this light one for bright rooms.
+
+00:08:08.300 --> 00:08:14.300
+Liquid LSD is free software under the GPL-3.0.
+

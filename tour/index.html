@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guided Tour — Liquid LSD</title>
+  <meta name="description" content="A guided tour of Liquid LSD: short looping clips of the real app, chapter by chapter, with every caption written out.">
+  <link rel="canonical" href="https://liquid-lsd.greenjon.com/tour/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Guided Tour — Liquid LSD">
+  <meta property="og:description" content="Short clips of the real app, chapter by chapter.">
+  <meta property="og:url" content="https://liquid-lsd.greenjon.com/tour/">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/tour.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body class="theme-dark tour-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../" class="brand">
+        <img src="../assets/images/logo.svg" alt="Liquid LSD Logo" class="brand-logo">
+        <span class="brand-text">Liquid <span class="accent-text">LSD</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="../#features">Features</a>
+        <a href="./" aria-current="page">Tour</a>
+        <a href="../docs/">Documentation</a>
+        <a href="../#download" class="btn btn-sm btn-primary">Download</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container tour-main">
+    <h1 class="tour-title">Guided tour</h1>
+    <p class="tour-lede">Real footage of the app, one chapter at a time. Play it through or jump to a section. Arrow keys step, space pauses. Every caption is written out below.</p>
+
+    <details class="tour-full"><summary>Watch the full overview</summary><div class="video-facade" data-src="https://www.spaz.org/~gj/liquid-lsd-files/overview/overview.mp4" data-vtt="../tour/captions/overview.vtt" style="background-image:url(https://www.spaz.org/~gj/liquid-lsd-files/overview/overview.jpg)"><button type="button" class="video-facade-play" aria-label="Play the full overview"><span>&#9654;</span> Play the full overview</button></div></details>
+
+    <div class="tour-layout">
+      <section class="tour-stage" aria-label="Tour player">
+        <div class="tour-video-wrap" id="tour-player">
+          <video id="tour-video" muted playsinline preload="metadata"></video>
+          <div class="tour-overlay" id="tour-overlay">
+            <div class="tour-scrub" id="tour-scrub" role="slider" aria-label="Seek within this clip" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="tour-scrub-fill" id="tour-progress-fill"></div>
+            </div>
+            <div class="tour-controls">
+              <button type="button" id="tour-pause" aria-label="Play">
+                <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+                <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h4v15H6zM14 4.5h4v15h-4z"/></svg>
+              </button>
+              <button type="button" id="tour-prev" aria-label="Previous chapter">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2.5v14H6zM20 5v14L9.5 12z"/></svg>
+              </button>
+              <button type="button" id="tour-next" aria-label="Next chapter">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5H18v14h-2.5zM4 5l10.5 7L4 19z"/></svg>
+              </button>
+              <span class="tour-spacer"></span>
+              <label class="tour-auto" title="Play the next chapter when this one ends"><span>Autoplay next</span>
+                <input type="checkbox" id="tour-autoplay" checked><span class="tour-switch" aria-hidden="true"></span>
+              </label>
+              <label class="tour-speed"><span class="sr-only">Speed</span>
+                <select id="tour-speed" aria-label="Playback speed">
+                  <option value="0.5">0.5&times;</option><option value="0.75">0.75&times;</option>
+                  <option value="1" selected>1&times;</option><option value="1.25">1.25&times;</option>
+                  <option value="1.5">1.5&times;</option><option value="1.75">1.75&times;</option>
+                  <option value="2">2&times;</option>
+                </select>
+              </label>
+              <button type="button" id="tour-full-btn" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2H6v4H4zM14 4h6v6h-2V6h-4zM4 14h2v4h4v2H4zM18 14h2v6h-6v-2h4z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="tour-info">
+          <div class="tour-heading"><span class="tour-counter" id="tour-counter">01 / 35</span><span class="tour-chapter" id="tour-chapter"></span></div>
+          <p class="tour-caption" id="tour-caption" aria-live="polite"></p>
+          <p class="tour-links" id="tour-links"></p>
+        </div>
+      </section>
+
+      <nav class="tour-nav" aria-label="Chapters">
+        <h3>Overview</h3>
+        <a href="#overview/pipeline" data-step="0"><span class="n">01</span>How it fits together</a>
+        <a href="#overview/window" data-step="1"><span class="n">02</span>The window</a>
+        <a href="#overview/decks" data-step="2"><span class="n">03</span>Decks and sources</a>
+        <a href="#overview/perform" data-step="3"><span class="n">04</span>Knobs and crossfaders</a>
+        <a href="#overview/fx" data-step="4"><span class="n">05</span>FX chains</a>
+        <a href="#overview/edit" data-step="5"><span class="n">06</span>Edit view</a>
+        <a href="#overview/library" data-step="6"><span class="n">07</span>Library and themes</a>
+        <h3>Modulation</h3>
+        <a href="#modulation/grid" data-step="7"><span class="n">08</span>The modulation grid</a>
+        <a href="#modulation/lfo" data-step="8"><span class="n">09</span>LFO</a>
+        <a href="#modulation/audio" data-step="9"><span class="n">10</span>Audio</a>
+        <a href="#modulation/seq" data-step="10"><span class="n">11</span>Step sequencer</a>
+        <a href="#modulation/combine" data-step="11"><span class="n">12</span>Muting and combining</a>
+        <h3>FX chains</h3>
+        <a href="#fx_chains/build" data-step="12"><span class="n">13</span>Building a chain</a>
+        <a href="#fx_chains/order" data-step="13"><span class="n">14</span>Order and bypass</a>
+        <a href="#fx_chains/knobs" data-step="14"><span class="n">15</span>Metaknobs and the Super Knob</a>
+        <a href="#fx_chains/focus" data-step="15"><span class="n">16</span>Focus mode</a>
+        <a href="#fx_chains/chains" data-step="16"><span class="n">17</span>Saved chains</a>
+        <a href="#fx_chains/master" data-step="17"><span class="n">18</span>Master FX</a>
+        <h3>Mixing</h3>
+        <a href="#mixing/levels" data-step="18"><span class="n">19</span>Deck levels</a>
+        <a href="#mixing/crossfader" data-step="19"><span class="n">20</span>The crossfader</a>
+        <a href="#mixing/transitions" data-step="20"><span class="n">21</span>Transitions</a>
+        <a href="#mixing/auto" data-step="21"><span class="n">22</span>AUTO and fade time</a>
+        <a href="#mixing/clock" data-step="22"><span class="n">23</span>The clock</a>
+        <h3>Library and presets</h3>
+        <a href="#library/browse" data-step="23"><span class="n">24</span>Browsing the Library</a>
+        <a href="#library/load" data-step="24"><span class="n">25</span>Loading onto a deck</a>
+        <a href="#library/save" data-step="25"><span class="n">26</span>Saving presets</a>
+        <a href="#library/queues" data-step="26"><span class="n">27</span>Queues</a>
+        <a href="#library/pair" data-step="27"><span class="n">28</span>The pair view</a>
+        <h3>Hardware control</h3>
+        <a href="#hardware/learn" data-step="28"><span class="n">29</span>MIDI learn</a>
+        <a href="#hardware/twister" data-step="29"><span class="n">30</span>Perform pages and the Twister</a>
+        <a href="#hardware/osc" data-step="30"><span class="n">31</span>OSC</a>
+        <h3>Output and recording</h3>
+        <a href="#output/screen" data-step="31"><span class="n">32</span>Output View and a second screen</a>
+        <a href="#output/video" data-step="32"><span class="n">33</span>Resolution and sharing</a>
+        <a href="#output/record" data-step="33"><span class="n">34</span>Recording</a>
+        <a href="#output/broadcast" data-step="34"><span class="n">35</span>Web broadcast</a>
+      </nav>
+    </div>
+
+    <section class="tour-transcript" id="transcript">
+      <h2>Every caption</h2>
+      <h3>Overview</h3>
+        <h4 id="t-overview-pipeline">01 · How it fits together</h4>
+        <ol>
+          <li data-step="0" data-line="0"><time>0:01</time><span>Liquid LSD plays up to three video sources at once, each on its own deck: A, B and BG.</span></li>
+          <li data-step="0" data-line="1"><time>0:08</time><span>Every deck runs its video through a chain of three effects.</span></li>
+          <li data-step="0" data-line="2"><time>0:13</time><span>A transition mixes Deck A and Deck B. The crossfader moves between them.</span></li>
+          <li data-step="0" data-line="3"><time>0:20</time><span>Deck BG fills in behind them, wherever their mix is transparent.</span></li>
+          <li data-step="0" data-line="4"><time>0:25</time><span>The mix then runs through three master effects, and out to your audience.</span></li>
+          <li data-step="0" data-line="5"><time>0:31</time><span>Three decks reach the audience. A fourth, Deck PV, is your private preview, with its own effects.</span></li>
+          <li data-step="0" data-line="6"><time>0:41</time><span>Every deck works the same way. Most of the time a deck plays a generator, a shader that draws video live.</span></li>
+          <li data-step="0" data-line="7"><time>0:49</time><span>Dozens come with the app, and you can add your own: they use ISF, an open shader format.</span></li>
+          <li data-step="0" data-line="8"><time>0:55</time><span>A deck can also show live video from another app, over Spout, Syphon or PipeWire.</span></li>
+          <li data-step="0" data-line="9"><time>1:03</time><span>Each generator has its own parameters. Wave Ripples has Sources, Wavelength and Wave Speed.</span></li>
+          <li data-step="0" data-line="10"><time>1:10</time><span>Metaballs has Balls, Ball Size and Merge.</span></li>
+          <li data-step="0" data-line="11"><time>1:14</time><span>Tunnel Scenes has Scene, Sides and Twist.</span></li>
+          <li data-step="0" data-line="12"><time>1:17</time><span>Any parameter can be turned with an on-screen knob, or driven by audio, an LFO, a sequencer or a hardware controller.</span></li>
+          <li data-step="0" data-line="13"><time>1:28</time><span>Effects work the same way. Kaleidoscope has Segments, Rotation and Zoom.</span></li>
+          <li data-step="0" data-line="14"><time>1:34</time><span>The next slot has its own effect, with its own parameters.</span></li>
+          <li data-step="0" data-line="15"><time>1:39</time><span>Order matters: Pixelate before Kaleidoscope looks different from Pixelate after it.</span></li>
+          <li data-step="0" data-line="16"><time>1:48</time><span>Transitions have parameters too. Vortex Swirl has Rotations and Radius.</span></li>
+          <li data-step="0" data-line="17"><time>1:54</time><span>Film Burn has its own, controlled the same way.</span></li>
+          <li data-step="0" data-line="18"><time>1:59</time><span>And the master chain works just like a deck&#x27;s.</span></li>
+          <li data-step="0" data-line="19"><time>2:03</time><span>Now let&#x27;s see where all of this lives in the app.</span></li>
+        </ol>
+        <h4 id="t-overview-window">02 · The window</h4>
+        <ol>
+          <li data-step="1" data-line="0"><time>0:01</time><span>The big screen on the right is the master output: what your audience sees.</span></li>
+          <li data-step="1" data-line="1"><time>0:07</time><span>Below it, a preview of each of the four decks: A, B, BG and PV.</span></li>
+          <li data-step="1" data-line="2"><time>0:13</time><span>A and B are the main decks. The crossfader mixes between them.</span></li>
+          <li data-step="1" data-line="3"><time>0:19</time><span>BG is the background deck: it is drawn behind A and B.</span></li>
+          <li data-step="1" data-line="4"><time>0:23</time><span>Its level starts at zero. Drag its fader up and BG appears behind deck A.</span></li>
+          <li data-step="1" data-line="5"><time>0:29</time><span>Deck A draws only part of the frame, so BG fills in around it.</span></li>
+          <li data-step="1" data-line="6"><time>0:35</time><span>PV is the preview deck. Try things out here: the audience never sees it.</span></li>
+          <li data-step="1" data-line="7"><time>0:41</time><span>On the left is the Perform view: rows of knobs, grouped into pages. This is the A/B page.</span></li>
+          <li data-step="1" data-line="8"><time>0:48</time><span>The BG/PV page holds the BG and PV decks.</span></li>
+          <li data-step="1" data-line="9"><time>0:55</time><span>MIXER holds the deck levels, the master FX chain, transitions and the clock.</span></li>
+          <li data-step="1" data-line="10"><time>1:03</time><span>Back to A/B. Perform is one of three views; the other two are Edit (Ch. 6 at 6:47) and Library (Ch. 7 at 7:37).</span></li>
+        </ol>
+        <h4 id="t-overview-decks">03 · Decks and sources</h4>
+        <ol>
+          <li data-step="2" data-line="0"><time>0:00</time><span>Every deck has two rows. The top row, SRC, is its source: the shader that draws the picture.</span></li>
+          <li data-step="2" data-line="1"><time>0:07</time><span>The row below is the deck&#x27;s FX chain. Here it is switched off.</span></li>
+          <li data-step="2" data-line="2"><time>0:12</time><span>BYPASS turns the whole chain on or off. Click it, and the picture runs through the effects.</span></li>
+          <li data-step="2" data-line="3"><time>0:19</time><span>More on FX in Ch. 5 at 5:13. Sources first.</span></li>
+          <li data-step="2" data-line="4"><time>0:23</time><span>Click the source name to browse sources and presets for that deck.</span></li>
+          <li data-step="2" data-line="5"><time>0:29</time><span>Click a source in the list and it loads straight into the deck.</span></li>
+          <li data-step="2" data-line="6"><time>0:36</time><span>Each click swaps the deck&#x27;s source. Watch deck A&#x27;s preview and the output.</span></li>
+          <li data-step="2" data-line="7"><time>0:42</time><span>And back to Kifs.</span></li>
+          <li data-step="2" data-line="8"><time>0:44</time><span>Save stores the deck&#x27;s source and all its settings as a preset.</span></li>
+          <li data-step="2" data-line="9"><time>0:50</time><span>The gear opens the Edit view with every parameter of the row (Ch. 6 at 6:47).</span></li>
+          <li data-step="2" data-line="10"><time>0:56</time><span>The FX row below is the deck&#x27;s effect chain (Ch. 5 at 5:13).</span></li>
+        </ol>
+        <h4 id="t-overview-perform">04 · Knobs and crossfaders</h4>
+        <ol>
+          <li data-step="3" data-line="0"><time>0:00</time><span>Every row has four knobs, mapped to that row&#x27;s most useful parameters.</span></li>
+          <li data-step="3" data-line="1"><time>0:06</time><span>Drag up or right to turn a knob up...</span></li>
+          <li data-step="3" data-line="2"><time>0:10</time><span>...and down or left to turn it down.</span></li>
+          <li data-step="3" data-line="3"><time>0:14</time><span>Hold Shift while dragging for fine control. Double-click a knob to type a value.</span></li>
+          <li data-step="3" data-line="4"><time>0:21</time><span>Under the output is the crossfader. It blends deck A into deck B.</span></li>
+          <li data-step="3" data-line="5"><time>0:33</time><span>The same crossfader is the first knob of the Transitions row on the MIXER page.</span></li>
+          <li data-step="3" data-line="6"><time>0:39</time><span>Turn it and the crossfader under the output follows.</span></li>
+          <li data-step="3" data-line="7"><time>0:44</time><span>The other knobs shape the transition: how deck A becomes deck B.</span></li>
+        </ol>
+        <h4 id="t-overview-fx">05 · FX chains</h4>
+        <ol>
+          <li data-step="4" data-line="0"><time>0:00</time><span>Every deck has an FX chain with three slots. The master has one too.</span></li>
+          <li data-step="4" data-line="1"><time>0:06</time><span>The picture flows through the slots from left to right: slot 1, then 2, then 3.</span></li>
+          <li data-step="4" data-line="2"><time>0:12</time><span>So order matters. Here Kaleidoscope folds the image, then Polar Tunnel wraps the result into a tunnel.</span></li>
+          <li data-step="4" data-line="3"><time>0:20</time><span>Swap them, and the tunnel is folded instead. Same effects, a very different picture.</span></li>
+          <li data-step="4" data-line="4"><time>0:27</time><span>Drag a slot onto another to reorder the chain.</span></li>
+          <li data-step="4" data-line="5"><time>0:34</time><span>The power button switches one slot off without removing it.</span></li>
+          <li data-step="4" data-line="6"><time>0:42</time><span>Each slot&#x27;s knob is that effect&#x27;s Metaknob: one knob that drives its main parameters.</span></li>
+          <li data-step="4" data-line="7"><time>0:48</time><span>The Super Knob turns the Metaknobs of every linked slot at once.</span></li>
+          <li data-step="4" data-line="8"><time>0:54</time><span>A slot joins in when the Super Knob passes its current value, so nothing jumps.</span></li>
+          <li data-step="4" data-line="9"><time>1:00</time><span>The link button above a slot adds it to the Super Knob or takes it out. Click to unlink Polar Tunnel.</span></li>
+          <li data-step="4" data-line="10"><time>1:08</time><span>Now the Super Knob moves only the linked slots. Polar Tunnel stays put.</span></li>
+          <li data-step="4" data-line="11"><time>1:15</time><span>Click again to link it back.</span></li>
+          <li data-step="4" data-line="12"><time>1:19</time><span>The link beside the Super Knob links or unlinks all slots at once.</span></li>
+          <li data-step="4" data-line="13"><time>1:25</time><span>The master FX chain on the MIXER page works the same way. It runs after the crossfader, on the final mix.</span></li>
+        </ol>
+        <h4 id="t-overview-edit">06 · Edit view</h4>
+        <ol>
+          <li data-step="5" data-line="0"><time>0:00</time><span>The gear on a row opens the Edit view.</span></li>
+          <li data-step="5" data-line="1"><time>0:04</time><span>Edit lists every parameter of the deck&#x27;s source, not only the four on the knobs.</span></li>
+          <li data-step="5" data-line="2"><time>0:10</time><span>K1 to K4 mark the parameters that sit on the row&#x27;s four knobs.</span></li>
+          <li data-step="5" data-line="3"><time>0:16</time><span>VAL sets a parameter&#x27;s value. LFO and the other columns add modulation.</span></li>
+          <li data-step="5" data-line="4"><time>0:22</time><span>Click a parameter to see and edit its properties.</span></li>
+          <li data-step="5" data-line="5"><time>0:29</time><span>The FX tab shows the deck&#x27;s chain: wet/dry, the Super Knob and every slot&#x27;s parameters.</span></li>
+          <li data-step="5" data-line="6"><time>0:36</time><span>These checkboxes are another way to choose which slots follow the Super Knob.</span></li>
+          <li data-step="5" data-line="7"><time>0:42</time><span>The tabs on the far left jump to the other decks and to the mixer.</span></li>
+        </ol>
+        <h4 id="t-overview-library">07 · Library and themes</h4>
+        <ol>
+          <li data-step="6" data-line="0"><time>0:00</time><span>The Library view fills the screen with your sources, effects and presets.</span></li>
+          <li data-step="6" data-line="1"><time>0:06</time><span>Tabs switch between sources, FX, transitions, queues and macros.</span></li>
+          <li data-step="6" data-line="2"><time>0:12</time><span>Search finds items by name, tag or folder.</span></li>
+          <li data-step="6" data-line="3"><time>0:20</time><span>Preferences, under General, has the theme.</span></li>
+          <li data-step="6" data-line="4"><time>0:25</time><span>There are two: dark, and this light one for bright rooms.</span></li>
+          <li data-step="6" data-line="5"><time>0:32</time><span>Liquid LSD is free software under the GPL-3.0.</span></li>
+        </ol>
+      <h3>Modulation</h3>
+        <h4 id="t-modulation-grid">08 · The modulation grid</h4>
+        <ol>
+          <li data-step="7" data-line="0"><time>0:01</time><span>Modulation makes parameters move on their own: with an LFO, the music, or a step pattern.</span></li>
+          <li data-step="7" data-line="1"><time>0:08</time><span>It is set up in the Edit view. Click the gear on deck A&#x27;s source row.</span></li>
+          <li data-step="7" data-line="2"><time>0:15</time><span>Each row is one parameter of the source.</span></li>
+          <li data-step="7" data-line="3"><time>0:19</time><span>VAL is the parameter&#x27;s own value: what its knob sets.</span></li>
+          <li data-step="7" data-line="4"><time>0:24</time><span>The other columns are modulation sources. A cell connects one source to one parameter.</span></li>
+          <li data-step="7" data-line="5"><time>0:31</time><span>The step sequencer column is off by default. Turn it on from the menu beside VAL.</span></li>
+        </ol>
+        <h4 id="t-modulation-lfo">09 · LFO</h4>
+        <ol>
+          <li data-step="8" data-line="0"><time>0:00</time><span>Start with an LFO on Zoom. Click its LFO cell.</span></li>
+          <li data-step="8" data-line="1"><time>0:05</time><span>The LFO panel opens on the right. A new LFO starts switched off.</span></li>
+          <li data-step="8" data-line="2"><time>0:11</time><span>Click the power button. The graph shows the wave, and the picture starts to breathe in and out.</span></li>
+          <li data-step="8" data-line="3"><time>0:18</time><span>The shape buttons pick the wave: sine, triangle, square or random.</span></li>
+          <li data-step="8" data-line="4"><time>0:29</time><span>Range sets how far it swings. Click the maximum and type a new value.</span></li>
+          <li data-step="8" data-line="5"><time>0:37</time><span>Time counts in seconds. Beat locks the LFO to the clock, so it moves with the music.</span></li>
+          <li data-step="8" data-line="6"><time>0:45</time><span>Beat Div sets how many beats one full swing takes.</span></li>
+          <li data-step="8" data-line="7"><time>0:50</time><span>Back in the grid, the cell&#x27;s small knob shows the LFO&#x27;s live value.</span></li>
+        </ol>
+        <h4 id="t-modulation-audio">10 · Audio</h4>
+        <ol>
+          <li data-step="9" data-line="0"><time>0:00</time><span>Now make Gain flash with the kick drum. Click its AUD cell.</span></li>
+          <li data-step="9" data-line="1"><time>0:06</time><span>Switch it on. The graph now follows the music.</span></li>
+          <li data-step="9" data-line="2"><time>0:12</time><span>Frequency Band picks what to listen to. Bass follows the kick drum.</span></li>
+          <li data-step="9" data-line="3"><time>0:20</time><span>Continuous follows how loud the band is. Transient fires on each new hit.</span></li>
+          <li data-step="9" data-line="4"><time>0:28</time><span>Response sets how fast it rises and falls. Punchy suits drums.</span></li>
+          <li data-step="9" data-line="5"><time>0:36</time><span>Range works as for the LFO. From 0 to 40, each kick brightens the picture.</span></li>
+        </ol>
+        <h4 id="t-modulation-seq">11 · Step sequencer</h4>
+        <ol>
+          <li data-step="10" data-line="0"><time>0:00</time><span>The step sequencer plays a pattern of values. Put one on Lobes.</span></li>
+          <li data-step="10" data-line="1"><time>0:06</time><span>Switch it on.</span></li>
+          <li data-step="10" data-line="2"><time>0:09</time><span>Pick 8, 16 or 32 steps.</span></li>
+          <li data-step="10" data-line="3"><time>0:12</time><span>Click a step and type its value. The bright box is the step playing now.</span></li>
+          <li data-step="10" data-line="4"><time>0:26</time><span>Lobes is on deck A&#x27;s first knob, so the LOBES knob steps along with the pattern.</span></li>
+          <li data-step="10" data-line="5"><time>0:32</time><span>Set the clock to BEAT and each step lands on the beat.</span></li>
+          <li data-step="10" data-line="6"><time>0:42</time><span>Step Hold and Glide Curve shape the move from one step to the next: a jump or a slide.</span></li>
+        </ol>
+        <h4 id="t-modulation-combine">12 · Muting and combining</h4>
+        <ol>
+          <li data-step="11" data-line="0"><time>0:00</time><span>The power button mutes a modulator and keeps its settings.</span></li>
+          <li data-step="11" data-line="1"><time>0:07</time><span>ADD adds the modulator to the value. MUL multiplies the value; SCALE pulls it down as the signal rises.</span></li>
+          <li data-step="11" data-line="2"><time>0:15</time><span>The knob still sets the starting point. Modulation moves around it.</span></li>
+          <li data-step="11" data-line="3"><time>0:21</time><span>Every deck, every FX slot and the mixer have the same grid.</span></li>
+          <li data-step="11" data-line="4"><time>0:26</time><span>Save the preset and its modulation is saved with it.</span></li>
+        </ol>
+      <h3>FX chains</h3>
+        <h4 id="t-fx_chains-build">13 · Building a chain</h4>
+        <ol>
+          <li data-step="12" data-line="0"><time>0:01</time><span>Effects change the picture a source draws: fold it, warp it, blur it, colour it.</span></li>
+          <li data-step="12" data-line="1"><time>0:08</time><span>Each deck&#x27;s second row is its FX chain. Deck A&#x27;s is new: no effects yet.</span></li>
+          <li data-step="12" data-line="2"><time>0:13</time><span>It has three slots, one under each of the last three knobs. Click the first slot.</span></li>
+          <li data-step="12" data-line="3"><time>0:20</time><span>The browser below now lists effects for that slot. Click one to load it.</span></li>
+          <li data-step="12" data-line="4"><time>0:28</time><span>Kaleidoscope folds the picture into mirrored wedges. Now the second slot.</span></li>
+          <li data-step="12" data-line="5"><time>0:37</time><span>Polar Tunnel wraps it into a tunnel.</span></li>
+          <li data-step="12" data-line="6"><time>0:41</time><span>And Bloom in the third, for a soft glow.</span></li>
+          <li data-step="12" data-line="7"><time>0:50</time><span>To try other effects without the browser, scroll the mouse wheel over a slot.</span></li>
+          <li data-step="12" data-line="8"><time>1:00</time><span>The wheel steps through your favourite effects, or the slot&#x27;s category.</span></li>
+        </ol>
+        <h4 id="t-fx_chains-order">14 · Order and bypass</h4>
+        <ol>
+          <li data-step="13" data-line="0"><time>0:00</time><span>The picture flows through the slots from left to right.</span></li>
+          <li data-step="13" data-line="1"><time>0:04</time><span>Drag a slot onto another to swap them. Now the tunnel is drawn first and then folded.</span></li>
+          <li data-step="13" data-line="2"><time>0:11</time><span>Swap them back: same effects, a different picture.</span></li>
+          <li data-step="13" data-line="3"><time>0:17</time><span>The power button beside a slot switches that effect off and keeps its settings.</span></li>
+          <li data-step="13" data-line="4"><time>0:27</time><span>BYPASS switches the whole chain off, so you can compare with the bare source.</span></li>
+        </ol>
+        <h4 id="t-fx_chains-knobs">15 · Metaknobs and the Super Knob</h4>
+        <ol>
+          <li data-step="14" data-line="0"><time>0:00</time><span>The knob above each slot is that effect&#x27;s Metaknob: one knob tuned to drive its main parameters.</span></li>
+          <li data-step="14" data-line="1"><time>0:13</time><span>The first knob is the Super Knob. It turns every linked Metaknob at once.</span></li>
+          <li data-step="14" data-line="2"><time>0:22</time><span>A Metaknob joins in when the Super Knob passes its value, so nothing jumps.</span></li>
+          <li data-step="14" data-line="3"><time>0:28</time><span>The link button above a slot takes it out of the Super Knob. Unlink Bloom...</span></li>
+          <li data-step="14" data-line="4"><time>0:35</time><span>...and the Super Knob leaves Bloom alone.</span></li>
+          <li data-step="14" data-line="5"><time>0:40</time><span>The chain link beside the Super Knob links or unlinks all three slots at once.</span></li>
+          <li data-step="14" data-line="6"><time>0:48</time><span>The gear opens the chain in the Edit view, where you choose what each Metaknob drives.</span></li>
+        </ol>
+        <h4 id="t-fx_chains-focus">16 · Focus mode</h4>
+        <ol>
+          <li data-step="15" data-line="0"><time>0:00</time><span>To work on one effect, click its number. This is focus mode.</span></li>
+          <li data-step="15" data-line="1"><time>0:06</time><span>Now the first knob is Kaleidoscope&#x27;s Metaknob...</span></li>
+          <li data-step="15" data-line="2"><time>0:10</time><span>...and the other three are its own parameters.</span></li>
+          <li data-step="15" data-line="3"><time>0:17</time><span>An effect with more than three parameters has pages. The arrows step through them.</span></li>
+          <li data-step="15" data-line="4"><time>0:24</time><span>Wet blends the effect with its input. Drag it down to fade Kaleidoscope out.</span></li>
+          <li data-step="15" data-line="5"><time>0:36</time><span>Click another number to focus that slot instead...</span></li>
+          <li data-step="15" data-line="6"><time>0:42</time><span>...or the lit one again to go back to the whole chain.</span></li>
+        </ol>
+        <h4 id="t-fx_chains-chains">17 · Saved chains</h4>
+        <ol>
+          <li data-step="16" data-line="0"><time>0:00</time><span>A whole chain can be saved and loaded. Click the chain name to list saved chains.</span></li>
+          <li data-step="16" data-line="1"><time>0:07</time><span>Click one to load all three slots at once.</span></li>
+          <li data-step="16" data-line="2"><time>0:20</time><span>Save keeps your changes. It turns red when the chain has changed since it was loaded.</span></li>
+          <li data-step="16" data-line="3"><time>0:27</time><span>The menu has Save As, Clear, and Copy and Paste between decks.</span></li>
+          <li data-step="16" data-line="4"><time>0:32</time><span>A deck&#x27;s FX chain is separate from its presets: loading a preset keeps the chain.</span></li>
+        </ol>
+        <h4 id="t-fx_chains-master">18 · Master FX</h4>
+        <ol>
+          <li data-step="17" data-line="0"><time>0:00</time><span>The MIXER page has the master FX chain. It works on the final mix, after the crossfader.</span></li>
+          <li data-step="17" data-line="1"><time>0:07</time><span>Load something bold into a master slot, like Invert...</span></li>
+          <li data-step="17" data-line="2"><time>0:15</time><span>...and it stays on screen whichever deck the crossfader shows.</span></li>
+          <li data-step="17" data-line="3"><time>0:26</time><span>The master chain starts with gentle effects you can leave on all night.</span></li>
+          <li data-step="17" data-line="4"><time>0:32</time><span>Every deck and the master: the same three slots, the same knobs.</span></li>
+        </ol>
+      <h3>Mixing</h3>
+        <h4 id="t-mixing-levels">19 · Deck levels</h4>
+        <ol>
+          <li data-step="18" data-line="0"><time>0:01</time><span>The output is a mix of decks A and B, with BG behind them. The MIXER page controls the mix.</span></li>
+          <li data-step="18" data-line="1"><time>0:08</time><span>The first row holds the levels: how bright each deck is in the mix.</span></li>
+          <li data-step="18" data-line="2"><time>0:13</time><span>Turn LEVEL A down and deck A fades out...</span></li>
+          <li data-step="18" data-line="3"><time>0:18</time><span>...and back up.</span></li>
+          <li data-step="18" data-line="4"><time>0:21</time><span>The thin fader beside each deck preview is the same level. Move either one and the other follows.</span></li>
+          <li data-step="18" data-line="5"><time>0:28</time><span>BG starts at zero. Turn LEVEL BG up...</span></li>
+          <li data-step="18" data-line="6"><time>0:34</time><span>...and the background deck appears behind deck A.</span></li>
+          <li data-step="18" data-line="7"><time>0:39</time><span>MASTER fades the whole output: a quick way to black out.</span></li>
+        </ol>
+        <h4 id="t-mixing-crossfader">20 · The crossfader</h4>
+        <ol>
+          <li data-step="19" data-line="0"><time>0:00</time><span>The crossfader blends deck A into deck B. Drag it under the output...</span></li>
+          <li data-step="19" data-line="1"><time>0:13</time><span>...or turn XFADE, the first knob of the Transitions row. They move together.</span></li>
+          <li data-step="19" data-line="2"><time>0:27</time><span>The A and B buttons jump straight to one deck: a hard cut.</span></li>
+        </ol>
+        <h4 id="t-mixing-transitions">21 · Transitions</h4>
+        <ol>
+          <li data-step="20" data-line="0"><time>0:00</time><span>How A turns into B is the transition. The default is a plain crossfade. Click its name to pick another.</span></li>
+          <li data-step="20" data-line="1"><time>0:08</time><span>Click a transition to use it. Vortex Swirl twists deck A away and unwinds deck B.</span></li>
+          <li data-step="20" data-line="2"><time>0:16</time><span>Now move the crossfader slowly to watch it.</span></li>
+          <li data-step="20" data-line="3"><time>0:26</time><span>The other three knobs are the transition&#x27;s own settings. They change with each transition.</span></li>
+          <li data-step="20" data-line="4"><time>0:33</time><span>Try another: Film Burn.</span></li>
+          <li data-step="20" data-line="5"><time>0:41</time><span>Back to deck A, burning through.</span></li>
+        </ol>
+        <h4 id="t-mixing-auto">22 · AUTO and fade time</h4>
+        <ol>
+          <li data-step="21" data-line="0"><time>0:00</time><span>AUTO runs the crossfader for you, from one deck to the other.</span></li>
+          <li data-step="21" data-line="1"><time>0:11</time><span>The time beside it is how long the fade takes. Drag it, or scroll over it, to change it.</span></li>
+          <li data-step="21" data-line="2"><time>0:19</time><span>Now AUTO fades back to A in 3 seconds.</span></li>
+          <li data-step="21" data-line="3"><time>0:26</time><span>Click AUTO while it fades to stop it where it is.</span></li>
+        </ol>
+        <h4 id="t-mixing-clock">23 · The clock</h4>
+        <ol>
+          <li data-step="22" data-line="0"><time>0:00</time><span>The last row is the clock. Everything set to follow the beat runs on its tempo.</span></li>
+          <li data-step="22" data-line="1"><time>0:06</time><span>Here an LFO set to Beat morphs deck A&#x27;s shape in time with the music.</span></li>
+          <li data-step="22" data-line="2"><time>0:12</time><span>Halve the tempo, and the morph slows down with it.</span></li>
+          <li data-step="22" data-line="3"><time>0:20</time><span>Double it to get back.</span></li>
+          <li data-step="22" data-line="4"><time>0:25</time><span>TAP sets the tempo: click it in time with the music, four times or more.</span></li>
+          <li data-step="22" data-line="5"><time>0:32</time><span>Plus and minus nudge it by half a beat per minute.</span></li>
+          <li data-step="22" data-line="6"><time>0:36</time><span>RESYNC puts the downbeat back on the first dot.</span></li>
+          <li data-step="22" data-line="7"><time>0:41</time><span>MAN keeps your tempo. AUDIO follows the beat it hears in the music.</span></li>
+          <li data-step="22" data-line="8"><time>0:47</time><span>Levels, crossfader, transitions and clock: the whole mix on one page.</span></li>
+        </ol>
+      <h3>Library and presets</h3>
+        <h4 id="t-library-browse">24 · Browsing the Library</h4>
+        <ol>
+          <li data-step="23" data-line="0"><time>0:01</time><span>Below the knobs is the Library: every source, effect, transition and preset you have.</span></li>
+          <li data-step="23" data-line="1"><time>0:08</time><span>Press Space to give it the whole column. Space again brings the knobs back.</span></li>
+          <li data-step="23" data-line="2"><time>0:14</time><span>The tabs pick what it lists: Sources, FX, Transitions, Queues and Macros.</span></li>
+          <li data-step="23" data-line="3"><time>0:19</time><span>The folders on the left narrow the list: stock sources, your saved presets, playlists.</span></li>
+          <li data-step="23" data-line="4"><time>0:26</time><span>Search finds anything by name, tag or folder. Ctrl+F jumps here from anywhere.</span></li>
+        </ol>
+        <h4 id="t-library-load">25 · Loading onto a deck</h4>
+        <ol>
+          <li data-step="24" data-line="0"><time>0:00</time><span>Double-click a source to load it into the deck that is not on air.</span></li>
+          <li data-step="24" data-line="1"><time>0:07</time><span>The crossfader is on A, so it went to deck B, ready for the next fade.</span></li>
+          <li data-step="24" data-line="2"><time>0:14</time><span>Or drag it onto the deck you want. Try it on PV, the preview deck, first.</span></li>
+          <li data-step="24" data-line="3"><time>0:24</time><span>Clicking a deck&#x27;s source name opens the same list for that deck alone: one click loads.</span></li>
+        </ol>
+        <h4 id="t-library-save">26 · Saving presets</h4>
+        <ol>
+          <li data-step="25" data-line="0"><time>0:00</time><span>Change something on deck A...</span></li>
+          <li data-step="25" data-line="1"><time>0:05</time><span>...and a star after its name marks unsaved changes.</span></li>
+          <li data-step="25" data-line="2"><time>0:10</time><span>Save stores the source, every setting and its modulation as a preset. Ctrl+S does the same.</span></li>
+          <li data-step="25" data-line="3"><time>0:16</time><span>Give it a name, and tags to find it by later, then click Save.</span></li>
+          <li data-step="25" data-line="4"><time>0:21</time><span>We cancel here. Saved presets appear in the Library, under Saved presets.</span></li>
+        </ol>
+        <h4 id="t-library-queues">27 · Queues</h4>
+        <ol>
+          <li data-step="26" data-line="0"><time>0:00</time><span>A queue lines up saved presets for your set. Search for some first.</span></li>
+          <li data-step="26" data-line="1"><time>0:05</time><span>Select a preset and press Q to add it to the A/B queue.</span></li>
+          <li data-step="26" data-line="2"><time>0:18</time><span>The Queues tab shows them in order.</span></li>
+          <li data-step="26" data-line="3"><time>0:24</time><span>The arrows on a deck&#x27;s source row step through the queue: the next preset loads and the crossfader fades to it.</span></li>
+          <li data-step="26" data-line="4"><time>0:32</time><span>Shift+Q fills the BG queue instead. FX and transitions have queues too.</span></li>
+        </ol>
+        <h4 id="t-library-pair">28 · The pair view</h4>
+        <ol>
+          <li data-step="27" data-line="0"><time>0:00</time><span>Click a deck&#x27;s preview to open its pair view.</span></li>
+          <li data-step="27" data-line="1"><time>0:06</time><span>Deck B&#x27;s source and FX rows stay on top, with the browser below for that deck.</span></li>
+          <li data-step="27" data-line="2"><time>0:12</time><span>Parameters opens the full Edit view for it.</span></li>
+          <li data-step="27" data-line="3"><time>0:17</time><span>Back, or Esc, returns to Perform.</span></li>
+          <li data-step="27" data-line="4"><time>0:22</time><span>Browse, load, save and queue: your whole set lives in the Library.</span></li>
+        </ol>
+      <h3>Hardware control</h3>
+        <h4 id="t-hardware-learn">29 · MIDI learn</h4>
+        <ol>
+          <li data-step="28" data-line="0"><time>0:01</time><span>Liquid LSD can be played from MIDI controllers, a Midi Fighter Twister, or OSC apps such as TouchOSC.</span></li>
+          <li data-step="28" data-line="1"><time>0:09</time><span>To put a knob on your controller, right-click it.</span></li>
+          <li data-step="28" data-line="2"><time>0:14</time><span>The ring pulses: it is waiting. Move a knob or fader on the controller and the two are linked.</span></li>
+          <li data-step="28" data-line="3"><time>0:21</time><span>Right-click again to stop waiting without linking anything.</span></li>
+          <li data-step="28" data-line="4"><time>0:26</time><span>Buttons learn the same way: right-click A, B, AUTO or TAP, then press a pad.</span></li>
+          <li data-step="28" data-line="5"><time>0:35</time><span>In Edit, right-click any slider for Learn MIDI and Learn OSC.</span></li>
+        </ol>
+        <h4 id="t-hardware-twister">30 · Perform pages and the Twister</h4>
+        <ol>
+          <li data-step="29" data-line="0"><time>0:00</time><span>A Midi Fighter Twister needs no setup: plug it in and its 16 knobs are the 16 knobs on screen.</span></li>
+          <li data-step="29" data-line="1"><time>0:08</time><span>Its side button steps through the pages, like these tabs, and the screen follows.</span></li>
+          <li data-step="29" data-line="2"><time>0:17</time><span>Its rings show each knob&#x27;s value, and on an FX row a push switches that slot off.</span></li>
+          <li data-step="29" data-line="3"><time>0:24</time><span>Preferences, under MIDI Controls, lists the pages. Each one is four rows.</span></li>
+          <li data-step="29" data-line="4"><time>0:30</time><span>Copy a page to a user file to change its rows and make it your own.</span></li>
+          <li data-step="29" data-line="5"><time>0:35</time><span>With MIDI on, this panel also shows incoming messages and every mapping, with its range, smoothing and soft takeover.</span></li>
+        </ol>
+        <h4 id="t-hardware-osc">31 · OSC</h4>
+        <ol>
+          <li data-step="30" data-line="0"><time>0:00</time><span>OSC Controls sets up control from a phone or tablet app such as TouchOSC.</span></li>
+          <li data-step="30" data-line="1"><time>0:05</time><span>Point the app at this computer and the inbound port. Feedback goes back on the outbound port.</span></li>
+          <li data-step="30" data-line="2"><time>0:12</time><span>Start Learn, then move a control in the app to link it. Right-clicking a slider does the same.</span></li>
+          <li data-step="30" data-line="3"><time>0:19</time><span>Mappings are saved in a profile, so each app or layout can have its own.</span></li>
+          <li data-step="30" data-line="4"><time>0:26</time><span>The Hardware page of the user guide covers each controller in detail.</span></li>
+        </ol>
+      <h3>Output and recording</h3>
+        <h4 id="t-output-screen">32 · Output View and a second screen</h4>
+        <ol>
+          <li data-step="31" data-line="0"><time>0:01</time><span>The master output is what the audience sees. There are several ways to get it in front of them.</span></li>
+          <li data-step="31" data-line="1"><time>0:08</time><span>Press F for Output View: the controls disappear and the output fills the screen.</span></li>
+          <li data-step="31" data-line="2"><time>0:17</time><span>Esc brings the controls back. F11 makes the window fullscreen.</span></li>
+          <li data-step="31" data-line="3"><time>0:23</time><span>With a projector or second screen, use the Output menu.</span></li>
+          <li data-step="31" data-line="4"><time>0:27</time><span>Secondary Output Window fills the other screen with the output, and the controls stay on yours.</span></li>
+          <li data-step="31" data-line="5"><time>0:34</time><span>Output Monitor picks which screen, if it lands on the wrong one.</span></li>
+        </ol>
+        <h4 id="t-output-video">33 · Resolution and sharing</h4>
+        <ol>
+          <li data-step="32" data-line="0"><time>0:00</time><span>Preferences, under Video &amp; Display, sets the render resolution. Lower it if a laptop struggles.</span></li>
+          <li data-step="32" data-line="1"><time>0:07</time><span>Display Scaling fits the output to screens with other shapes.</span></li>
+          <li data-step="32" data-line="2"><time>0:12</time><span>Live Video Sharing sends any deck or the master to other apps, such as OBS or Resolume.</span></li>
+          <li data-step="32" data-line="3"><time>0:18</time><span>Tick a row to share it. It uses Spout on Windows, Syphon on macOS and PipeWire on Linux.</span></li>
+        </ol>
+        <h4 id="t-output-record">34 · Recording</h4>
+        <ol>
+          <li data-step="33" data-line="0"><time>0:00</time><span>Recording settings are just below: the folder, the quality, and whether to include the audio.</span></li>
+          <li data-step="33" data-line="1"><time>0:06</time><span>To record your set, press Ctrl+R or use Output, Record Output.</span></li>
+          <li data-step="33" data-line="2"><time>0:12</time><span>A red REC badge with the time shows while it records. Ctrl+R again stops it.</span></li>
+          <li data-step="33" data-line="3"><time>0:18</time><span>Render Video renders offline, frame by frame, from an audio file: slower than real time, at any resolution.</span></li>
+        </ol>
+        <h4 id="t-output-broadcast">35 · Web broadcast</h4>
+        <ol>
+          <li data-step="34" data-line="0"><time>0:00</time><span>Web Broadcast is experimental: it streams your show to a web page, where each viewer&#x27;s browser draws it.</span></li>
+          <li data-step="34" data-line="1"><time>0:07</time><span>It needs a relay server and a broadcaster token. Enter both here.</span></li>
+          <li data-step="34" data-line="2"><time>0:13</time><span>Go Live connects. The title bar then shows LIVE while you are streaming.</span></li>
+          <li data-step="34" data-line="3"><time>0:19</time><span>The Output page of the user guide has all the details.</span></li>
+        </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> greenjon.com &bull; <a href="../">Home</a> &bull; <a href="../docs/">Documentation</a> &bull; <a href="https://github.com/greenjon/liquid-lsd" target="_blank" rel="noopener">Source</a></p>
+    </div>
+  </footer>
+
+  <script id="tour-data" type="application/json">[{"slug": "overview/pipeline", "vtitle": "Overview", "title": "How it fits together", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/pipeline.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/pipeline.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/pipeline.jpg", "dur": 128.1, "captions": [{"start": 1.4, "end": 8.3, "text": "Liquid LSD plays up to three video sources at once, each on its own deck: A, B and BG."}, {"start": 8.3, "end": 13.6, "text": "Every deck runs its video through a chain of three effects."}, {"start": 13.6, "end": 20.1, "text": "A transition mixes Deck A and Deck B. The crossfader moves between them."}, {"start": 20.1, "end": 25.6, "text": "Deck BG fills in behind them, wherever their mix is transparent."}, {"start": 25.6, "end": 31.9, "text": "The mix then runs through three master effects, and out to your audience."}, {"start": 31.9, "end": 41.1, "text": "Three decks reach the audience. A fourth, Deck PV, is your private preview, with its own effects."}, {"start": 41.1, "end": 49.1, "text": "Every deck works the same way. Most of the time a deck plays a generator, a shader that draws video live."}, {"start": 49.1, "end": 55.9, "text": "Dozens come with the app, and you can add your own: they use ISF, an open shader format."}, {"start": 55.9, "end": 63.1, "text": "A deck can also show live video from another app, over Spout, Syphon or PipeWire."}, {"start": 63.1, "end": 70.4, "text": "Each generator has its own parameters. Wave Ripples has Sources, Wavelength and Wave Speed."}, {"start": 70.4, "end": 74.1, "text": "Metaballs has Balls, Ball Size and Merge."}, {"start": 74.1, "end": 77.5, "text": "Tunnel Scenes has Scene, Sides and Twist."}, {"start": 77.5, "end": 88.1, "text": "Any parameter can be turned with an on-screen knob, or driven by audio, an LFO, a sequencer or a hardware controller."}, {"start": 88.1, "end": 94.6, "text": "Effects work the same way. Kaleidoscope has Segments, Rotation and Zoom."}, {"start": 94.6, "end": 99.8, "text": "The next slot has its own effect, with its own parameters."}, {"start": 99.8, "end": 108.4, "text": "Order matters: Pixelate before Kaleidoscope looks different from Pixelate after it."}, {"start": 108.4, "end": 114.4, "text": "Transitions have parameters too. Vortex Swirl has Rotations and Radius."}, {"start": 114.4, "end": 119.4, "text": "Film Burn has its own, controlled the same way."}, {"start": 119.4, "end": 123.0, "text": "And the master chain works just like a deck's."}, {"start": 123.0, "end": 128.1, "text": "Now let's see where all of this lives in the app."}]}, {"slug": "overview/window", "vtitle": "Overview", "title": "The window", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/window.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/window.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/window.jpg", "dur": 72.0, "captions": [{"start": 1.5, "end": 7.5, "text": "The big screen on the right is the master output: what your audience sees."}, {"start": 7.5, "end": 13.0, "text": "Below it, a preview of each of the four decks: A, B, BG and PV."}, {"start": 13.0, "end": 19.0, "text": "A and B are the main decks. The crossfader mixes between them."}, {"start": 19.0, "end": 23.5, "text": "BG is the background deck: it is drawn behind A and B."}, {"start": 23.5, "end": 29.9, "text": "Its level starts at zero. Drag its fader up and BG appears behind deck A."}, {"start": 29.9, "end": 35.9, "text": "Deck A draws only part of the frame, so BG fills in around it."}, {"start": 35.9, "end": 41.9, "text": "PV is the preview deck. Try things out here: the audience never sees it."}, {"start": 41.9, "end": 48.9, "text": "On the left is the Perform view: rows of knobs, grouped into pages. This is the A/B page."}, {"start": 48.9, "end": 55.0, "text": "The BG/PV page holds the BG and PV decks."}, {"start": 55.0, "end": 63.1, "text": "MIXER holds the deck levels, the master FX chain, transitions and the clock."}, {"start": 63.1, "end": 72.0, "text": "Back to A/B. Perform is one of three views; the other two are Edit (Ch. 6 at 6:47) and Library (Ch. 7 at 7:37)."}]}, {"slug": "overview/decks", "vtitle": "Overview", "title": "Decks and sources", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/decks.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/loops/decks.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/decks.jpg", "dur": 62.9, "captions": [{"start": 0.0, "end": 7.0, "text": "Every deck has two rows. The top row, SRC, is its source: the shader that draws the picture."}, {"start": 7.0, "end": 12.0, "text": "The row below is the deck's FX chain. Here it is switched off."}, {"start": 12.0, "end": 19.5, "text": "BYPASS turns the whole chain on or off. Click it, and the picture runs through the effects."}, {"start": 19.5, "end": 23.0, "text": "More on FX in Ch. 5 at 5:13. Sources first."}, {"start": 23.0, "end": 29.0, "text": "Click the source name to browse sources and presets for that deck."}, {"start": 29.0, "end": 36.6, "text": "Click a source in the list and it loads straight into the deck."}, {"start": 36.6, "end": 42.4, "text": "Each click swaps the deck's source. Watch deck A's preview and the output."}, {"start": 42.4, "end": 44.9, "text": "And back to Kifs."}, {"start": 44.9, "end": 50.9, "text": "Save stores the deck's source and all its settings as a preset."}, {"start": 50.9, "end": 56.9, "text": "The gear opens the Edit view with every parameter of the row (Ch. 6 at 6:47)."}, {"start": 56.9, "end": 62.9, "text": "The FX row below is the deck's effect chain (Ch. 5 at 5:13)."}]}, {"slug": "overview/perform", "vtitle": "Overview", "title": "Knobs and crossfaders", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/perform.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/perform.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/perform.jpg", "dur": 50.7, "captions": [{"start": 0.0, "end": 6.0, "text": "Every row has four knobs, mapped to that row's most useful parameters."}, {"start": 6.0, "end": 10.2, "text": "Drag up or right to turn a knob up..."}, {"start": 10.2, "end": 14.2, "text": "...and down or left to turn it down."}, {"start": 14.2, "end": 21.2, "text": "Hold Shift while dragging for fine control. Double-click a knob to type a value."}, {"start": 21.2, "end": 33.2, "text": "Under the output is the crossfader. It blends deck A into deck B."}, {"start": 33.2, "end": 39.2, "text": "The same crossfader is the first knob of the Transitions row on the MIXER page."}, {"start": 39.2, "end": 44.2, "text": "Turn it and the crossfader under the output follows."}, {"start": 44.2, "end": 51.1, "text": "The other knobs shape the transition: how deck A becomes deck B."}]}, {"slug": "overview/fx", "vtitle": "Overview", "title": "FX chains", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/fx.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/fx.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/fx.jpg", "dur": 93.9, "captions": [{"start": 0.4, "end": 6.4, "text": "Every deck has an FX chain with three slots. The master has one too."}, {"start": 6.4, "end": 12.4, "text": "The picture flows through the slots from left to right: slot 1, then 2, then 3."}, {"start": 12.4, "end": 20.9, "text": "So order matters. Here Kaleidoscope folds the image, then Polar Tunnel wraps the result into a tunnel."}, {"start": 20.9, "end": 27.9, "text": "Swap them, and the tunnel is folded instead. Same effects, a very different picture."}, {"start": 27.9, "end": 34.4, "text": "Drag a slot onto another to reorder the chain."}, {"start": 34.4, "end": 42.1, "text": "The power button switches one slot off without removing it."}, {"start": 42.1, "end": 48.6, "text": "Each slot's knob is that effect's Metaknob: one knob that drives its main parameters."}, {"start": 48.6, "end": 54.7, "text": "The Super Knob turns the Metaknobs of every linked slot at once."}, {"start": 54.7, "end": 60.7, "text": "A slot joins in when the Super Knob passes its current value, so nothing jumps."}, {"start": 60.7, "end": 68.7, "text": "The link button above a slot adds it to the Super Knob or takes it out. Click to unlink Polar Tunnel."}, {"start": 68.7, "end": 75.2, "text": "Now the Super Knob moves only the linked slots. Polar Tunnel stays put."}, {"start": 75.2, "end": 79.0, "text": "Click again to link it back."}, {"start": 79.0, "end": 85.4, "text": "The link beside the Super Knob links or unlinks all slots at once."}, {"start": 85.4, "end": 93.9, "text": "The master FX chain on the MIXER page works the same way. It runs after the crossfader, on the final mix."}]}, {"slug": "overview/edit", "vtitle": "Overview", "title": "Edit view", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/edit.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/edit.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/edit.jpg", "dur": 49.4, "captions": [{"start": 0.0, "end": 4.9, "text": "The gear on a row opens the Edit view."}, {"start": 4.9, "end": 10.9, "text": "Edit lists every parameter of the deck's source, not only the four on the knobs."}, {"start": 10.9, "end": 16.9, "text": "K1 to K4 mark the parameters that sit on the row's four knobs."}, {"start": 16.9, "end": 22.9, "text": "VAL sets a parameter's value. LFO and the other columns add modulation."}, {"start": 22.9, "end": 29.9, "text": "Click a parameter to see and edit its properties."}, {"start": 29.9, "end": 36.9, "text": "The FX tab shows the deck's chain: wet/dry, the Super Knob and every slot's parameters."}, {"start": 36.9, "end": 42.9, "text": "These checkboxes are another way to choose which slots follow the Super Knob."}, {"start": 42.9, "end": 49.4, "text": "The tabs on the far left jump to the other decks and to the mixer."}]}, {"slug": "overview/library", "vtitle": "Overview", "title": "Library and themes", "docs": "docs/user_guide/your_workspace/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/overview/library.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/overview/library.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/overview/library.jpg", "dur": 38.4, "captions": [{"start": 0.0, "end": 6.4, "text": "The Library view fills the screen with your sources, effects and presets."}, {"start": 6.4, "end": 12.4, "text": "Tabs switch between sources, FX, transitions, queues and macros."}, {"start": 12.4, "end": 20.9, "text": "Search finds items by name, tag or folder."}, {"start": 20.9, "end": 25.9, "text": "Preferences, under General, has the theme."}, {"start": 25.9, "end": 32.4, "text": "There are two: dark, and this light one for bright rooms."}, {"start": 32.4, "end": 38.4, "text": "Liquid LSD is free software under the GPL-3.0."}]}, {"slug": "modulation/grid", "vtitle": "Modulation", "title": "The modulation grid", "docs": "docs/user_guide/modulation/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/grid.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/grid.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/grid.jpg", "dur": 43.8, "captions": [{"start": 1.5, "end": 8.5, "text": "Modulation makes parameters move on their own: with an LFO, the music, or a step pattern."}, {"start": 8.5, "end": 15.0, "text": "It is set up in the Edit view. Click the gear on deck A's source row."}, {"start": 15.0, "end": 19.5, "text": "Each row is one parameter of the source."}, {"start": 19.5, "end": 24.5, "text": "VAL is the parameter's own value: what its knob sets."}, {"start": 24.5, "end": 31.5, "text": "The other columns are modulation sources. A cell connects one source to one parameter."}, {"start": 31.5, "end": 43.8, "text": "The step sequencer column is off by default. Turn it on from the menu beside VAL."}]}, {"slug": "modulation/lfo", "vtitle": "Modulation", "title": "LFO", "docs": "docs/user_guide/modulation/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/lfo.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/loops/lfo.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/lfo.jpg", "dur": 56.7, "captions": [{"start": 0.0, "end": 5.5, "text": "Start with an LFO on Zoom. Click its LFO cell."}, {"start": 5.5, "end": 11.0, "text": "The LFO panel opens on the right. A new LFO starts switched off."}, {"start": 11.0, "end": 18.0, "text": "Click the power button. The graph shows the wave, and the picture starts to breathe in and out."}, {"start": 18.0, "end": 29.4, "text": "The shape buttons pick the wave: sine, triangle, square or random."}, {"start": 29.4, "end": 37.2, "text": "Range sets how far it swings. Click the maximum and type a new value."}, {"start": 37.2, "end": 45.7, "text": "Time counts in seconds. Beat locks the LFO to the clock, so it moves with the music."}, {"start": 45.7, "end": 50.7, "text": "Beat Div sets how many beats one full swing takes."}, {"start": 50.7, "end": 56.7, "text": "Back in the grid, the cell's small knob shows the LFO's live value."}]}, {"slug": "modulation/audio", "vtitle": "Modulation", "title": "Audio", "docs": "docs/user_guide/modulation/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/audio.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/audio.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/audio.jpg", "dur": 47.6, "captions": [{"start": 0.0, "end": 6.0, "text": "Now make Gain flash with the kick drum. Click its AUD cell."}, {"start": 6.0, "end": 12.0, "text": "Switch it on. The graph now follows the music."}, {"start": 12.0, "end": 20.5, "text": "Frequency Band picks what to listen to. Bass follows the kick drum."}, {"start": 20.5, "end": 28.0, "text": "Continuous follows how loud the band is. Transient fires on each new hit."}, {"start": 28.0, "end": 36.5, "text": "Response sets how fast it rises and falls. Punchy suits drums."}, {"start": 36.5, "end": 47.1, "text": "Range works as for the LFO. From 0 to 40, each kick brightens the picture."}]}, {"slug": "modulation/seq", "vtitle": "Modulation", "title": "Step sequencer", "docs": "docs/user_guide/modulation/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/seq.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/seq.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/seq.jpg", "dur": 50.2, "captions": [{"start": 0.0, "end": 6.0, "text": "The step sequencer plays a pattern of values. Put one on Lobes."}, {"start": 6.0, "end": 9.0, "text": "Switch it on."}, {"start": 9.0, "end": 12.5, "text": "Pick 8, 16 or 32 steps."}, {"start": 12.5, "end": 26.7, "text": "Click a step and type its value. The bright box is the step playing now."}, {"start": 26.7, "end": 32.7, "text": "Lobes is on deck A's first knob, so the LOBES knob steps along with the pattern."}, {"start": 32.7, "end": 42.7, "text": "Set the clock to BEAT and each step lands on the beat."}, {"start": 42.7, "end": 49.7, "text": "Step Hold and Glide Curve shape the move from one step to the next: a jump or a slide."}]}, {"slug": "modulation/combine", "vtitle": "Modulation", "title": "Muting and combining", "docs": "docs/user_guide/modulation/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/combine.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/combine.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/modulation/combine.jpg", "dur": 31.6, "captions": [{"start": 0.0, "end": 7.0, "text": "The power button mutes a modulator and keeps its settings."}, {"start": 7.0, "end": 15.0, "text": "ADD adds the modulator to the value. MUL multiplies the value; SCALE pulls it down as the signal rises."}, {"start": 15.0, "end": 21.0, "text": "The knob still sets the starting point. Modulation moves around it."}, {"start": 21.0, "end": 26.0, "text": "Every deck, every FX slot and the mixer have the same grid."}, {"start": 26.0, "end": 31.6, "text": "Save the preset and its modulation is saved with it."}]}, {"slug": "fx_chains/build", "vtitle": "FX chains", "title": "Building a chain", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/build.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/loops/build.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/build.jpg", "dur": 66.2, "captions": [{"start": 1.5, "end": 8.0, "text": "Effects change the picture a source draws: fold it, warp it, blur it, colour it."}, {"start": 8.0, "end": 13.5, "text": "Each deck's second row is its FX chain. Deck A's is new: no effects yet."}, {"start": 13.5, "end": 20.8, "text": "It has three slots, one under each of the last three knobs. Click the first slot."}, {"start": 20.8, "end": 28.8, "text": "The browser below now lists effects for that slot. Click one to load it."}, {"start": 28.8, "end": 37.6, "text": "Kaleidoscope folds the picture into mirrored wedges. Now the second slot."}, {"start": 37.6, "end": 41.6, "text": "Polar Tunnel wraps it into a tunnel."}, {"start": 41.6, "end": 50.2, "text": "And Bloom in the third, for a soft glow."}, {"start": 50.2, "end": 60.2, "text": "To try other effects without the browser, scroll the mouse wheel over a slot."}, {"start": 60.2, "end": 65.7, "text": "The wheel steps through your favourite effects, or the slot's category."}]}, {"slug": "fx_chains/order", "vtitle": "FX chains", "title": "Order and bypass", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/order.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/order.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/order.jpg", "dur": 37.5, "captions": [{"start": 0.0, "end": 4.5, "text": "The picture flows through the slots from left to right."}, {"start": 4.5, "end": 11.5, "text": "Drag a slot onto another to swap them. Now the tunnel is drawn first and then folded."}, {"start": 11.5, "end": 17.5, "text": "Swap them back: same effects, a different picture."}, {"start": 17.5, "end": 27.0, "text": "The power button beside a slot switches that effect off and keeps its settings."}, {"start": 27.0, "end": 37.5, "text": "BYPASS switches the whole chain off, so you can compare with the bare source."}]}, {"slug": "fx_chains/knobs", "vtitle": "FX chains", "title": "Metaknobs and the Super Knob", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/knobs.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/knobs.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/knobs.jpg", "dur": 55.7, "captions": [{"start": 0.0, "end": 13.6, "text": "The knob above each slot is that effect's Metaknob: one knob tuned to drive its main parameters."}, {"start": 13.6, "end": 22.7, "text": "The first knob is the Super Knob. It turns every linked Metaknob at once."}, {"start": 22.7, "end": 28.7, "text": "A Metaknob joins in when the Super Knob passes its value, so nothing jumps."}, {"start": 28.7, "end": 35.2, "text": "The link button above a slot takes it out of the Super Knob. Unlink Bloom..."}, {"start": 35.2, "end": 40.7, "text": "...and the Super Knob leaves Bloom alone."}, {"start": 40.7, "end": 48.2, "text": "The chain link beside the Super Knob links or unlinks all three slots at once."}, {"start": 48.2, "end": 55.2, "text": "The gear opens the chain in the Edit view, where you choose what each Metaknob drives."}]}, {"slug": "fx_chains/focus", "vtitle": "FX chains", "title": "Focus mode", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/focus.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/focus.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/focus.jpg", "dur": 48.1, "captions": [{"start": 0.0, "end": 6.0, "text": "To work on one effect, click its number. This is focus mode."}, {"start": 6.0, "end": 10.0, "text": "Now the first knob is Kaleidoscope's Metaknob..."}, {"start": 10.0, "end": 17.5, "text": "...and the other three are its own parameters."}, {"start": 17.5, "end": 24.5, "text": "An effect with more than three parameters has pages. The arrows step through them."}, {"start": 24.5, "end": 36.1, "text": "Wet blends the effect with its input. Drag it down to fade Kaleidoscope out."}, {"start": 36.1, "end": 42.1, "text": "Click another number to focus that slot instead..."}, {"start": 42.1, "end": 47.6, "text": "...or the lit one again to go back to the whole chain."}]}, {"slug": "fx_chains/chains", "vtitle": "FX chains", "title": "Saved chains", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/chains.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/chains.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/chains.jpg", "dur": 38.7, "captions": [{"start": 0.0, "end": 7.3, "text": "A whole chain can be saved and loaded. Click the chain name to list saved chains."}, {"start": 7.3, "end": 20.7, "text": "Click one to load all three slots at once."}, {"start": 20.7, "end": 27.2, "text": "Save keeps your changes. It turns red when the chain has changed since it was loaded."}, {"start": 27.2, "end": 32.7, "text": "The menu has Save As, Clear, and Copy and Paste between decks."}, {"start": 32.7, "end": 39.1, "text": "A deck's FX chain is separate from its presets: loading a preset keeps the chain."}]}, {"slug": "fx_chains/master", "vtitle": "FX chains", "title": "Master FX", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/master.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/master.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/master.jpg", "dur": 38.0, "captions": [{"start": 0.4, "end": 7.4, "text": "The MIXER page has the master FX chain. It works on the final mix, after the crossfader."}, {"start": 7.4, "end": 15.3, "text": "Load something bold into a master slot, like Invert..."}, {"start": 15.3, "end": 26.9, "text": "...and it stays on screen whichever deck the crossfader shows."}, {"start": 26.9, "end": 32.4, "text": "The master chain starts with gentle effects you can leave on all night."}, {"start": 32.4, "end": 38.0, "text": "Every deck and the master: the same three slots, the same knobs."}]}, {"slug": "mixing/levels", "vtitle": "Mixing", "title": "Deck levels", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/levels.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/levels.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/levels.jpg", "dur": 50.7, "captions": [{"start": 1.5, "end": 8.5, "text": "The output is a mix of decks A and B, with BG behind them. The MIXER page controls the mix."}, {"start": 8.5, "end": 13.5, "text": "The first row holds the levels: how bright each deck is in the mix."}, {"start": 13.5, "end": 18.1, "text": "Turn LEVEL A down and deck A fades out..."}, {"start": 18.1, "end": 21.1, "text": "...and back up."}, {"start": 21.1, "end": 28.1, "text": "The thin fader beside each deck preview is the same level. Move either one and the other follows."}, {"start": 28.1, "end": 34.6, "text": "BG starts at zero. Turn LEVEL BG up..."}, {"start": 34.6, "end": 39.6, "text": "...and the background deck appears behind deck A."}, {"start": 39.6, "end": 50.7, "text": "MASTER fades the whole output: a quick way to black out."}]}, {"slug": "mixing/crossfader", "vtitle": "Mixing", "title": "The crossfader", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/crossfader.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/crossfader.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/crossfader.jpg", "dur": 45.8, "captions": [{"start": 0.0, "end": 13.6, "text": "The crossfader blends deck A into deck B. Drag it under the output..."}, {"start": 13.6, "end": 27.7, "text": "...or turn XFADE, the first knob of the Transitions row. They move together."}, {"start": 27.7, "end": 45.8, "text": "The A and B buttons jump straight to one deck: a hard cut."}]}, {"slug": "mixing/transitions", "vtitle": "Mixing", "title": "Transitions", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/transitions.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/transitions.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/transitions.jpg", "dur": 51.2, "captions": [{"start": 0.0, "end": 8.8, "text": "How A turns into B is the transition. The default is a plain crossfade. Click its name to pick another."}, {"start": 8.8, "end": 16.1, "text": "Click a transition to use it. Vortex Swirl twists deck A away and unwinds deck B."}, {"start": 16.1, "end": 26.6, "text": "Now move the crossfader slowly to watch it."}, {"start": 26.6, "end": 33.1, "text": "The other three knobs are the transition's own settings. They change with each transition."}, {"start": 33.1, "end": 41.2, "text": "Try another: Film Burn."}, {"start": 41.2, "end": 50.7, "text": "Back to deck A, burning through."}]}, {"slug": "mixing/auto", "vtitle": "Mixing", "title": "AUTO and fade time", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/auto.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/auto.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/auto.jpg", "dur": 31.35, "captions": [{"start": 0.0, "end": 11.5, "text": "AUTO runs the crossfader for you, from one deck to the other."}, {"start": 11.5, "end": 19.8, "text": "The time beside it is how long the fade takes. Drag it, or scroll over it, to change it."}, {"start": 19.8, "end": 26.3, "text": "Now AUTO fades back to A in 3 seconds."}, {"start": 26.3, "end": 31.35, "text": "Click AUTO while it fades to stop it where it is."}]}, {"slug": "mixing/clock", "vtitle": "Mixing", "title": "The clock", "docs": "docs/user_guide/performance_controls/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/clock.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/clock.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/mixing/clock.jpg", "dur": 52.6, "captions": [{"start": 0.0, "end": 6.0, "text": "The last row is the clock. Everything set to follow the beat runs on its tempo."}, {"start": 6.0, "end": 12.0, "text": "Here an LFO set to Beat morphs deck A's shape in time with the music."}, {"start": 12.0, "end": 20.0, "text": "Halve the tempo, and the morph slows down with it."}, {"start": 20.0, "end": 25.0, "text": "Double it to get back."}, {"start": 25.0, "end": 32.0, "text": "TAP sets the tempo: click it in time with the music, four times or more."}, {"start": 32.0, "end": 36.5, "text": "Plus and minus nudge it by half a beat per minute."}, {"start": 36.5, "end": 41.0, "text": "RESYNC puts the downbeat back on the first dot."}, {"start": 41.0, "end": 47.0, "text": "MAN keeps your tempo. AUDIO follows the beat it hears in the music."}, {"start": 47.0, "end": 52.6, "text": "Levels, crossfader, transitions and clock: the whole mix on one page."}]}, {"slug": "library/browse", "vtitle": "Library and presets", "title": "Browsing the Library", "docs": "docs/user_guide/presets_and_library/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/library/browse.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/library/browse.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/library/browse.jpg", "dur": 38.0, "captions": [{"start": 1.5, "end": 8.0, "text": "Below the knobs is the Library: every source, effect, transition and preset you have."}, {"start": 8.0, "end": 14.0, "text": "Press Space to give it the whole column. Space again brings the knobs back."}, {"start": 14.0, "end": 19.5, "text": "The tabs pick what it lists: Sources, FX, Transitions, Queues and Macros."}, {"start": 19.5, "end": 26.0, "text": "The folders on the left narrow the list: stock sources, your saved presets, playlists."}, {"start": 26.0, "end": 37.0, "text": "Search finds anything by name, tag or folder. Ctrl+F jumps here from anywhere."}]}, {"slug": "library/load", "vtitle": "Library and presets", "title": "Loading onto a deck", "docs": "docs/user_guide/presets_and_library/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/library/load.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/library/load.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/library/load.jpg", "dur": 32.18, "captions": [{"start": 0.0, "end": 7.68, "text": "Double-click a source to load it into the deck that is not on air."}, {"start": 7.68, "end": 14.18, "text": "The crossfader is on A, so it went to deck B, ready for the next fade."}, {"start": 14.18, "end": 24.68, "text": "Or drag it onto the deck you want. Try it on PV, the preview deck, first."}, {"start": 24.68, "end": 31.68, "text": "Clicking a deck's source name opens the same list for that deck alone: one click loads."}]}, {"slug": "library/save", "vtitle": "Library and presets", "title": "Saving presets", "docs": "docs/user_guide/presets_and_library/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/library/save.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/library/save.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/library/save.jpg", "dur": 28.0, "captions": [{"start": 0.0, "end": 5.5, "text": "Change something on deck A..."}, {"start": 5.5, "end": 10.0, "text": "...and a star after its name marks unsaved changes."}, {"start": 10.0, "end": 16.5, "text": "Save stores the source, every setting and its modulation as a preset. Ctrl+S does the same."}, {"start": 16.5, "end": 21.5, "text": "Give it a name, and tags to find it by later, then click Save."}, {"start": 21.5, "end": 27.5, "text": "We cancel here. Saved presets appear in the Library, under Saved presets."}]}, {"slug": "library/queues", "vtitle": "Library and presets", "title": "Queues", "docs": "docs/user_guide/presets_and_library/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/library/queues.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/library/queues.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/library/queues.jpg", "dur": 41.3, "captions": [{"start": 0.0, "end": 5.5, "text": "A queue lines up saved presets for your set. Search for some first."}, {"start": 5.5, "end": 18.3, "text": "Select a preset and press Q to add it to the A/B queue."}, {"start": 18.3, "end": 24.3, "text": "The Queues tab shows them in order."}, {"start": 24.3, "end": 32.8, "text": "The arrows on a deck's source row step through the queue: the next preset loads and the crossfader fades to it."}, {"start": 32.8, "end": 40.3, "text": "Shift+Q fills the BG queue instead. FX and transitions have queues too."}]}, {"slug": "library/pair", "vtitle": "Library and presets", "title": "The pair view", "docs": "docs/user_guide/presets_and_library/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/library/pair.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/library/pair.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/library/pair.jpg", "dur": 27.6, "captions": [{"start": 0.0, "end": 6.0, "text": "Click a deck's preview to open its pair view."}, {"start": 6.0, "end": 12.5, "text": "Deck B's source and FX rows stay on top, with the browser below for that deck."}, {"start": 12.5, "end": 17.0, "text": "Parameters opens the full Edit view for it."}, {"start": 17.0, "end": 22.0, "text": "Back, or Esc, returns to Perform."}, {"start": 22.0, "end": 27.6, "text": "Browse, load, save and queue: your whole set lives in the Library."}]}, {"slug": "hardware/learn", "vtitle": "Hardware control", "title": "MIDI learn", "docs": "docs/user_guide/hardware/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/learn.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/learn.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/learn.jpg", "dur": 40.9, "captions": [{"start": 1.5, "end": 9.0, "text": "Liquid LSD can be played from MIDI controllers, a Midi Fighter Twister, or OSC apps such as TouchOSC."}, {"start": 9.0, "end": 14.0, "text": "To put a knob on your controller, right-click it."}, {"start": 14.0, "end": 21.5, "text": "The ring pulses: it is waiting. Move a knob or fader on the controller and the two are linked."}, {"start": 21.5, "end": 26.9, "text": "Right-click again to stop waiting without linking anything."}, {"start": 26.9, "end": 35.4, "text": "Buttons learn the same way: right-click A, B, AUTO or TAP, then press a pad."}, {"start": 35.4, "end": 40.9, "text": "In Edit, right-click any slider for Learn MIDI and Learn OSC."}]}, {"slug": "hardware/twister", "vtitle": "Hardware control", "title": "Perform pages and the Twister", "docs": "docs/user_guide/hardware/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/twister.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/loops/twister.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/twister.jpg", "dur": 45.2, "captions": [{"start": 0.0, "end": 8.0, "text": "A Midi Fighter Twister needs no setup: plug it in and its 16 knobs are the 16 knobs on screen."}, {"start": 8.0, "end": 17.8, "text": "Its side button steps through the pages, like these tabs, and the screen follows."}, {"start": 17.8, "end": 24.7, "text": "Its rings show each knob's value, and on an FX row a push switches that slot off."}, {"start": 24.7, "end": 30.2, "text": "Preferences, under MIDI Controls, lists the pages. Each one is four rows."}, {"start": 30.2, "end": 35.7, "text": "Copy a page to a user file to change its rows and make it your own."}, {"start": 35.7, "end": 44.7, "text": "With MIDI on, this panel also shows incoming messages and every mapping, with its range, smoothing and soft takeover."}]}, {"slug": "hardware/osc", "vtitle": "Hardware control", "title": "OSC", "docs": "docs/user_guide/hardware/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/osc.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/osc.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/hardware/osc.jpg", "dur": 31.8, "captions": [{"start": 0.4, "end": 5.9, "text": "OSC Controls sets up control from a phone or tablet app such as TouchOSC."}, {"start": 5.9, "end": 12.9, "text": "Point the app at this computer and the inbound port. Feedback goes back on the outbound port."}, {"start": 12.9, "end": 19.9, "text": "Start Learn, then move a control in the app to link it. Right-clicking a slider does the same."}, {"start": 19.9, "end": 26.2, "text": "Mappings are saved in a profile, so each app or layout can have its own."}, {"start": 26.2, "end": 31.8, "text": "The Hardware page of the user guide covers each controller in detail."}]}, {"slug": "output/screen", "vtitle": "Output and recording", "title": "Output View and a second screen", "docs": "docs/user_guide/output_and_recording/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/output/screen.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/output/screen.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/output/screen.jpg", "dur": 40.5, "captions": [{"start": 1.5, "end": 8.5, "text": "The master output is what the audience sees. There are several ways to get it in front of them."}, {"start": 8.5, "end": 17.5, "text": "Press F for Output View: the controls disappear and the output fills the screen."}, {"start": 17.5, "end": 23.0, "text": "Esc brings the controls back. F11 makes the window fullscreen."}, {"start": 23.0, "end": 27.5, "text": "With a projector or second screen, use the Output menu."}, {"start": 27.5, "end": 34.5, "text": "Secondary Output Window fills the other screen with the output, and the controls stay on yours."}, {"start": 34.5, "end": 40.0, "text": "Output Monitor picks which screen, if it lands on the wrong one."}]}, {"slug": "output/video", "vtitle": "Output and recording", "title": "Resolution and sharing", "docs": "docs/user_guide/output_and_recording/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/output/video.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/output/video.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/output/video.jpg", "dur": 26.4, "captions": [{"start": 0.4, "end": 7.4, "text": "Preferences, under Video & Display, sets the render resolution. Lower it if a laptop struggles."}, {"start": 7.4, "end": 12.4, "text": "Display Scaling fits the output to screens with other shapes."}, {"start": 12.4, "end": 18.9, "text": "Live Video Sharing sends any deck or the master to other apps, such as OBS or Resolume."}, {"start": 18.9, "end": 25.9, "text": "Tick a row to share it. It uses Spout on Windows, Syphon on macOS and PipeWire on Linux."}]}, {"slug": "output/record", "vtitle": "Output and recording", "title": "Recording", "docs": "docs/user_guide/output_and_recording/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/output/record.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/output/record.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/output/record.jpg", "dur": 26.8, "captions": [{"start": 0.0, "end": 6.8, "text": "Recording settings are just below: the folder, the quality, and whether to include the audio."}, {"start": 6.8, "end": 12.8, "text": "To record your set, press Ctrl+R or use Output, Record Output."}, {"start": 12.8, "end": 18.3, "text": "A red REC badge with the time shows while it records. Ctrl+R again stops it."}, {"start": 18.3, "end": 26.3, "text": "Render Video renders offline, frame by frame, from an audio file: slower than real time, at any resolution."}]}, {"slug": "output/broadcast", "vtitle": "Output and recording", "title": "Web broadcast", "docs": "docs/user_guide/output_and_recording/", "clip": "https://www.spaz.org/~gj/liquid-lsd-files/output/broadcast.mp4", "loop": "https://www.spaz.org/~gj/liquid-lsd-files/output/broadcast.mp4", "poster": "https://www.spaz.org/~gj/liquid-lsd-files/output/broadcast.jpg", "dur": 25.3, "captions": [{"start": 0.4, "end": 7.9, "text": "Web Broadcast is experimental: it streams your show to a web page, where each viewer's browser draws it."}, {"start": 7.9, "end": 13.4, "text": "It needs a relay server and a broadcaster token. Enter both here."}, {"start": 13.4, "end": 19.7, "text": "Go Live connects. The title bar then shows LIVE while you are streaming."}, {"start": 19.7, "end": 25.3, "text": "The Output page of the user guide has all the details."}]}]</script>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/tour.js"></script>
+</body>
+</html>

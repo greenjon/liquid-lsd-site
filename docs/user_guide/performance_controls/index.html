@@ -1,0 +1,2182 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Liquid LSD real-time graphics and audio workstation.">
+      
+      
+      
+        <link rel="canonical" href="https://liquid-lsd.greenjon.com/docs/user_guide/performance_controls/">
+      
+      
+        <link rel="prev" href="../output_and_recording/">
+      
+      
+        <link rel="next" href="../macros_and_rack/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Performance Controls - Liquid LSD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/docs-clips.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#performance-controls" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Liquid LSD" class="md-header__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liquid LSD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Performance Controls
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="dark" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liquid LSD" class="md-nav__button md-logo" aria-label="Liquid LSD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Liquid LSD
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/greenjon/liquid-lsd" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../your_workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual_sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presets_and_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presets & Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output_and_recording/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output & Recording
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Controls
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trackpad-performance-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trackpad Performance Surface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trackpad Performance Surface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surface-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surface layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-finger-stutters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-finger stutters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup on Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-tooltips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes &amp; Tooltips
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes &amp; Tooltips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hover-tooltips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hover tooltips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-tier-notes-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three-tier notes system
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-and-editing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding and editing notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-preset-name-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The preset name label
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fx-chain-slot-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FX Chain &amp; Slot Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midi-hardware-control-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Hardware &amp; Control Mappings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MIDI Hardware &amp; Control Mappings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midi-learn-modulator-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Learn &amp; Modulator Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intelligent-signal-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intelligent Signal Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tuning-continuous-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Tuning Continuous Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discrete-controls-buttons-pads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete Controls (Buttons &amp; Pads)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-rotary-encoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Rotary Encoders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-profiles-midi-fighter-twister" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller Profiles: Midi Fighter Twister
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller Profiles: Midi Fighter Twister">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-setup-in-the-midi-fighter-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-time setup in the Midi Fighter Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-knobs-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the knobs control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#walkthrough-load-an-effect-onto-deck-a-with-only-the-twister" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Walkthrough: load an effect onto Deck A with only the Twister
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#side-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Side buttons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rings-and-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rings and LEDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-xt-firmware-and-native-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: XT firmware and native mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-own-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your own profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osc-touchosc-control-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OSC / TouchOSC Control Surfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSC / TouchOSC Control Surfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osc-learn-modulator-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OSC Learn &amp; Modulator Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tuning-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Tuning &amp; Shaping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiles_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perform-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perform Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros_and_rack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macro Controls & the Perform View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_broadcast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Broadcast
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Usage & Startup Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trackpad-performance-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trackpad Performance Surface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trackpad Performance Surface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surface-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surface layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-finger-stutters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-finger stutters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup on Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-tooltips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes &amp; Tooltips
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes &amp; Tooltips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hover-tooltips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hover tooltips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-tier-notes-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three-tier notes system
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-and-editing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding and editing notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-preset-name-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The preset name label
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fx-chain-slot-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FX Chain &amp; Slot Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#midi-hardware-control-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Hardware &amp; Control Mappings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MIDI Hardware &amp; Control Mappings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midi-learn-modulator-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI Learn &amp; Modulator Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intelligent-signal-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intelligent Signal Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tuning-continuous-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Tuning Continuous Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discrete-controls-buttons-pads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discrete Controls (Buttons &amp; Pads)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-rotary-encoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relative Rotary Encoders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-profiles-midi-fighter-twister" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller Profiles: Midi Fighter Twister
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller Profiles: Midi Fighter Twister">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-setup-in-the-midi-fighter-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-time setup in the Midi Fighter Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-knobs-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the knobs control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#walkthrough-load-an-effect-onto-deck-a-with-only-the-twister" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Walkthrough: load an effect onto Deck A with only the Twister
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#side-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Side buttons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rings-and-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rings and LEDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-xt-firmware-and-native-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: XT firmware and native mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-own-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your own profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osc-touchosc-control-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OSC / TouchOSC Control Surfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OSC / TouchOSC Control Surfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osc-learn-modulator-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OSC Learn &amp; Modulator Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fine-tuning-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fine-Tuning &amp; Shaping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiles_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perform-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perform Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="performance-controls">Performance Controls</h1>
+<p>This page covers two things that are especially useful during a live show: the trackpad performance surface, and the notes system for keeping reminders attached to your presets and parameters.</p>
+<div class="tour-clips">
+<p class="tour-clips-head">Watch: <strong>FX chains</strong> &mdash; <a href="../../../tour/">open the guided tour</a></p>
+<div class="tour-clips-grid">
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/build.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/build.mp4"></video><figcaption><a href="../../../tour/#fx_chains/build">Building a chain</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/order.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/order.mp4"></video><figcaption><a href="../../../tour/#fx_chains/order">Order and bypass</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/knobs.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/knobs.mp4"></video><figcaption><a href="../../../tour/#fx_chains/knobs">Metaknobs and the Super Knob</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/focus.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/focus.mp4"></video><figcaption><a href="../../../tour/#fx_chains/focus">Focus mode</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/chains.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/chains.mp4"></video><figcaption><a href="../../../tour/#fx_chains/chains">Saved chains</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/master.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/fx_chains/master.mp4"></video><figcaption><a href="../../../tour/#fx_chains/master">Master FX</a></figcaption></figure>
+</div>
+</div>
+
+<div class="tour-clips">
+<p class="tour-clips-head">Watch: <strong>Mixing</strong> &mdash; <a href="../../../tour/">open the guided tour</a></p>
+<div class="tour-clips-grid">
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/mixing/levels.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/mixing/levels.mp4"></video><figcaption><a href="../../../tour/#mixing/levels">Deck levels</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/mixing/crossfader.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/mixing/crossfader.mp4"></video><figcaption><a href="../../../tour/#mixing/crossfader">The crossfader</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/mixing/transitions.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/mixing/transitions.mp4"></video><figcaption><a href="../../../tour/#mixing/transitions">Transitions</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/mixing/auto.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/mixing/auto.mp4"></video><figcaption><a href="../../../tour/#mixing/auto">AUTO and fade time</a></figcaption></figure>
+<figure><video controls muted loop playsinline preload="none" poster="https://www.spaz.org/~gj/liquid-lsd-files/mixing/clock.jpg" src="https://www.spaz.org/~gj/liquid-lsd-files/mixing/clock.mp4"></video><figcaption><a href="../../../tour/#mixing/clock">The clock</a></figcaption></figure>
+</div>
+</div>
+
+<hr />
+<h2 id="trackpad-performance-surface">Trackpad Performance Surface</h2>
+<p>If you're performing on a laptop, you can turn your trackpad into a hardware-style performance controller — a bit like the classic Stanton SCS.3m DJ mixer. Hold <strong><code>CapsLock</code></strong> to activate it.</p>
+<p>While CapsLock is held:
+- The trackpad stops moving the mouse cursor
+- It becomes an absolute-position performance surface with three faders and a crossfader</p>
+<p>Release CapsLock to return to normal mouse control.</p>
+<h3 id="surface-layout">Surface layout</h3>
+<pre><code>┌────────────────────────────────────────────────────┐
+│  [Deck A Level]  [Deck BG Level]  [Deck B Level]   │  ← Top 55% of trackpad
+│                                                    │
+├────────────────────────────────────────────────────┤
+│                   (dead zone)                      │  ← Middle buffer zone
+├────────────────────────────────────────────────────┤
+│              Crossfader  (A ←——→ B)                │  ← Bottom 28%
+└────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Bottom zone (crossfader):</strong> Drag left for Deck A, right for Deck B. The full width maps to the crossfader range. Touch the centre and it snaps to 50/50.</p>
+<p><strong>Top zone (level faders):</strong> Three vertical strips — left third controls Deck A level, middle controls Deck BG, right controls Deck B. Touch anywhere in a strip to jump the level to that position instantly.</p>
+<p><strong>Dead zone (middle):</strong> A buffer between the two zones that prevents accidental switches when you're moving fast.</p>
+<h3 id="multi-finger-stutters">Multi-finger stutters</h3>
+<p>The real power comes from using two fingers at once. Each zone tracks fingers independently, using a last-in-first-out stack:</p>
+<p><strong>Crossfader cut stutters:</strong>
+1. Hold one finger down on the Deck A side.
+2. Tap repeatedly with a second finger on the Deck B side.
+3. Each tap snaps the crossfader to B; lifting the tap snaps it back to A.</p>
+<p>This gives you machine-gun visual cuts synchronized to your tapping rhythm.</p>
+<p><strong>Video strobes:</strong>
+1. Hold a finger at the bottom of a deck's level strip (level = 0%, blackout).
+2. Tap with a second finger at the top of the same strip (level = 100%, full brightness).
+3. Releasing the tap drops the deck back to blackout.</p>
+<p>This creates rhythmic video flashes and stroboscopic accents.</p>
+<p>When all fingers lift from a strip, the level stays frozen where you left it.</p>
+<h3 id="setup-on-linux">Setup on Linux</h3>
+<p>On Linux, the trackpad surface reads raw multi-touch input directly. This requires read/write permission on the input device.</p>
+<p>If the permission isn't set up, you'll see a <strong>Touchpad Status: Read/Write Permission Required</strong> message in <strong>Preferences → General</strong>, next to the <strong>Enable CapsLock Trackpad Console</strong> checkbox, with an <strong>Install Permissions (Polkit)</strong> button. Clicking it installs the necessary udev rule using <code>pkexec</code> — no reboot required. If you ran the desktop installer script (<code>./install-desktop.sh</code>) when you first unzipped the app, this was done automatically.</p>
+<p>On macOS, native trackpad support works without any extra setup.</p>
+<p><strong>Focus safety:</strong> If Liquid LSD loses window focus (e.g. via Alt+Tab), the trackpad grab releases immediately, so you're never locked out of your mouse.</p>
+<hr />
+<h2 id="notes-tooltips">Notes &amp; Tooltips</h2>
+<h3 id="hover-tooltips">Hover tooltips</h3>
+<p>Hovering over almost any parameter in the app shows a tooltip with:
+1. The parameter name, valid range, and factory default value.
+2. A plain-English description of what the parameter does.
+3. Any personal note you've attached to the parameter (in amber text).</p>
+<p>Macro knob tooltips show the value in the target parameter's real units, with the knob position as a percentage: <code>ZOOM: 5.00 (100%)</code>. The same real value is shown on the knob face (always while a row is in Edit, otherwise on hover).</p>
+<p>Tooltips appear after a short delay (~250ms) so they don't flash annoyingly as you move the mouse.</p>
+<h3 id="the-three-tier-notes-system">The three-tier notes system</h3>
+<p>You can attach notes at three different scopes:</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>What it's for</th>
+<th>Where it's stored</th>
+<th>When it appears</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source Note</strong></td>
+<td>Notes about a visual generator (e.g. "Gyroid works best with low gain feedback")</td>
+<td><code>~/.liquid-lsd/source-notes.json</code></td>
+<td>Stays with you globally, across all presets</td>
+</tr>
+<tr>
+<td><strong>Preset Note</strong></td>
+<td>Notes about a specific preset</td>
+<td>Inside the <code>.lsd</code> file</td>
+<td>Shows when hovering the preset name label on the deck monitor</td>
+</tr>
+<tr>
+<td><strong>Parameter Note</strong></td>
+<td>A reminder about a specific parameter in a preset</td>
+<td>Inside the <code>.lsd</code> file</td>
+<td>Shows in the parameter's hover tooltip</td>
+</tr>
+</tbody>
+</table>
+<p>Source Notes are global and persist no matter which preset you load — good for tips about generators that are always true. Preset and Parameter Notes travel with the preset file when you share it.</p>
+<h3 id="adding-and-editing-notes">Adding and editing notes</h3>
+<p><strong>Parameter notes:</strong>
+Hover over any parameter row in Edit's parameter grid and click <strong>⋮</strong> (or right-click the parameter name), then choose <strong>Add/Edit Parameter Note...</strong></p>
+<p><strong>Preset notes:</strong>
+Right-click the preset name label below the deck monitor preview and choose <strong>Add/Edit Preset Note...</strong></p>
+<p><strong>Source notes:</strong>
+Open the Deck Menu popup and choose <strong>Add/Edit Source Note...</strong></p>
+<p>All three open the same note editor: a multi-line text box up to 2048 characters. Press <code>Ctrl+Enter</code> to save, or <code>Escape</code> to cancel.</p>
+<h3 id="the-preset-name-label">The preset name label</h3>
+<p>Below each deck's monitor preview you'll see the name of the currently loaded preset. Hovering it shows the full file path, the last save time, and the preset note if one exists. A <code>*</code> next to the name means there are unsaved changes.</p>
+<p>If no preset is loaded yet (the deck is in an unsaved state), the label shows <code>Untitled</code> in grey. You can't attach a preset note until the preset has been saved at least once.</p>
+<hr />
+<h2 id="fx-chain-slot-management">FX Chain &amp; Slot Management</h2>
+<p>Every deck and the master bus each own one FX chain of 3 serial ISF filter slots: a deck's chain is
+its <strong><code>FX</code></strong> sub-tab, and <strong>Master FX</strong> (the Mixer's <strong><code>FX</code></strong> sub-tab in Edit) is applied to the
+final output after the crossfader. All five chains work the same way. Each chain has a <strong>Chain Super
+Knob</strong> and each slot its own <strong>Metaknob</strong> — see <a href="../macros_and_rack/">Macro Controls &amp; the Perform View</a>
+for the FX Rack view that exposes these.</p>
+<ul>
+<li><strong>Deck row layout</strong>: the deck badge (<code>A</code>, <code>B</code>, <code>BG</code>, <code>PV</code>) carries a caption, slate <code>SRC</code> or cyan <code>FX</code>, naming the half the row shows. Line 1 is the long name box (click to Browse) and the Edit gear; line 2 holds <code>⋮</code>, Save, queue <code>◀ ▶</code> and the slot pills on an FX row, or <code>⋮</code>, Save, <code>◀ ▶</code> and a right-aligned Eject on a source row (same button sizes on both).</li>
+<li><strong>Chain Header Kebab (<code>⋮</code>)</strong>:</li>
+<li><strong>Save Chain As...</strong>: Saves that chain's 3 slots (and its Super Knob state) into an
+    <code>.lsdfxchain</code> file in <code>library/fx_chains/</code>.</li>
+<li><strong>Copy Chain / Paste Chain</strong>: Copies or pastes one chain's 3 slots between any decks and Master FX.</li>
+<li><strong>Clear Chain Slots</strong>: Disposes and empties that chain's 3 slots.</li>
+<li><strong>Per-Slot Kebab (<code>⋮</code>)</strong>:</li>
+<li><strong>Save Slot Preset As...</strong>: Saves the slot's filter ID, dry/wet, Metaknob position/target,
+    and parameters into an <code>.lsdfx</code> file in <code>library/fx/</code>.</li>
+<li><strong>Copy Slot / Paste Slot</strong>: Copies or pastes individual slot configurations across slots or chains.</li>
+<li><strong>Clear Slot</strong>: Clears the slot filter and resets parameters.</li>
+<li><strong>Drag-and-Drop Targets</strong>: Drag <code>.lsdfxchain</code> onto a chain header, or <code>.lsdfx</code> onto a slot, to
+  instantly load/swap effects.</li>
+<li><strong>Library Browser</strong>: The <code>[ FX ]</code> Library view's right-click menus can load stock filters, saved
+  singles, and saved chains into any deck or <strong>Master FX</strong>.</li>
+<li><strong>FX is separate from presets</strong>: Loading or saving a deck preset (<code>.lsd</code>) never touches that
+  deck's FX chain. FX chains are saved with your session and restored on the next launch.</li>
+<li><strong>Performance Matrix FX Controls</strong>:</li>
+<li><strong>Shared Chain Header (<code>[◀] Name • [▶] [Save] [⋮] ... [BYPASS]</code>)</strong>:<ul>
+<li><strong><code>◀</code> / <code>▶</code> (Decks A, B, BG)</strong>: On Decks A, B, and BG, steps through the respective live FX queue (A/B or BG) directly on that deck, advancing the queue while targeting the clicked deck. Rendered disabled when the FX queue is empty. Omitted on Deck PV and Master FX, allowing the chain name button to expand while keeping row width perfectly aligned.</li>
+<li><strong>Chain Name Button</strong>: Displays current chain name with <code>•</code> dirty indicator when modified from baseline. Clicking binds the Library dock below to this chain (the <strong>Chain</strong> list: no row is expanded, and the name gets a coloured outline; <strong>✕</strong> or <code>Esc</code> lets go), with live text search over saved <code>.lsdfxchain</code> files. Accepts <code>.lsdfxchain</code> drag-and-drop.</li>
+<li><strong><code>[Save]</code></strong>: Overwrites the loaded chain file with current state, or triggers Save As if untitled.</li>
+<li><strong><code>[⋮]</code> Menu</strong>: Save As..., New Chain, Revert to Saved (undoes tweaks back to clean loaded state), Clear All Slots, and Copy/Paste Chain.</li>
+<li><strong><code>[BYPASS]</code></strong>: Top-level kill switch to immediately bypass or re-enable the entire FX chain.</li>
+</ul>
+</li>
+<li><strong>FX Slot Cells (<code>Effect Name</code>)</strong>:<ul>
+<li>Drawn under each of knobs 2–4 on Deck rows in <code>[FX]</code> mode and the Master row in <code>[FX]</code> mode. The cell is just the effect name, so names get the full cell width.</li>
+<li><strong><code>◀</code> / <code>▶</code> (on hover), Mouse Wheel, or Right-Click → Previous/Next in Shortlist</strong>: Steps to previous/next effect in the <strong>FX Shortlist</strong> (favorited ★ effects, or the current effect's category alphabetically). The arrows only appear at the cell's edges while the mouse is over it.</li>
+</ul>
+</li>
+<li><strong>Slot Side Buttons (left of each slot knob)</strong>: two stacked buttons.<ul>
+<li><strong>Link (top)</strong>: links/unlinks that slot's Metaknob to the Super Knob.</li>
+</ul>
+</li>
+<li><strong>Chain Link (left of the Super Knob, knob 1)</strong>: links or unlinks all three slots at once. Click links all unless they are all linked already, in which case it unlinks all; the icon shows a chain when every filled slot is linked, a dimmer chain when only some are, and a broken chain when none are. The Macro Strip has the same toggle by the <code>CHAIN MACRO</code> title. Where a new chain starts (linked or unlinked) is the <strong>Default FX chain linking</strong> preference.<ul>
+<li><strong>Bypass (bottom, power icon)</strong>: turns just that effect on or off. Row-coloured when on, red when bypassed, dim when the slot is empty. In Focus Mode, only the focused slot's bypass is shown, next to knob 1.</li>
+<li><strong>Effect Name</strong>: Truncated caption showing loaded filter. Click opens the pair view with Browse on that slot (Stock filters, ★ Favorites, and Saved <code>.lsdfx</code> presets). Browse opens a moment after you release the click, so a double-click (Focus Mode) or a drag doesn't open it.</li>
+<li><strong>Drag &amp; Drop</strong>: Drag an effect name onto another slot's name to swap/reorder (hold <code>Ctrl</code> while dropping to duplicate). Accepts stock ISF filters and <code>.lsdfx</code> single presets from Library.</li>
+<li><strong>Right-Click Context Menu</strong>: Focus Mode, Previous/Next in Shortlist, Replace..., Save as FX Preset..., Copy/Paste Slot, Reset Parameters, Clear Slot, Add/Remove from FX Shortlist (★), and Edit in Edit.</li>
+</ul>
+</li>
+<li><strong>Swap Gain Dip</strong>:<ul>
+<li>Replacing an effect or loading a chain applies a smooth audio/visual gain dip (fade out -&gt; swap -&gt; fade in) instead of a hard cut.</li>
+<li>Duration is customizable in Preferences (<code>FX Swap Fade (ms)</code>, 0–1000 ms, default 150 ms; 0 = immediate hard cut).</li>
+</ul>
+</li>
+<li><strong>Knob Labeling</strong>:<ul>
+<li>Knob 1 controls the chain's <code>SUPER</code> knob.</li>
+<li>Knobs 2–4 display <code>META</code> (or the target parameter name when custom-routed), while the effect name itself is clearly displayed in the slot cell below.</li>
+</ul>
+</li>
+<li><strong>Focus Mode (Traktor / Mixxx style)</strong>:<ul>
+<li><strong>Entering Focus Mode</strong>:</li>
+<li>Click any slot pill (<code>[1]</code>, <code>[2]</code>, or <code>[3]</code>) in the FX row header.</li>
+<li>Or double-click any slot cell's effect name.</li>
+<li>Or right-click a slot cell and select <strong>Focus Mode (Edit Parameters)</strong>.</li>
+<li><strong>Header Controls in Focus Mode</strong>:</li>
+<li><code>[⋮]</code>: Chain kebab menu remains accessible for Save As, Clear, etc.</li>
+<li><code>[Focused Effect Name ▾]</code>: Displays the name of the focused effect; clicking opens the pair view's FX Browse directly for that slot to audition or swap shaders.</li>
+<li><code>[◀ P1/N ▶]</code>: Parameter page stepper; appears automatically whenever the focused shader exposes more than 3 parameters.</li>
+<li><code>[1] [2] [3]</code>: Slot focus pills with clean styling. The active slot pill is highlighted in blue accent. Click another slot pill to switch focus instantly, or click the active focused slot pill a second time (or press <code>Escape</code>) to exit Focus Mode back to the 3-slot chain view.</li>
+<li><strong>4 Knobs in Focus Mode</strong>:</li>
+<li><strong>Knob 1 (<code>META</code>)</strong>: The focused slot's Metaknob (<code>$chainLabel/FX/FX&lt;slot&gt;/Meta</code>). Its Dry/Wet is the <code>Wet</code> slider in the chain header. The focused slot's <code>FxSlotCell</code> is drawn underneath so shortlist stepping (hover <code>◀ ▶</code> or mouse wheel) and picker access remain directly below the knob, with the slot's bypass button to its left.</li>
+<li><strong>Knobs 2–4 (<code>Top Parameters</code>)</strong>: Dynamically retargeted to the focused shader's parameters on the active page, in the slot's knob order (set in the Edit bay's <strong>Knobs</strong> list; the effect's own order by default) (e.g. <code>SPEED</code>, <code>INTENSITY</code>, <code>COLOR</code>).</li>
+<li><strong>Parameter Cells (<code>FxParamCell</code>)</strong>: Drawn under Knobs 2–4 with the parameter's name and a modulation indicator dot. The current value is shown inside the knob face, and a <code>[⟲]</code> reset button (restores the authored default) sits to the left of the knob.</li>
+</ul>
+</li>
+<li><strong>Stable Layout</strong>: Knobs stay the same size and in the same place whichever mode a row is in (source, FX group, or Focus Mode), and switching one row never resizes the others. Knob names and effect/parameter names share the same line under each knob. Names too long for it end in <code>…</code>; hover the knob for the full name.<ul>
+<li><strong>Seamless Hardware MIDI Retargeting</strong>:</li>
+<li>Physical MIDI controllers mapped to the row's standard macro paths (<code>Macro/&lt;bankId&gt;/knob_1..4</code>) immediately control the focused slot's Metaknob and parameters without requiring any MIDI remapping or controller mode switching.</li>
+<li>Exiting Focus Mode restores Knob 1 to <code>SUPER</code> and Knobs 2–4 to <code>META</code>.</li>
+</ul>
+</li>
+<li><strong>Performance Matrix Tabs</strong>:<ul>
+<li>Deck FX chains are on each deck's FX row; Master FX is on the Master FX row, on the <strong>MIXER</strong> tab.</li>
+<li>The <strong>Transitions</strong> row includes a <code>[DICES]</code> die button to randomize transition parameters with undo support.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="midi-hardware-control-mappings">MIDI Hardware &amp; Control Mappings</h2>
+<p>Liquid LSD includes an intelligent, multi-type MIDI subsystem for connecting hardware controllers (DJ controllers, fader banks, rotary knobs, pads, foot switches, and keyboards).</p>
+<h3 id="quick-setup">Quick Setup</h3>
+<ol>
+<li>Connect your USB or DIN MIDI interface.</li>
+<li>Open <strong>Preferences → MIDI Controls</strong> (or press <code>Ctrl+,</code>).</li>
+<li>Ensure <strong>Enable MIDI Subsystem</strong> is checked. The background watchdog automatically detects newly connected controllers without restarting the application.</li>
+<li>Check the <strong>Live MIDI Monitor (Sniffer)</strong> at the top of the panel: moving any knob or pressing any pad on your controller will immediately stream incoming packets (Channel, Message Type, Index, and Values).</li>
+</ol>
+<h3 id="midi-learn-modulator-variables">MIDI Learn &amp; Modulator Variables</h3>
+<p>You can map any parameter, internal modulator variable, matrix CV modulator, or global performance action:</p>
+<ol>
+<li><strong>In-Situ Right-Click Learn (Fastest)</strong>:</li>
+<li>Right-click any slider or variable label in the UI — including an LFO's <strong>Speed / Subdivision</strong>, <strong>Depth</strong>, <strong>Min/Max bounds</strong>, <strong>Asymmetry (Slope)</strong>, <strong>Morph</strong>, <strong>Hold</strong>, or a parameter's <strong>Initial Range (Base Value)</strong>.</li>
+<li>Select <strong>Learn MIDI Mapping (...)</strong> from the context menu. This is a controller mapping: it sets the value itself and is saved in your controller profile, not in the preset. The slider will pulse in cyan/blue while awaiting hardware input.</li>
+<li>Move a knob, fader, or press a pad on your MIDI controller. Liquid LSD immediately maps the control, preserves your configured min/max limits, and saves the mapping to the active profile.</li>
+<li>If a macro knob currently drives that value (its slider shows the cyan lock and a <code>[K#]</code> badge), <strong>Learn MIDI</strong> is greyed out as "locked by K#": the knob rewrites the value every frame, so a mapping would do nothing. Release the target first (uncheck it in the macro editor), or map a different value.</li>
+<li>
+<p>Right-click again and select <strong>Cancel MIDI Learn</strong> if needed.</p>
+</li>
+<li>
+<p><strong>Modulation Matrix Cells</strong>:</p>
+</li>
+<li>
+<p>Click any cell in the MIDI column of the Parameters matrix, then click <strong>Learn MIDI Modulator</strong> (or <strong>Re-Learn MIDI Modulator</strong>) in Modulation. This adds a MIDI modulator that is saved in the preset and adds on top of the parameter's value; <strong>Clear MIDI Modulator</strong> removes it.</p>
+</li>
+<li>
+<p><strong>Global Performance Actions</strong>:</p>
+</li>
+<li>
+<p>In <strong>Preferences → MIDI Controls</strong>, click <strong>Learn</strong> next to <em>Queue Advance A/B Next</em>, <em>Queue Step Back A/B Prev</em>, <em>BG Shader Advance</em>, <em>BG Step Back</em>, or <em>Tap Tempo</em>.</p>
+</li>
+<li>
+<p><strong>Modulator Variable Paths</strong>:</p>
+</li>
+<li>Modulator variables use unified path syntax: <code>&lt;parameterPath&gt;:mod/&lt;modulatorId&gt;/&lt;propertyName&gt;</code>. Learn writes the modulator's stable id, so the mapping keeps following that modulator when others are added, removed or reordered. Older numeric paths such as <code>Deck A/geometry/zoom:mod/0/subdivision</code> (LFO 1 Speed), <code>:mod/0/depth</code> or <code>:mod/1/morph</code> still work and resolve by list position. Modulator mappings resolve dynamically each frame and display user-friendly labels (e.g. <code>Deck A/geometry/zoom [LFO 1 Speed]</code>) in the MIDI Preferences mapping table.</li>
+</ol>
+<h3 id="intelligent-signal-classification">Intelligent Signal Classification</h3>
+<p>When you turn a knob or tap a pad during Learn mode, Liquid LSD inspects the incoming stream and classifies it automatically:
+- <strong>Note On / Off:</strong> Identified as a discrete button (pads/keys), defaulting to Momentary mode.
+- <strong>Continuous CC:</strong> Identified as an absolute continuous pot or slider ($0 \dots 127$).
+- <strong>Relative Rotary Encoders:</strong> Endless rotaries sending delta step packets ($63/65$ or $1/127$) are auto-classified into relative decoding mode.
+- <strong>Pitch Bend:</strong> 14-bit bipolar inputs are mapped with center-spring return.</p>
+<p>You can override any auto-detected mode at any time using the dropdowns in <strong>Preferences → MIDI Controls</strong>.</p>
+<h3 id="fine-tuning-continuous-controls">Fine-Tuning Continuous Controls</h3>
+<p>In the <strong>Parameter Mappings</strong> table of the MIDI tab:
+- <strong>Min / Max Bounds:</strong> Clamp physical travel to a specific sub-range of the parameter.
+- <strong>Invert:</strong> Flips the physical direction ($0 \leftrightarrow 127$).
+- <strong>Slew (Smoothing):</strong> Configurable smoothing filter ($0 \dots 250\,\text{ms}$) that eliminates 7-bit "zipper noise" or stepped visual jumps on sensitive shader uniforms.
+- <strong>Soft Takeover (Pickup):</strong> Toggle between <em>Immediate</em> jump and <em>Soft Takeover</em>. With Soft Takeover active, parameter values will not jump upon loading a new preset until your physical knob/fader crosses the stored software value. The UI indicates <code>Awaiting Pickup</code> along with physical knob telemetry until synced.</p>
+<h3 id="discrete-controls-buttons-pads">Discrete Controls (Buttons &amp; Pads)</h3>
+<p>Hardware buttons and pads support four distinct trigger behaviors:
+- <strong>Momentary:</strong> Active only while held; snaps back to minimum/default on release (ideal for video strobes, momentary feedback bursts, and glitch triggers).
+- <strong>Toggle (Latched):</strong> Flips state on each press.
+- <strong>Step Increment:</strong> Each press increments the parameter value by a configurable step size.
+- <strong>Step Decrement:</strong> Each press decrements the parameter value by a configurable step size.</p>
+<h3 id="relative-rotary-encoders">Relative Rotary Encoders</h3>
+<p>Liquid LSD supports the three industry-standard relative encoding formats used by hardware like the DJ TechTools MIDI Fighter Twister, Behringer X-Touch, and Arturia controllers:
+- <strong>Binary Offset (64-centric):</strong> $65 = +1, 63 = -1$.
+- <strong>Signed Bit (1-centric):</strong> $1 = +1, 65 = -1$.
+- <strong>Two's Complement (1-centric):</strong> $1 = +1, 127 = -1$.
+Each rotary mapping includes an editable <strong>Step</strong> multiplier to dial in coarse or fine rotational sensitivity.</p>
+<h3 id="profiles">Profiles</h3>
+<p>All assignments are stored in JSON profiles under <code>library/midi/&lt;profile_name&gt;.json</code>. You can create, save, switch, and delete mapping profiles in the MIDI tab, allowing you to quickly switch between different hardware setups (e.g. home studio controller vs live gig setup).</p>
+<h3 id="controller-profiles-midi-fighter-twister">Controller Profiles: Midi Fighter Twister</h3>
+<p>Some controllers are recognised automatically. When a device whose name contains <code>Twister</code> connects, the app loads the built-in <strong>Midi Fighter Twister</strong> profile and its 16 encoders drive the Performance Matrix with no learning at all. (The log line <code>Controller profile 'midi-fighter-twister' matches MIDI device: ...</code> confirms the match.)</p>
+<p>This section is in the order you will need it: <a href="#twister-setup">one-time setup</a>, <a href="#twister-layout">what the knobs control</a>, <a href="#twister-gestures">gestures</a>, <a href="#twister-walkthrough">a first walkthrough</a>, <a href="#twister-side-buttons">the side buttons</a>, <a href="#twister-lights">lights</a>, <a href="#twister-troubleshooting">troubleshooting</a>, <a href="#twister-xt">the optional XT firmware mode</a>, and <a href="#twister-own-profiles">your own profiles</a>.</p>
+<p><a id="twister-setup"></a></p>
+<h4 id="one-time-setup-in-the-midi-fighter-utility">One-time setup in the Midi Fighter Utility</h4>
+<p>Do this once, in DJ TechTools' <strong>Midi Fighter Utility</strong>. The app ships a ready-made settings file for it, <code>midi-fighter-twister.mfs</code>:</p>
+<ol>
+<li>In <strong>Preferences → MIDI Controls → Controller Profiles</strong>, press <strong>Save Utility Settings...</strong> on the Midi Fighter Twister profile and pick a folder (the app remembers it for next time). <strong>Open Folder</strong> then shows the saved file.</li>
+<li>In the Utility, load that file, then send the settings to the Twister.</li>
+<li>That is all. The file sets <strong>every encoder on all four banks</strong> to <code>Relative (ENC 3FH/41H)</code> (binary offset: clockwise sends 65, counter-clockwise 63; relative mode has no end stops, so a knob never gets stuck at 0 or 127), <strong>every knob switch and all six side buttons</strong> to <code>CC Hold</code>, and <strong>every LED black</strong> in both its on and off state, so a knob the app is not using stays dark instead of showing the factory blue.</li>
+</ol>
+<p>Then start Liquid LSD with the Twister plugged in and check <strong>Preferences → MIDI Controls</strong> → <em>Controller Profiles</em>: the Twister profile should be listed with your device. The log reports <code>Controller feedback on for ...</code> when the output port is opened; if it says <code>No MIDI output port found</code>, the app can read the Twister but cannot light it. While the app runs it overrides the ring and LED colours set in the Utility.</p>
+<p><strong>The app owns the banks.</strong> The top and middle side buttons on the right are plain <code>CC Hold</code> buttons, not the firmware's Previous/Next Bank. <strong>Right-top</strong> steps to the next bank (wrapping), <strong>Shift + right-top</strong> goes back; the app shows the bank's page and sends the bank change to the Twister, so the screen and the hardware agree. <strong>Right-middle</strong> opens the Library (<strong>Shift + right-middle</strong> opens it on the FX tab). <strong>Left-middle</strong> toggles <strong>Chain Link</strong> on the FX chain of the row you touched last (<strong>Shift + left-middle</strong> taps tempo). Don't set the side buttons to Previous/Next Bank in the Utility: the side buttons send six CC numbers per bank and would misfire.</p>
+<p>If you set the Twister up by hand instead, use those same settings in the Utility.</p>
+<p>To use the factory absolute mode instead, copy the profile to <code>library/controllers/</code> and set <code>"mode": "ABSOLUTE"</code> on the <code>knob</code> input (the app then tracks each change, and a knob can hit the end of its 0-127 range).</p>
+<p><a id="twister-layout"></a></p>
+<h4 id="what-the-knobs-control">What the knobs control</h4>
+<p><strong>The 16 knobs are the 16 knobs on screen.</strong> Knobs 1-4 are the first visible row, 5-8 the second, and so on, so the Twister's 4×4 grid mirrors the matrix. Whatever a row is showing is what its encoders control: a deck's source knobs, its FX chain's Super Knob and Metaknobs, or the focused effect's parameters. Focus an FX slot, with the mouse or the Twister, and the same encoders follow. In Edit the Twister follows the open module: knobs 1-4 control that module's 4 macro knobs (reflecting its active sub-tab, e.g. SRC or FX), while knobs 5-16 are inert. Edit itself (the full 3-column parameter matrix) is opened and edited with the mouse; the controller only opens the pair view's pickers.</p>
+<p>The Twister's hardware <strong>banks</strong> pick the page shown on screen (three pages: A/B, BG/PV, MIXER; the fourth bank leaves the page as it is). Press right-top (Shift + right-top goes back) and the matrix changes with it; clicking a tab on screen moves the encoders to that page too, so screen and hardware always agree.</p>
+<table>
+<thead>
+<tr>
+<th>Bank</th>
+<th>Page</th>
+<th>Knobs 1-4</th>
+<th>Knobs 5-8</th>
+<th>Knobs 9-12</th>
+<th>Knobs 13-16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>A/B</strong></td>
+<td>Deck A source</td>
+<td>Deck A FX</td>
+<td>Deck B source</td>
+<td>Deck B FX</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>BG/PV</strong></td>
+<td>Deck BG source</td>
+<td>Deck BG FX</td>
+<td>Deck PV source</td>
+<td>Deck PV FX</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>MIXER</strong></td>
+<td>Master MIX</td>
+<td>Master FX</td>
+<td>Transitions</td>
+<td>Clock (knob 13)</td>
+</tr>
+</tbody>
+</table>
+<p>Each row shows one half (source or FX), so no <code>SRC</code>/<code>FX</code> switching is needed on the hardware. Which page each bank shows is the profile's <code>banks.pages</code>; you can point a bank at your own page (see <a href="#perform-pages">Perform Pages</a>).</p>
+<p><strong>An FX row</strong> has the chain's <strong>Super Knob</strong> on its first knob and the three slots' <strong>Metaknobs</strong> on the other three. <strong>Focusing</strong> a slot (shift + tap) hands the whole row to that effect: knob 1 becomes the slot's Metaknob and knobs 2-4 its parameters (more than three parameters make extra pages).</p>
+<p><a id="twister-gestures"></a></p>
+<h4 id="gestures">Gestures</h4>
+<table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>On a source / mix knob</th>
+<th>On an FX slot knob</th>
+<th>On a focused parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Turn</strong></td>
+<td>moves the knob</td>
+<td>moves the slot's Metaknob</td>
+<td>moves the parameter</td>
+</tr>
+<tr>
+<td><strong>Tap the switch</strong></td>
+<td>reset to centre</td>
+<td>bypass or un-bypass that slot</td>
+<td>reset to the parameter's default</td>
+</tr>
+<tr>
+<td><strong>Hold the switch and turn</strong></td>
+<td>fine adjustment (10× slower)</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td><strong>Shift + tap</strong></td>
+<td>-</td>
+<td>focus that slot</td>
+<td>next parameter page</td>
+</tr>
+<tr>
+<td><strong>Shift + tap on knob 1 of a focused row</strong></td>
+<td>-</td>
+<td>leave focus</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Shift + tap on knob 1 (Super Knob) of an FX row</strong></td>
+<td>-</td>
+<td>Chain Link: link or unlink all three slots</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Shift</strong> is the bottom button on the Twister's left side (the same physical button on every bank).</li>
+<li><strong>Fast turns accelerate</strong> up to 4×; slow turns stay exact.</li>
+<li><strong>Your own mappings win.</strong> If you have learned a mapping on a specific Twister channel/CC, that mapping still runs and the profile ignores that input.</li>
+</ul>
+<p><a id="twister-walkthrough"></a></p>
+<h4 id="walkthrough-load-an-effect-onto-deck-a-with-only-the-twister">Walkthrough: load an effect onto Deck A with only the Twister</h4>
+<ol>
+<li><strong>Go to bank 1</strong> (A/B). Deck A's FX row is knobs 5-8 (the second row of the grid): knob 5 is the chain's Super Knob, knobs 6-8 are slots 1-3.</li>
+<li><strong>Touch the slot you want.</strong> Give knob 6 (slot 1) a small turn. The picker opens for the <em>last knob you touched</em>, so this step chooses the target. Don't tap it: a tap bypasses the slot.</li>
+<li><strong>Press the right-bottom side button.</strong> The picker for that slot opens on screen (stock filters, favourites and saved effects).</li>
+<li><strong>Browse.</strong> Turn <strong>knob 16</strong> (the last knob of the grid, bottom right) to move the highlight. Nothing is applied while you move. Press <strong>right-top</strong> to step to the next category (hold Shift for the previous one).</li>
+<li><strong>Tap knob 16</strong> to apply the highlighted effect to the slot. The item currently loaded is marked in the list (stock items only).</li>
+<li><strong>Close the picker</strong> with <strong>left-top</strong>. The effect is now in slot 1; turn knob 6 for its Metaknob and knob 5 for the Super Knob.</li>
+<li><strong>Tune it.</strong> Hold <strong>Shift</strong> and tap knob 6 to focus the slot: its parameters spread over knobs 6-8 and knob 5 becomes the Metaknob. <strong>Shift + tap knob 5</strong> leaves focus.</li>
+</ol>
+<p>Variations:</p>
+<ul>
+<li><strong>Replace</strong> an effect: repeat steps 2-5 on the same slot. <strong>Clear</strong> a slot: with the picker open, <strong>Shift + right-bottom</strong>.</li>
+<li><strong>Load a saved chain</strong> into all three slots: touch <strong>knob 5</strong> (the Super Knob) before step 3. The picker then lists your saved chains, and <strong>Shift + right-bottom</strong> clears the whole chain.</li>
+<li><strong>Change Deck A's source</strong> instead: touch any knob in the source row (knobs 1-4) and press right-bottom for the source list.</li>
+<li><strong>Switching decks or targets:</strong> The picker stays scoped to the deck and row that opened it. Because knobs 5-15 are inert while browsing and knobs 1-4 follow the row being filled, close the picker first with <strong>left-top</strong>, touch a knob on the other deck or row (switching Twister banks if needed), and press <strong>right-bottom</strong> to open its picker.</li>
+<li><strong>Master FX or a transition:</strong> use bank 3 and touch a knob in Master FX (knobs 5-8) or Transitions (knobs 9-12).</li>
+<li>If nothing happens when you press right-bottom, you haven't touched a knob since the app started: turn one first.</li>
+<li>Picking from the <strong>Library view</strong> instead is described below.</li>
+</ul>
+<p><a id="twister-side-buttons"></a></p>
+<h4 id="side-buttons">Side buttons</h4>
+<p>The side buttons change meaning with the view:</p>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>Left-top</th>
+<th>Left-middle</th>
+<th>Right-top</th>
+<th>Right-middle</th>
+<th>Right-bottom</th>
+<th>Knob 16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Perform</strong></td>
+<td>back (<code>Esc</code>); <strong>Shift +</strong> toggles Edit mode</td>
+<td>toggle Chain Link; <strong>Shift +</strong> tap tempo</td>
+<td>next bank / page (<strong>Shift +</strong> prev)</td>
+<td>open the <strong>Library</strong>; <strong>Shift +</strong> opens it on the FX tab</td>
+<td>open the <strong>picker</strong>; <strong>Shift +</strong> toggles Pair view</td>
+<td>normal knob</td>
+</tr>
+<tr>
+<td><strong>Pair view</strong></td>
+<td>back to Perform</td>
+<td>toggle Chain Link; <strong>Shift +</strong> tap tempo</td>
+<td>next bank / page (<strong>Shift +</strong> prev)</td>
+<td>step the pane (<strong>Shift +</strong> back)</td>
+<td>nothing; <strong>Shift +</strong> clears the slot or chain</td>
+<td><strong>cursor</strong>: turn to move; tap applies</td>
+</tr>
+<tr>
+<td><strong>Library</strong></td>
+<td>leave Library</td>
+<td>toggle Chain Link; <strong>Shift +</strong> tap tempo</td>
+<td>next bank / page (<strong>Shift +</strong> prev)</td>
+<td>step the <strong>tab</strong> (<strong>Shift +</strong> prev)</td>
+<td>step <strong>pane</strong> (<strong>Shift +</strong> prev)</td>
+<td><strong>cursor</strong>: turn to move, tap to load</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Send-knob rings:</strong> a send knob that can receive the highlighted item shows a full ring at half brightness in the target's colour; the others stay dark. Set the encoders' indicator to <strong>Bar</strong> in the Midi Fighter Utility to get a full ring (a Dot ring shows a single LED).</li>
+<li><strong>Knob 16 ring:</strong> in the Pair view and the Library the ring shows the cursor's place in its list (empty at the first row, full at the last); it is full when the list has no cursor yet or one row.</li>
+<li><strong>Left-middle button:</strong> Toggles Chain Link on the FX chain of the row you touched last. <strong>Shift + left-middle</strong> taps the BPM tempo (<code>clock.tap_tempo</code>).</li>
+<li><strong>Right-top button:</strong> Steps through hardware banks / Perform pages (<strong>Shift + right-top</strong> steps backward).</li>
+<li><strong>Unsaved-changes prompt:</strong> when loading would discard edits on a deck, the prompt takes over the controller: <strong>left-top</strong> = Cancel, <strong>right-middle</strong> or <strong>knob 16 tap</strong> = Save, <strong>right-bottom</strong> or <strong>Shift + tap</strong> = Discard. Nothing else navigates until you answer.</li>
+<li><strong>Picker:</strong> moving never applies anything; only a tap does. Touch a knob of the row first; with none touched yet the button does nothing. Knob 16 is the cursor. Knobs 9-15 do nothing (apart from the sends) while a picker is active (in the Library and picker, knobs 9-13 send the highlighted item, see below); knobs 1-8 keep controlling the two rows of the pair view (they light in their rows' colours), so you can tweak a freshly loaded source or chain without leaving it. Touching a knob of the other row points the browser at that half. To pick for another deck, send the item there with knobs 9-12 or go back with <strong>left-top</strong> first.</li>
+<li><strong>Edit:</strong> Left-top closes Edit (collapsing the module bay back to the Faceplate, same as Esc); <strong>Shift + left-top</strong> toggles Edit mode for the touched row. Right-bottom opens the pair view for the last-touched knob's row.</li>
+<li><strong>Banks in the pair view:</strong> pressing a bank button walks the pairs instead of changing the page: a higher bank is the next pair (Deck A, B, BG, PV, Master, Transitions/Clock, wrapping), a lower bank the previous one, so you can reach any deck's pair from the Twister alone.</li>
+<li><strong>Quick switch:</strong> in the pair view, <strong>Shift + tap</strong> on knob 9-12 (A, B, BG, PV) or 13 (Master) goes to that pair without sending anything.</li>
+<li><strong>Send knobs (Library and picker):</strong> tap a knob in row three to send the highlighted item to a deck: <strong>knob 9 = Deck A, knob 10 = Deck B, knob 11 = Deck BG, knob 12 = Deck PV</strong>; in the FX tab <strong>knob 13 = Master FX</strong>. A source or preset replaces the deck's content (with the usual unsaved-changes prompt), an FX chain replaces all three slots, and a single FX goes into the first empty slot (the last slot if all are full). From the Library the send only loads (you stay in the Library with your place kept, so you can send the next item straight away, and an FX send shows a toast with where it landed); Ctrl+Z undoes it. From the pair view the target's pair also takes over the screen, so <strong>knobs 1-8 play what you just loaded</strong> while knob 16 keeps browsing; send again to move to another deck. A knob glows in its target's colour while the highlighted item can go there. They work on the Sources and FX lists only. Back returns to Perform.</li>
+<li><strong>Library:</strong> a preset or generator loads onto the deck the crossfader is moving away from, a BG queue item onto Deck BG, a transition onto the mixer. In the FX tab, a tap applies the item to the live deck (a single effect goes into the first empty slot, the last slot if all are full; a chain replaces the deck's chain) and <strong>Shift + tap</strong> adds it to the FX queue. Holding Shift, the side buttons add to the BG queue and step the tab and list backwards.</li>
+<li><strong>Unified browser:</strong> a fresh tab starts in the list. <strong>Right-bottom</strong> moves on to the queues and <strong>Shift +</strong> it goes back to the folder tree. In the tree, turning moves a cursor (an outline) over the visible folders and playlists without changing the list; a <strong>tap</strong> selects the folder or playlist under it, which fills the list and clears the list's selection. A playlist is just a tree entry, so there is no separate playlist pane.</li>
+<li>The FX queue transport commands (<code>fx.queue_next/prev</code>, <code>fx.bg_queue_next/prev</code>) have no free button in the built-in profile; map them in your own profile.</li>
+</ul>
+<p><a id="twister-lights"></a></p>
+<h4 id="rings-and-leds">Rings and LEDs</h4>
+<p>The Twister mirrors the screen. Each encoder's ring shows its knob's value, and its LED takes the colour of the row it controls. A knob with nothing to control goes dark: an empty or bypassed FX slot, or a blank position on a focused effect's parameter page (its ring still shows the value).</p>
+<ul>
+<li>LEDs can't show greys, so on the MIXER page the Master row is red (the screen keeps its greys) and Transitions stay cyan.</li>
+<li><strong>The clock knob</strong> (knob 13, the first knob of the Clock row on the MIXER page) is the beat light: its LED sits dim plum and flashes light plum on every beat and orange on beat 1 of the bar, and its ring shows the tempo across the beat tracker's BPM search range (Preferences → Tempo &amp; Sync). <strong>Push it to tap tempo</strong> (the same as the TAP button); turning it does nothing. On the stock firmware the ring brightness pulses instead of the colour. While a Library or picker is browsing, the knob does its browse job instead.</li>
+<li>On pages with a pinned FX row (A/B, BG/PV, MIXER) the FX row's LED is a shifted hue of its source row's, so the four LEDs of a bank differ.</li>
+</ul>
+<p><a id="twister-troubleshooting"></a></p>
+<h4 id="troubleshooting">Troubleshooting</h4>
+<ul>
+<li><strong>Nothing responds:</strong> check <em>Enable MIDI Subsystem</em> in Preferences → MIDI Controls, and that the log shows the <code>matches MIDI device</code> line. Watch the Live MIDI Monitor to confirm the Twister's messages arrive.</li>
+<li><strong>Knobs jump to the ends or stick:</strong> the encoders are not in <code>Relative (ENC 3FH/41H)</code> mode on every bank (see setup).</li>
+<li><strong>Wrong page, or rings and LEDs from the wrong bank, or a side button doing the wrong thing:</strong> the middle side buttons must be <code>CC Hold</code> (save and load the settings file, see setup); on the factory Previous/Next Bank setting the side buttons send different CC numbers.</li>
+<li><strong>Unused knobs glow blue:</strong> the LEDs' off colour in the Utility is not black. Save and load the settings file (see setup), or set every knob's on and off colours to black on all four banks.</li>
+<li><strong>No lights at all:</strong> the log says <code>No MIDI output port found</code>. Reconnect the device, or close other software holding the Twister's port.</li>
+<li><strong>Rings lag or drop:</strong> the app writes lights to the showing bank a few messages at a time (the Twister drops bursts), rewrites the whole bank just after you switch to it, and re-sends it shortly after you stop turning, because the Twister redraws its own stored colours after bank changes. If rings still lag, raise <code>output.minIntervalMs</code> (default 2) in a copy of the profile.</li>
+<li><strong>See exactly what is sent:</strong> set <code>"trace": true</code> in the profile's <code>output</code> section (or start the app with <code>LSD_MIDI_TRACE=1</code>). Every message sent to the device, every bank change and every encoder message is then logged.</li>
+<li><strong>A Twister knob drives something else, or the browse cursor won't move:</strong> a learned mapping on that knob's channel/CC wins over the controller profile in the Perform view (while browsing, the profile wins). Clear the learned binding in the Learned Mappings list.</li>
+<li><strong>The Twister profile isn't in the Learned Mappings bar:</strong> that bar holds your learned mappings. The controller profile is chosen automatically from the device name and is listed under <em>Controller Profiles</em> in MIDI Controls.</li>
+</ul>
+<p><a id="twister-xt"></a></p>
+<h4 id="optional-xt-firmware-and-native-mode">Optional: XT firmware and native mode</h4>
+<p>If you have flashed your Twister with the custom <strong>XT firmware</strong> (the <code>nativeMode</code> build from the Midi Fighter Twister Open Source project; flashing is done with DJ TechTools' tools and is entirely your choice), Liquid LSD can drive it in <strong>native mode</strong>:</p>
+<ul>
+<li>Each ring follows its parameter: a bar, a bar with a centre detent for -100..100 parameters, and a dot for endless and stepped parameters. The style changes live as you change pages, effects and sources.</li>
+<li>The switch LEDs show the exact row colour.</li>
+<li>There are no hardware banks. <strong>Right-top</strong> steps through the Perform pages (<strong>Shift + right-top</strong> goes back); the other side buttons work as before. No Utility settings file is needed.</li>
+<li>The Library and Pair view send knobs (9-13) leave the ring off and show the target in the switch LED colour, because native mode has no half-brightness.</li>
+</ul>
+<p>To use it: open <strong>Preferences → MIDI Controls → Controller Profiles</strong>, and in <strong>Use profile</strong> under the Twister choose <em>Midi Fighter Twister (XT firmware, native mode)</em>. Choose the stock profile again to go back. Both profiles fit the same device name, so the app never switches by itself, and a Twister on the stock firmware must keep using the stock profile.</p>
+<p>When the app quits, unplugs the Twister or you change the profile, the app turns the switch LEDs black and returns the device to normal. If the app crashes the Twister stays in native mode until you unplug and replug it.</p>
+<p><a id="twister-own-profiles"></a></p>
+<h4 id="your-own-profiles">Your own profiles</h4>
+<p>Profiles are JSON files: built-ins ship inside the app, and yours go in <code>library/controllers/*.json</code>. A file with the same <code>id</code> as a built-in replaces it, so copy a built-in's JSON and edit it. A file with a mistake is skipped; the reason is logged and shown in the <strong>Controller Profiles</strong> section of Preferences &gt; MIDI Controls. That section lists each profile and the device using it, and has <strong>Copy to User File</strong> (for built-ins), <strong>Delete User File</strong> (reverts to the built-in) and <strong>Reload Profiles</strong> (after you edit a file by hand).</p>
+<p>Each user profile also has a <strong>Mappings</strong> list:</p>
+<ul>
+<li>Click a command to choose another (the list is filterable and dimmed where the command can't be driven by that input).</li>
+<li>Use the trash button to remove a mapping, or add one with the row at the bottom (modifier, input, command). Invalid edits are not saved; the problems are listed.</li>
+<li>To map by touch, choose a command and a modifier in the add row, press <strong>Learn</strong> and move the control on the device. A control the profile doesn't know becomes a new input. Modifier and bank buttons can't be learned.</li>
+<li>Only global mappings can be edited there; per-bank mappings are still edited in the JSON.</li>
+</ul>
+<p>See <code>docs/developer/unified_control_mapping.md</code> for the format.</p>
+<hr />
+<h2 id="osc-touchosc-control-surfaces">OSC / TouchOSC Control Surfaces</h2>
+<p>Liquid LSD includes a native, zero-dependency OSC 1.0 server for wireless control from TouchOSC and other OSC-capable apps on phones and tablets — no external bridge software required.</p>
+<h3 id="quick-setup_1">Quick Setup</h3>
+<ol>
+<li>Open <strong>Preferences → OSC Controls</strong> (or press <code>Ctrl+,</code>).</li>
+<li>Check <strong>Enable OSC Server</strong>. By default it listens on UDP port <code>8000</code> and sends feedback out on port <code>9000</code> — both are editable, with a <strong>Restart Server</strong> button to apply port changes.</li>
+<li>Point your TouchOSC layout at your computer's IP address, using the same inbound/outbound ports. Move any control on the layout — Liquid LSD automatically learns the client's IP from the first packet it receives, so there's nothing to configure on the desktop side beyond the ports.</li>
+<li>The <strong>Live Packet Sniffer</strong> in the OSC Controls tab streams recent inbound and outbound traffic (address, arguments, and remote host) so you can confirm packets are arriving.</li>
+</ol>
+<h3 id="osc-learn-modulator-variables">OSC Learn &amp; Modulator Variables</h3>
+<p>You can map OSC controls either in-situ from the UI or manually from Preferences:</p>
+<ol>
+<li><strong>In-Situ Right-Click Learn (Fastest)</strong>:</li>
+<li>Right-click any slider or variable label in the UI — including an LFO's <strong>Speed / Subdivision</strong>, <strong>Depth</strong>, <strong>Min/Max bounds</strong>, <strong>Asymmetry</strong>, a parameter's <strong>Initial Range (Base Value)</strong>, the crossfader, fade speed, or a deck/transition queue's <code>&lt;</code>/<code>&gt;</code> buttons.</li>
+<li>Select <strong>Learn OSC (...)</strong> from the context menu. The control will pulse in amber while awaiting input.</li>
+<li>Move a fader, knob, or XY pad on your TouchOSC surface. Liquid LSD ignores the first packet from a new address (guarding against a controller's connect-time sync burst) and maps once a later packet actually moves the value, preserving your configured min/max limits and saving the mapping to the active profile.</li>
+<li>As with MIDI, <strong>Learn OSC</strong> is greyed out as "locked by K#" while an enabled macro knob target drives that value.</li>
+<li>
+<p>Right-click again and select <strong>Cancel OSC Learn</strong> (or cancel from Preferences) if needed. Once mapped, the same context menu offers <strong>Clear OSC Mapping</strong> to remove it without leaving the performance view.</p>
+</li>
+<li>
+<p><strong>Manual Learn from Preferences</strong>:</p>
+</li>
+<li>Open <strong>Preferences → OSC Controls</strong>.</li>
+<li>Type or paste the target parameter or modulator path into the <strong>Learn OSC</strong> field:<ul>
+<li>Base parameters: <code>Mixer/crossfade</code>, <code>Deck A/geometry/zoom</code>, <code>Master/FX1/speed</code>.</li>
+<li>Modulator variables: <code>Deck A/geometry/zoom:mod/&lt;modulatorId&gt;/subdivision</code> (a numeric <code>:mod/0/...</code> is a legacy list position and still works).</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Start Learn</strong>, then move the control on your OSC surface.</p>
+</li>
+<li>
+<p><strong>TouchOSC XY Pads &amp; Multi-Argument Vectors</strong>:</p>
+</li>
+<li>Multi-argument messages (e.g. <code>/2/xy</code>) are automatically unpacked into per-axis sub-addresses (<code>/2/xy/0</code> for X, <code>/2/xy/1</code> for Y). Learning from an XY pad maps the active axis.</li>
+</ol>
+<h3 id="fine-tuning-shaping">Fine-Tuning &amp; Shaping</h3>
+<p>The <strong>Address Mappings</strong> table in the OSC Controls tab offers comprehensive per-control shaping:
+- <strong>Min / Max Clamping</strong>: Scales the incoming controller range $[0.0, 1.0]$ to custom parameter boundaries (e.g., $0.1\,\text{s} \dots 8.0\,\text{s}$ for an LFO period).
+- <strong>Invert</strong>: Inverts incoming values ($1.0 - x$).
+- <strong>Slew Rate Smoothing</strong>: Exponential filter ($0 \dots 250\,\text{ms}$) to smooth out coarse touch faders or packet jitter without visual stepping.
+- <strong>Soft Takeover (Pickup)</strong>: Prevents value jumping by waiting until the physical controller crosses the current software value before taking over control.</p>
+<p>Macro Knobs also respond directly to <code>/macro/&lt;bankId&gt;/knob/1</code>–<code>/macro/&lt;bankId&gt;/knob/8</code> (no manual mapping needed), and broadcast their values back out over OSC whenever they change — keeping tablet layouts in bidirectional sync. See <a href="../macros_and_rack/">Macro Controls &amp; the Perform View</a>.</p>
+<h3 id="profiles_1">Profiles</h3>
+<p>Like MIDI, OSC address mappings are stored in JSON profiles under <code>library/osc/&lt;profile_name&gt;.json</code>. Create, save, switch, and delete profiles from the OSC Controls tab to switch between different tablet layouts or venues.</p>
+<h2 id="perform-pages">Perform Pages</h2>
+<p>You manage pages in <strong>Preferences &gt; MIDI Controls &gt; Perform Pages</strong> (it is there even with MIDI turned off).</p>
+<p>The tab strip above the matrix (A/B, BG/PV, MIXER) lists <em>pages</em>: each is four rows. Clicking a tab closes Edit and the Pair view and shows that page's rows, including when you click the tab you are already on. You can add your own by putting a JSON file in <code>library/perform_pages/</code> (press Reload Pages in Preferences &gt; MIDI Controls, or restart the app, to pick it up):</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;mine&quot;,
+  &quot;name&quot;: &quot;MINE&quot;,
+  &quot;tooltip&quot;: &quot;Deck A source, Deck A FX, Transitions and Clock &amp; Global&quot;,
+  &quot;rows&quot;: [
+    { &quot;row&quot;: &quot;deck.A.src&quot; }, { &quot;row&quot;: &quot;deck.A.fx&quot; }, { &quot;row&quot;: &quot;trans&quot; }, { &quot;row&quot;: &quot;global&quot; }
+  ]
+}
+</code></pre>
+<p>A page needs exactly 4 rows. Row names: <code>deck.A.src</code> and <code>deck.A.fx</code> (likewise <code>B</code>, <code>BG</code>, <code>PV</code>) for a deck's source row and FX row, <code>master.mix</code> and <code>master.fx</code> for Master's levels and Master FX, <code>trans</code>, <code>global</code>. A page of <code>deck.A.src</code>, <code>deck.A.fx</code>, <code>deck.B.src</code>, <code>deck.B.fx</code> shows both halves of both decks at once. A file whose <code>id</code> is <code>ab</code>, <code>bgpv</code>, <code>mixer</code> or <code>master</code> replaces that built-in page. Pages saved by an earlier version that name <code>deck.&lt;tag&gt;.srcfx</code> or <code>master</code> are skipped (the log says why): replace those rows with the split ones above. You can also manage pages in <strong>Preferences &gt; MIDI Controls &gt; Perform Pages</strong>: copy a built-in page to edit it, create a new page, rename it and pick each of its four rows from a list, or delete it again. Edits are saved at once. Each page shows its <strong>controller name</strong> (<code>perform.&lt;id&gt;</code>), the name a controller profile uses; it does not change when you rename the page. To get a different name, type one into <strong>Name for a copy</strong> and press <strong>Copy As New Page</strong>, then hide the original if you like. Untick <strong>Show in tab strip</strong> to hide a page's tab (a Twister bank that selects it still shows it, with a temporary tab while it is active); with more than five tabs they narrow to fit. Files with mistakes are skipped; the log says why. A controller profile can select your page with <code>perform.mine</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
