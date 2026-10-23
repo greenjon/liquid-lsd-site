@@ -642,10 +642,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-step-grid" class="md-nav__link">
+  <a href="#the-step-editor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The step grid
+        The step editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern tools
       
     </span>
   </a>
@@ -668,6 +679,17 @@
     <span class="md-ellipsis">
       
         Glide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-and-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth and Offset
       
     </span>
   </a>
@@ -1141,10 +1163,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-step-grid" class="md-nav__link">
+  <a href="#the-step-editor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The step grid
+        The step editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern tools
       
     </span>
   </a>
@@ -1167,6 +1200,17 @@
     <span class="md-ellipsis">
       
         Glide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-and-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth and Offset
       
     </span>
   </a>
@@ -1285,13 +1329,13 @@
 
 <hr />
 <h2 id="the-cv-grid">The CV Grid</h2>
-<p>The CV grid is the middle column of <strong>Edit</strong> (open a row's chevron in the Perform view, or click a deck monitor in the Mixer and press <strong>Parameters</strong>). It's a matrix:</p>
+<p>The CV grid is the middle column of <strong>Edit</strong> (click a row's gear in the Perform view). It's a matrix:</p>
 <ul>
 <li><strong>Rows</strong> = visual parameters (Lobes, Zoom, Hue, Feedback Decay, etc.)</li>
 <li><strong>Columns</strong> = modulation sources (manual value, MIDI, LFO, Sequencer, Audio)</li>
 </ul>
 <p>Click any cell at the intersection of a parameter and a source type to configure that connection. Active cells show an animated readout knob so you can see the live signal at a glance.</p>
-<p>The side rail on the left (<code>[MIX] [A] [B] [BG] [PV]</code>) switches between the master mixer and the decks; the section tabs above the grid switch between a deck's source (<code>SRC</code>) and its <code>FX</code> chain, or the Mixer's <code>CTRL</code> / <code>FX</code> / <code>TRANS</code>. The selected cell's details appear in the Modulation column on the right.</p>
+<p>The side rail on the left (<code>[MST] [OUT] [A] [B] [BG] [PV]</code>) switches between the master levels and clock controls, the output stage and the decks; the section tabs above the grid switch between a deck's source (<code>SRC</code>) and its <code>FX</code> chain, the output stage's <code>FX</code> / <code>TRANS</code>, or the MST tab's <code>LEVELS</code> / <code>CTRL</code>. The selected cell's details appear in the Modulation column on the right.</p>
 <h3 id="columns">Columns</h3>
 <p>Each column is colour-coded:</p>
 <ul>
@@ -1417,17 +1461,28 @@
 <h2 id="step-sequencer">Step Sequencer</h2>
 <p>The sequencer outputs a stepped voltage pattern that advances with each beat or at a set interval — good for geometric shifts, colour steps, and rhythmic stutter effects.</p>
 <blockquote>
-<p><strong>Note:</strong> The sequencer is disabled by default. Enable it in <strong>Preferences → General</strong> (under Features, "Enable Step Sequencer"), or toggle it directly from the <strong>⋮</strong> kebab menu left of Edit's <strong>VAL</strong> column header.</p>
+<p><strong>Note:</strong> The sequencer is on by default. If you don't use it, turn it off in <strong>Preferences → General</strong> (under Features, "Enable Step Sequencer"), or from the <strong>⋮</strong> kebab menu left of Edit's <strong>VAL</strong> column header, to hide its column and tab.</p>
 </blockquote>
-<h3 id="the-step-grid">The step grid</h3>
-<p>Steps are laid out in rows of 8: 8 steps in one row, 16 in two, 32 in four. Click any cell to type a value (0 to 100), or hover and scroll to adjust. The active step is highlighted in bright green.</p>
-<p><strong>Keyboard editing shortcuts</strong> (when a step is focused):</p>
+<h3 id="the-step-editor">The step editor</h3>
+<p>Each step is a bar. Bars sit in rows of up to 16, so a 32-step pattern is two rows. The step playing now is outlined, and every fourth step is numbered. A white line traces the output as it will actually move: flat steps when Step Hold is 100%, slides when it is lower. A dot rides the line at the current position.</p>
 <ul>
-<li><code>Up</code> / <code>Down</code> — fine step (±0.1)</li>
-<li><code>Shift</code> + <code>Up</code> / <code>Down</code> — medium step (±1)</li>
-<li><code>Ctrl+Shift</code> + <code>Up</code> / <code>Down</code> — coarse step (±10)</li>
-<li>Middle-click — reset to 0</li>
-<li><code>Tab</code> / <code>Shift+Tab</code> — move between steps</li>
+<li><strong>Paint</strong> — click and drag across the bars to draw a pattern. Values snap to the <strong>Snap</strong> grid (5% by default; pick Off, 10%, 12.5% or 25% in the toolbar), and holding <code>Shift</code> paints freely. A fast drag fills the steps in between.</li>
+<li><strong>Nudge</strong> — hover a bar and scroll, by one Snap step per notch (<code>Shift</code> for 1%, <code>Ctrl</code> for 20%).</li>
+<li><strong>Keyboard</strong> — clicking a bar selects it (thin outline). While the pointer is over the bars, <code>Left</code> / <code>Right</code> move the selection, <code>Up</code> / <code>Down</code> nudge it (<code>Shift</code> for 1%), <code>Delete</code> or <code>Backspace</code> resets it, and <code>Enter</code> opens the number box.</li>
+<li><strong>Type a value</strong> — double-click a bar, type a number (0 to 100, or -100 to 100 for a bipolar parameter) and press Enter.</li>
+<li><strong>Reset</strong> — right-click or middle-click a bar to set it to 0.</li>
+</ul>
+<p><strong>Length</strong> is a 1 to 32 slider, so odd lengths such as 5 or 7 work. Steps past the end are kept and shown ghosted after the last playing step, so lengthening again brings them back. <strong>Phase</strong> starts the pattern part-way through, and <strong>Sync to Step 1</strong> restarts it now.</p>
+<h3 id="pattern-tools">Pattern tools</h3>
+<p>The row above the bars edits the active steps:</p>
+<ul>
+<li><strong>Randomize</strong> — random values. <strong>Auto</strong> (when randomization is enabled) — also re-roll the pattern whenever a preset or deck is randomized; the deck morph then slides between patterns. <strong>Invert</strong> — flip every step.</li>
+<li><strong>Shift &lt;</strong> / <strong>Shift &gt;</strong> — rotate the pattern one step earlier or later.</li>
+<li><strong>Copy</strong> / <strong>Paste</strong> — copy a pattern (with its length) from one sequencer to another.</li>
+<li><strong>Fill...</strong> — Ramp Up, Ramp Down, Triangle, Alternate, Pulse or All On.</li>
+<li><strong>Euclid...</strong> — spread N hits evenly across the pattern, the classic euclidean rhythm, with a Rotate control and a preview before you apply.</li>
+<li><strong>Clear</strong> — reset all 32 steps to 0.</li>
+<li><strong>Snap</strong> — the grid painting and nudging snap to.</li>
 </ul>
 <h3 id="timing">Timing</h3>
 <ul>
@@ -1435,11 +1490,14 @@
 <li><strong>Time</strong> — Wall clock seconds per step (0.01s to 5.0s).</li>
 <li><strong>Frame</strong> — Advances every N render frames (1 to 120).</li>
 </ul>
+<p>Changing the clock unit keeps the same step duration where it can.</p>
 <h3 id="glide">Glide</h3>
 <ul>
-<li><strong>Step Hold</strong> slider — At 100% the value jumps instantly and holds flat for the full step. At 0% it glides smoothly from one step to the next over the whole duration. In between you get a hold then glide.</li>
-<li><strong>Glide Curve</strong> — Linear is a straight ramp; Smooth is an S-curve with gentle acceleration and deceleration.</li>
+<li><strong>Step Hold</strong> slider — At 100% the value jumps instantly and holds flat for the full step. At 0% it glides smoothly from one step to the next over the whole duration. In between you get a hold then glide. It has a dice to randomize within a range, like the other sliders.</li>
+<li><strong>Glide Curve</strong> — Linear is a straight ramp; Smooth is an S-curve with gentle acceleration and deceleration. Greyed out while Step Hold is 100%, since nothing glides.</li>
 </ul>
+<h3 id="depth-and-offset">Depth and Offset</h3>
+<p><strong>Depth</strong> scales the pattern and <strong>Offset</strong> shifts it up or down before it is applied to the parameter. Both can be randomized.</p>
 <hr />
 <h2 id="modulation-operators">Modulation Operators</h2>
 <p>When you set up a modulator, you also choose how it combines with the base value:</p>

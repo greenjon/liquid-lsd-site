@@ -100,7 +100,7 @@ Every deck has two rows. The top row, SRC, is its source: the shader that draws 
 The row below is the deck's FX chain. Here it is switched off.
 
 00:03:32.100 --> 00:03:39.600
-BYPASS turns the whole chain on or off. Click it, and the picture runs through the effects.
+FX ON turns the whole chain on or off. Click it, and the picture runs through the effects.
 
 00:03:39.600 --> 00:03:43.100
 More on FX in Ch. 5 at 5:13. Sources first.
