@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -585,6 +585,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#invert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-audio-hardware-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Audio Hardware panel
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -985,6 +1007,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licenses/SHADERS_LICENSE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licenses & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1100,6 +1149,28 @@
     <span class="md-ellipsis">
       
         Range (Min / Max)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-audio-hardware-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Audio Hardware panel
       
     </span>
   </a>
@@ -1348,7 +1419,12 @@
 <p>You can hide columns you're not using via the <strong>⋮</strong> kebab menu, positioned just left of the <strong>VAL</strong> column header and aligned with the row action buttons below it. That menu also shows warnings if a loaded preset uses modulators that are currently hidden or offline, with a one-click <strong>Turn On Needed Columns</strong> button to sort it out.</p>
 <hr />
 <h2 id="audio-modulation">Audio Modulation</h2>
-<p>Clicking an <strong>AUD</strong> cell opens the audio modulator config. Each parameter supports two independent audio connections (Audio 1 and Audio 2).</p>
+<p>Clicking an <strong>AUD</strong> cell opens the audio modulator config. Each parameter has two independent audio slots (Audio 1 and Audio 2), shown one above the other, each with its own power button. Turning one on or off leaves the other alone; clearing Audio 1 empties it without moving Audio 2 up.</p>
+<p><strong>Auto Gain:</strong> audio signals are always normalized against each band's own level over the last 20 seconds or so, so a modulator behaves the same whether the feed is quiet or hot; you don't set it up. It keeps the music's shape: during a breakdown it holds on to the level from before, so the breakdown looks calm for as long as it lasts and the drop hits, and when a quieter or louder song settles in it adopts that as the new normal. To make the picture follow the music more or less, use <strong>Audio Response</strong> (below). <strong>Input Trim</strong> (Preferences &gt; Audio Hardware) is only for setting up the input: raise it if the panel says the input is too quiet for beat detection. See <a href="#the-audio-hardware-panel">The Audio Hardware panel</a>.</p>
+<p><strong>Built-in responses:</strong> most stock sources, every stock effect and every stock transition but Linear Crossfade ship with audio and beat modulators already wired on their key parameters: one running, and one or two alternates sitting bypassed in the same row, so you switch an alternate on (and the running one off) by clicking its AUD or LFO cell. They are ordinary modulators, so edit or delete them freely. To make everything that follows the music move more or less, use <strong>Preferences &gt; Audio Hardware &gt; Audio Response</strong> (0% = nothing follows the music, 100% = as tuned, up to 200%); it scales the audio signals themselves, so it applies to built-in and hand-made audio modulators alike, and leaves LFOs and the beat alone. A default you saved yourself replaces the built-in response, and a preset that stores its own parameters replaces it too. On an effect, a response on the parameter its main knob (Metaknob) drives multiplies rather than adds (MUL), so an effect turned down to zero stays off and turning it up makes the hits bigger too. The stock FX chains carry the built-in effect responses; a chain you saved yourself keeps the parameters it stored. A transition's response only plays during a fade (with the crossfader fully on A or B the visible deck is shown as is), and the stock transition presets carry the same responses. Luminous Flash's Spread and Film Burn's Burn Spread have none on purpose: pushed above about 45% they make the picture pop the moment a fade starts.</p>
+<p><strong>Breakdowns and drops:</strong> every stock source also runs a Section <strong>Energy</strong> modulator (its breakdown look) and a Section <strong>Drop</strong> modulator (one hit on the drop), on top of its other responses; see Section below. Effects are more sparing, because they sit on a source that already reacts: Bloom, Anamorphic Streak, Radial Blur, Kaleidoscope, Pinch/Bulge and Vortex Swirl hit on the drop, and Bloom (softer, wider glow) and Fluid Smear (melts further) change in a breakdown. Every other effect except Invert and Luma Key has a drop hit sitting bypassed, ready to switch on. Transitions have none: they only show during a fade, which rarely meets a drop.</p>
+<p><strong>Built-in random ranges:</strong> every stock shader source also ships with a random range (the <strong>Initial Range</strong> slider with its dice on) on the parameters that change its look: types, colour modes and palettes, twists, folds, sizes, glow, hue and saturation. The deck die rolls new values inside them, and the deck's <strong>Rand</strong> control fades from one roll to the next. Controls that decide whether the picture is watchable at all (Brightness, Quality, reseed triggers) have none. Each range stops short of the parameter's limit by the reach of its running audio or LFO response, so a roll never leaves the response pressed against a limit. Stepped parameters (types, modes, palettes, side counts) give every step an equal chance and switch halfway through a Rand fade rather than stepping through the values in between. A parameter a macro knob drives takes part too: the roll moves the knob. <strong>Ctrl+Z</strong> after a roll puts the values and knob positions back. Like the audio responses, a default you saved yourself or a preset that stores its own parameters replaces the ranges.</p>
+<p>Stock <strong>effects</strong> and <strong>transitions</strong> ship random ranges the same way. The deck die and Rand roll the effects in that deck's chain along with its source (the whole-rig die and Rand All also roll the Master FX chain). An effect's main knob, its Metaknob, is never rolled: it says how much of the effect you get, so the roll changes the effect's look (angle, segments, centre, palette, mode) and leaves the amount to you. Invert and Luma Key have nothing else to roll. The transition die on the Transitions row rolls only the transition's ranged inputs, inside their ranges, and its TRANS knobs move with it; Rand All rolls the transition too. Every transition range is kept low enough that nothing shows with the crossfader at rest. The stock FX chains carry the ranges too; a chain you saved yourself keeps what it stored.</p>
 <h3 id="frequency-bands">Frequency bands</h3>
 <table>
 <thead>
@@ -1380,7 +1456,12 @@
 <ul>
 <li><strong>Continuous</strong> — Tracks the ongoing energy level of the band. Good for sustained movement, breathing dynamics, amplitude-following effects.</li>
 <li><strong>Transient</strong> — Fires on attacks and hits. Detects the moment energy <em>increases</em> in the band, making it sharp and percussive. Great for triggering flashes, jumps, or snaps on drum hits.</li>
+<li><strong>Section</strong> — Follows the shape of the song instead of its beats. Pick one of two signals:</li>
+<li><strong>Energy</strong> compares how loud the music is now with the last 20 seconds or so. It rests in the middle of the range during normal playing, sinks toward Min in a breakdown and stays there until the drop, and rises toward Max when the song gets louder. Use it to calm things down in a breakdown (smaller, slower, darker) and open them up when the music builds.</li>
+<li><strong>Drop</strong> jumps to Max when a breakdown ends with the bass coming back, then falls back to Min over 4 bars. Use it for one big hit on the drop: a flash, a zoom punch, an effect swept in. The drop is detected about half a second after the bass comes back (two loud kicks in a row), and the hit is dated back to that beat, so it starts slightly decayed but in time with the music.</li>
 </ul>
+<p>Section signals need about 20 seconds of music before they react. They are not scaled by Audio Response and have no response profile (they're already smooth), so only the range applies. A breakdown has to last at least 4 seconds before its end counts as a drop.</p>
+<p>Every stock source ships with one Energy and one Drop modulator already running (for example "breakdown drains colour" on Saturation and "drop surge" on Flight Speed), and so do a few effects (see Built-in responses above). They sit next to the parameter's other modulators; bypass one to turn it off.</p>
 <h3 id="response-profiles">Response profiles</h3>
 <p>These control how quickly the signal rises and falls:</p>
 <table>
@@ -1426,7 +1507,23 @@
 <p>The oscilloscope shows two traces: the raw audio energy (faint ghost trace) and the smoothed follower output (solid line). This makes it easy to see how the profile is shaping the signal before it reaches your parameter.</p>
 <h3 id="range-min-max">Range (Min / Max)</h3>
 <p>The dual-handled range slider at the bottom sets the floor and ceiling of the modulation output. For example, if you want bass energy to push Lobes between 3 and 8, set Min to 3 and Max to 8.</p>
+<p>Min and Max are measured from the parameter's set value, and moving one never moves the other. Audio sources only push upward from silence, so Min is the resting offset and Max is the loudest peak. Section <strong>Energy</strong> is the exception: it swings both ways, so it rests halfway between Min and Max, with Min the depth of a breakdown and Max a much louder passage.</p>
 <p>Enabling randomization adds independent drift sliders for the Min and Max bounds, so the range itself wanders gently over time.</p>
+<h3 id="invert">Invert</h3>
+<p><strong>Invert</strong> (just above the range) flips the signal: silence drives the parameter to Max and loud hits pull it toward Min. Inverted Section <strong>Energy</strong> rises in a breakdown and sinks when the song gets louder; inverted <strong>Drop</strong> dips on the drop and recovers over 4 bars. The response profile still sets how fast it reacts, so with Punchy the parameter drops on each kick and eases back up.</p>
+<p>On <strong>MUL</strong>, an inverted modulator ducks the parameter on every hit, like sidechain pumping: for example, Brightness that dims a little on each kick. Two parameters on the same band, one inverted, move in opposite directions. With no audio at all (input muted, stream stopped), an inverted modulator sits at Max, so the parameter can look stuck until the music comes back.</p>
+<h3 id="the-audio-hardware-panel">The Audio Hardware panel</h3>
+<p><strong>Preferences → Audio Hardware</strong> (<code>Ctrl+P</code> opens Preferences) is where the audio comes in and where you can watch what the modulators hear.</p>
+<ul>
+<li><strong>Device and routing</strong> — <strong>Enable Audio Engine</strong>, the <strong>Audio Backend</strong> (Auto tries JACK first and falls back to Java Sound), the <strong>Input Hardware Device</strong> (greyed out while JACK / PipeWire manages capture; the refresh button rescans) and <strong>Channel Routing</strong> (Mix L + R, Left Only or Right Only).</li>
+<li><strong>Input Trim</strong> (0 to 10×, default 1×) and, where the system allows it, <strong>System Volume</strong> (the system's own recording level; the label shows <code>[MUTED]</code> when it is muted). Both are for setting up the input so beat detection hears enough. They don't change how much the picture moves, because auto gain levels the signals afterwards.</li>
+<li><strong>Sync State</strong> — <code>ACTIVE</code> when a signal is coming in and the tempo is being tracked, <code>SILENT</code> when there is no input or it is too quiet. If the peak meter moves but the state stays <code>SILENT</code>, the panel says the input is too quiet for beat detection: raise Input Trim or System Volume. If the engine isn't running at all, a <strong>Retry Connection</strong> button appears.</li>
+<li><strong>Audio Response</strong> (0% to 200%, default 100%) — the one control for how strongly everything that follows the music moves. It scales the Amp, Bass, Mid, High and Flux signals that every audio modulator reads, built-in or your own. Section signals, LFOs, beat detection and the beat clock are not affected.</li>
+<li><strong>Auto gain readout</strong> — the line under Audio Response (<code>Auto gain  amp 1.0x  bass 1.3x ...</code>) shows how much auto gain is lifting each band right now. <code>1.0x</code> means the band is already at the reference level.</li>
+<li><strong>Sections readout</strong> — the next line shows the song-section detector behind the Section <strong>Energy</strong> and <strong>Drop</strong> signals: <code>listening...</code> for the first 20 seconds or so, then <code>normal</code> or <code>BREAKDOWN</code>, the low-end level now as a percentage of its usual level, how long it has been under 45% (a breakdown starts after 3 s), and how many drops it has called. The detector listens to the low end (70% bass, 30% full mix) before auto gain.</li>
+<li><strong>Meters and scopes</strong> — the right column has the stereo input peak meter (before routing; a channel that routing drops is marked <code>[Bypassed]</code>) and a scope for each signal a modulator can use: the raw buffer, the beat sine, the four bands (Continuous) and their transients (Flux), and the two Section signals, <strong>Section Energy</strong> and <strong>Section Drop</strong>. Watch the last two through a track to see when a breakdown and drop are detected.</li>
+<li><strong>Master Tempo &amp; Link</strong> shows the current BPM, the clock source and Ableton Link status, with a button to the Tempo &amp; Sync page.</li>
+</ul>
 <hr />
 <h2 id="lfo-modulation">LFO Modulation</h2>
 <p>Clicking an <strong>LFO</strong> cell opens the LFO config. Each cell has a primary oscillator and an optional secondary modulator.</p>
@@ -1440,7 +1537,7 @@
 </ul>
 <p><strong>Clock mode:</strong></p>
 <ul>
-<li><strong>Time</strong> — Set the period in seconds. Use Fast / Medium / Slow sliders.</li>
+<li><strong>Time</strong> — Set the period in seconds. Use Fast / Medium / Slow sliders. Changing the period (by hand, from a controller, a macro or a preset morph) only changes how fast the LFO runs; it never jumps.</li>
 <li><strong>Beat</strong> — Synced to the beat clock. Subdivisions from 1/8 beat to 8 bars.</li>
 </ul>
 <p><strong>Waveshaping:</strong></p>
@@ -1449,7 +1546,7 @@
 <li><strong>Morph</strong> — Softens sharp corners. At 0.0 you get a pure triangle; at 1.0 you get a smooth sine-like curve.</li>
 <li><strong>Hold</strong> — Compresses the transition into a shorter moment and adds a plateau at the peak.</li>
 </ul>
-<p><strong>Range (Min / Max):</strong> Sets the output range directly. No need to think in terms of depth and offset — just say "I want this to move between 2.0 and 6.0" and set those values.</p>
+<p><strong>Range (Min / Max):</strong> Sets the output range directly. No need to think in terms of depth and offset — just say "I want this to move between 2.0 and 6.0" and set those values. Min and Max are the lowest and highest the LFO reaches, whatever the parameter's own range, and moving one leaves the other where it is. (The LFO swings evenly either side of the midpoint, so on a 0-to-1 parameter a Min below the set value pulls the parameter down as well as up; the result is clamped at the parameter's limits.)</p>
 <h3 id="secondary-modulator-lfo-2">Secondary Modulator (LFO 2)</h3>
 <p>LFO 2 modulates LFO 1 to add movement and complexity:</p>
 <ul>
@@ -1490,7 +1587,7 @@
 <li><strong>Time</strong> — Wall clock seconds per step (0.01s to 5.0s).</li>
 <li><strong>Frame</strong> — Advances every N render frames (1 to 120).</li>
 </ul>
-<p>Changing the clock unit keeps the same step duration where it can.</p>
+<p>Changing the clock unit keeps the same step duration where it can. Changing a Time or Frame interval while it plays keeps the current step and only changes the speed.</p>
 <h3 id="glide">Glide</h3>
 <ul>
 <li><strong>Step Hold</strong> slider — At 100% the value jumps instantly and holds flat for the full step. At 0% it glides smoothly from one step to the next over the whole duration. In between you get a hold then glide. It has a dice to randomize within a range, like the other sliders.</li>
@@ -1624,10 +1721,10 @@ Edit receives them when several are open).</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

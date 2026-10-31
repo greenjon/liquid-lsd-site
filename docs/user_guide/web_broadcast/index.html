@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -757,6 +757,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licenses/SHADERS_LICENSE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licenses & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -903,6 +930,10 @@ Each viewer's browser — renders the visuals locally using WebGL
 <td><strong>Auto-Connect</strong></td>
 <td>If enabled, broadcasts automatically when the app starts</td>
 </tr>
+<tr>
+<td><strong>Broadcaster Name</strong></td>
+<td>Shown to viewers on the web TV's LIVE title card ("LIVE · name"); leave blank for just LIVE. Up to 40 characters</td>
+</tr>
 </tbody>
 </table>
 <p>These preferences are saved between sessions in <code>lsd-preferences.properties</code>.</p>
@@ -919,14 +950,67 @@ Each viewer's browser — renders the visuals locally using WebGL
 <hr />
 <h2 id="the-web-player">The web player</h2>
 <p>The standalone browser client (<code>web/index.html</code>) presents the visualizer in a retro CRT television shell.</p>
-<p><strong>Power switch:</strong> Click it to turn the visualizer on. The browser requires this interaction to start Web Audio (standard browser security policy). Turning the TV on triggers a CRT warmup animation; turning it off plays a vintage beam-collapse animation.</p>
+<p><strong>Power switch:</strong> Click it (or anywhere on the TV) to turn the visualizer on. The browser requires this interaction to start Web Audio (standard browser security policy). Turning the TV on triggers a CRT warmup animation; turning it off plays a vintage beam-collapse animation.</p>
 <p><strong>Volume dial:</strong> Drag the rotary dial up or down to adjust volume. The curve is tuned to feel perceptually linear — small moves at the bottom, bigger moves at the top.</p>
-<p><strong>Fullscreen:</strong> Double-click the TV screen to expand to full-screen. Double-click again or press <code>Esc</code> to go back to the TV shell.</p>
+<p><strong>Fullscreen:</strong> Double-click the TV screen, press <code>S</code>, or choose MENU › <strong>Fullscreen</strong> to expand to full-screen (the on-screen display comes along). Do any of them again, or press <code>Esc</code>, to go back to the TV shell. Choosing it from the MENU closes the menu. In Chrome and Edge, <code>Esc</code> closes the menu first if it is open (hold <code>Esc</code> to leave full screen right away); other browsers always leave full screen on <code>Esc</code>.</p>
+<p><strong>Version:</strong> the MENU title shows the TV's version (v1, v2, …) on the right. If it is older than the one just announced, reload the page to get the latest.</p>
+<p><strong>Microphone:</strong> press <code>A</code> or choose MENU › <strong>Input</strong> to make the picture follow your microphone instead of the radio, for a room playing its own music. Your browser asks permission the first time; the sound is only analysed, never played through the speakers. Press <code>A</code> again for the radio. Turning the TV off also puts the radio back. Locked during a live broadcast.</p>
+<p><strong>Viewer controls</strong> (Autopilot only; while you broadcast live they are locked and the screen says so):</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+<th>Keys / touch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CH ▲ / ▼</strong></td>
+<td>The next / previous channel, now (a channel you've seen keeps the FX chain it had; the autopilot itself still picks channels at random)</td>
+<td><code>→</code> <code>↑</code> <code>N</code> / <code>←</code> <code>↓</code> <code>P</code>; swipe left / right on the picture</td>
+</tr>
+<tr>
+<td><strong>FX</strong></td>
+<td>Puts the next FX chain on the scene on air</td>
+<td><code>F</code></td>
+</tr>
+<tr>
+<td><strong>HOLD</strong></td>
+<td>Keeps the current scene until you press it again (the background keeps changing)</td>
+<td><code>H</code> or <code>Space</code>; long-press the picture</td>
+</tr>
+<tr>
+<td><strong>TIME</strong></td>
+<td>How long each scene holds: 8, 16, 32 or 64 bars (drag, scroll or click)</td>
+<td><code>[</code> <code>]</code></td>
+</tr>
+<tr>
+<td><strong>REACT</strong></td>
+<td>How strongly the picture reacts to the music, 25-200%, 100% to start (double-click for 100%). The TV levels quiet and loud shows itself, so this is about taste, not volume</td>
+<td><code>-</code> <code>=</code></td>
+</tr>
+</tbody>
+</table>
+<p>Click or tap the picture (or press <code>I</code>) to show the channel, the scene, its FX chain and the track playing on the radio. TIME and REACT are remembered in the browser.</p>
+<p><strong>No signal:</strong> if the radio stream drops or goes quiet, the screen shows snow and NO SIGNAL, and the TV reconnects by itself.</p>
+<p><strong>Big GPU scenes:</strong> the most demanding 3D fractals and simulations only play on computers fast enough for them (the TV checks at power-on; MENU › Big GPU scenes overrides it). Add <code>?heavy=1</code> to the address to force them on, <code>?heavy=0</code> to keep them off.</p>
+<p><strong>Screen:</strong> while the TV is on, your computer or phone won't dim or lock (in browsers that support it).</p>
+<p><strong>Lock screen and media keys:</strong> your phone's lock screen and your keyboard's media keys show the show and the scene; play/pause is the power switch, next/previous change the scene.</p>
+<p><strong>Install as an app:</strong> use your browser's Install / Add to Home Screen; it opens fullscreen like a TV app.</p>
+<p><strong>Kiosk mode:</strong> <code>index.html?kiosk</code> shows only the picture (no TV body), turns itself on and hides the mouse pointer; use the keyboard or swipes. Browsers that refuse to start sound on their own get a "click or press a key for sound" prompt.</p>
+<p><strong>MENU:</strong> the MENU button or <code>M</code> opens the service menu (arrows or clicks to change, Esc or M to close): <strong>SYNC</strong> (how late the sound reaches you, for Bluetooth and other delayed speakers), <strong>Announce scenes</strong> (name each new scene on screen; off by default), <strong>REACT</strong>, <strong>TIME</strong>, <strong>Reduced motion</strong> (Auto follows your system setting), <strong>Big GPU scenes</strong> (Auto lets the GPU check decide), <strong>Input</strong> (radio or microphone) and <strong>Fullscreen</strong>. The selected row explains itself at the bottom of the menu (and on mouse hover). Settings are remembered in this browser. REACT, TIME and Heavy scenes are locked during a live broadcast.</p>
+<p><strong>SYNC:</strong> if the picture's pulses come before the beat you hear (Bluetooth speakers are often 150-250 ms late), open MENU › <strong>TAP SYNC</strong> and tap Space or the picture on 8 beats; or set <strong>SYNC</strong> by hand. It needs the beat light to be green (or a live broadcast).</p>
+<p><strong>Reduced motion:</strong> follows your system's "reduce motion" setting (or MENU › Reduced motion): gentler reaction, no hard scenes, no flashes or glitch effects, no cut on the drop, slower changes.</p>
+<p><strong>Going live:</strong> when the desktop starts broadcasting, viewers see a LIVE title card with the broadcaster's name (if one is set in the desktop's Web Broadcast preferences).</p>
+<p><strong>Power:</strong> click anywhere on the TV to turn it on (the browser needs that click to start the sound). Once it's on, a click on the cabinet turns it off; clicks on the picture show the info instead.</p>
+<p><strong>About:</strong> the nameplate under the screen opens the Liquid LSD website. MENU › <strong>ABOUT</strong> tells you about the desktop app (with a QR code for your phone), and <strong>I</strong> shows a Liquid LSD line with the info.</p>
+<p><strong>Beat light:</strong> the second light on the badge blinks on every beat: green when the TV has locked onto the music's beat, amber while it keeps time on its own (quiet passages, or before it has found the beat).</p>
 <p><strong>What viewers see.</strong> Each deck's source and its parameters, the deck FX chains and the master FX chain, the transition and crossfader, the channel levels and the beat all go over the wire, so the web TV follows your mix closely. A few things stay desktop-only: external video sources (Spout, NDI, PipeWire, webcam) show as nothing, and anything the web player does not have (a custom shader you added to your own library) is skipped. Viewers join in the middle of a broadcast on the right beat.</p>
 <p>The viewer's browser also connects to a live audio stream and runs its own audio analysis, keeping the visuals reactive to music even when you're not broadcasting.</p>
 <hr />
 <h2 id="autopilot-mode">Autopilot mode</h2>
-<p>When no broadcaster is connected, the web player switches to <strong>Autopilot</strong> — running its own curated visual playlist against the live audio stream. It keeps the visualizer interesting and audio-reactive 24/7 without needing a human operator.</p>
+<p>When no broadcaster is connected, the web player switches to <strong>Autopilot</strong> — running its own curated visual playlist against the live audio stream. It keeps the visualizer interesting and audio-reactive 24/7 without needing a human operator. It finds the beat of the radio stream itself, so beat-synced movement lands on the music, and changes scenes on the bar: every 16 bars by default (the TIME dial), with the background changing half as often. It also follows the song: when the bass drops out for a breakdown a calm or building scene comes in, and when the drop lands a hard scene cuts in on it (unless HOLD is on).</p>
 <p>When a broadcaster connects, Autopilot smoothly hands off control to the live stream. When the broadcast ends, it picks up again automatically.</p>
 <p>The web presets and playlists used for Autopilot live in <code>web/presets/</code> and <code>web/playlists/</code>, separate from your desktop preset library. Web presets are ordinary desktop <code>.lsd</code> files, so you can copy one across in either direction (a preset using only sources the web has). A playlist line can add an FX chain after a bar: <code>my-preset | my-chain</code>; the desktop's FX chains and transition presets ship with the web TV.</p>
 
@@ -978,10 +1062,10 @@ Each viewer's browser — renders the visuals locally using WebGL
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

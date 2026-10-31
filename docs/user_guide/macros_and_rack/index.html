@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -754,10 +754,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-layout-tabs" class="md-nav__link">
+  <a href="#the-perform-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The layout tabs
+        The Perform pages
       
     </span>
   </a>
@@ -880,6 +880,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#transition-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition Defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -992,6 +1003,33 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licenses/SHADERS_LICENSE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licenses & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1174,10 +1212,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-layout-tabs" class="md-nav__link">
+  <a href="#the-perform-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The layout tabs
+        The Perform pages
       
     </span>
   </a>
@@ -1294,6 +1332,17 @@
     <span class="md-ellipsis">
       
         Explicit ISF FX Defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition Defaults
       
     </span>
   </a>
@@ -1474,7 +1523,7 @@ the Transitions and Master FX rows its <strong>OUT</strong> side tab).</p>
 <h3 id="who-wins-when-several-things-drive-the-same-value">Who wins when several things drive the same value</h3>
 <p>A parameter's base value can be driven from several places. From strongest to weakest:</p>
 <ol>
-<li><strong>A macro knob target</strong> locks the value against direct writes, but the Value and the knob are linked both ways: dragging, scrolling or typing in <strong>Initial Range</strong> moves the knob (and so every other target of that knob), and the Value follows. Stepped and S-curve targets land on the nearest position, and a typed value outside the target's range stops at the knob's end. Any MIDI or OSC mapping on it is <strong>suspended</strong> (its row in Preferences shows "Suspended: driven by ...") and works again when you release the target.</li>
+<li><strong>A macro knob target</strong> locks the value against direct writes, but the Value and the knob are linked both ways: dragging, scrolling or typing in <strong>Initial Range</strong> moves the knob (and so every other target of that knob), and the Value follows. Stepped and S-curve targets land on the nearest position, and a typed value outside the target's range stops at the knob's end. A randomize (the deck die, Rand, or the Initial Range dice) moves the knob the same way, so a rolled value sticks. Any MIDI or OSC mapping on it is <strong>suspended</strong> (its row in Preferences shows "Suspended: driven by ...") and works again when you release the target.</li>
 <li><strong>An effect Metaknob target</strong> (including through the Super Knob, which moves linked Metaknobs) owns the effect parameter it is aimed at. A macro knob can't be added to that parameter ("driven by its Metaknob"), and an existing macro target on it is ignored while the Metaknob target is enabled. The parameter's row shows the same cyan highlight as a macro target, with a <code>[K1]</code> badge when the Metaknob sits on a macro knob. As with a macro target, editing the Value in Edit moves the Metaknob instead (and the macro knob above it, if it has one). Uncheck the Metaknob target (in the slot's <strong>Metaknob targets</strong> block or on the Edit-row strip) to use a macro knob there instead. A Metaknob aimed at <strong>Dry/Wet</strong> owns the slot's Dry/Wet the same way: the focus header's <code>Wet</code> slider then moves the Metaknob. MIDI and OSC mappings on it are suspended as well.</li>
 <li><strong>Direct edits, MIDI and OSC mappings</strong> on an unlocked value: the last one to move wins.</li>
 <li><strong>Modulators (LFO, sequencer, audio)</strong> never compete. They are always added on top of whatever value results from 1-3.</li>
@@ -1547,13 +1596,13 @@ knob already drives it.</p>
 rows across 4 columns, color-coded by deck — on the left, with the Mixer column and
 Library dock alongside. (Earlier versions also had a "Classic" Parameters/Properties view,
 toggled with <code>F4</code>; everything it did now lives in Edit, below.)</p>
-<p>The active tab is remembered between sessions in application preferences.</p>
-<h3 id="the-layout-tabs">The layout tabs</h3>
-<p>Each tab shows up to 4 rows of 4 knobs, mapped to different banks:</p>
+<p>The active page is remembered between sessions in application preferences.</p>
+<h3 id="the-perform-pages">The Perform pages</h3>
+<p>Each page shows 4 rows of 4 knobs, mapped to different banks:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Tab</th>
+<th style="text-align: left;">Page</th>
 <th style="text-align: left;">Row 1</th>
 <th style="text-align: left;">Row 2</th>
 <th style="text-align: left;">Row 3</th>
@@ -1592,7 +1641,7 @@ Opening a deck in Edit shows the row for the Edit tab you are on (SRC or FX).</p
 <li><strong>Master Rows Are Split Too</strong>: The <strong>Master MST row</strong> (<code>[ MST ]</code> pill) has the deck-levels badge, with the four knobs on the deck levels and the master level. The <strong>Master FX row</strong> (<code>[ FX ]</code> pill) has the Master FX chain header (the chain name, then <code>[⋮] [Save] [1] [2] [3]</code>) and its <code>[ FX ON ]</code> button, with the knobs on the Master FX Super Knob + 3 Metaknobs. The crossfader sits on the Transitions row.</li>
 <li>The Transitions row has the transition picker on line 1 (click it to pick from the Library below — see below; the Edit gear sits at its end), and line 2 is laid out like an FX row: <code>[⋮]</code> menu, <code>[Save]</code> (saves the transition as a preset), queue <code>[◀] [▶]</code>, then the crossfader cells below. Its four knobs are fixed: <strong>knob 1 is the crossfader</strong> (it follows auto-fades and the slider, and turning it takes over like the slider does), and <strong>knobs 2-4 are the active transition's first three sliders</strong>, relabelled whenever you change transition. Transitions with fewer than three sliders leave the spare knobs blank. Line 2 ends with <code>A</code> / <code>B</code> snap buttons, <code>AUTO</code> and the fade time; there is no crossfader slider on the row (use knob 1 or the Mixer panel's slider). These knobs cannot be re-learned; Dry/Wet stays in the Edit bay.</li>
 </ul>
-<p>Each row is color-coded to its deck or target (blue for Deck A, orange for Deck B, amber for Deck BG, mint for Deck PV, violet for Transitions, crimson for Master, teal for FX) and starts with a title badge spanning both control lines: a large <strong>A</strong>, <strong>B</strong>, <strong>BG</strong> or <strong>PV</strong> on deck rows (the <code>[SRC]</code>/<code>[FX]</code> pills beside it show which the knobs control), and <strong>MASTER</strong>, <strong>TRANS</strong> and <strong>CLOCK</strong> on the MIXER tab. No row has a header bar over its knobs, so MIXER-tab knobs are the same size as deck knobs.</p>
+<p>Each row is color-coded to its deck or target (orange for Deck A, blue for Deck B, green for Deck BG, plum for Deck PV, cyan for Transitions, light grey for Master) and starts with a title badge spanning both control lines: a large <strong>A</strong>, <strong>B</strong>, <strong>BG</strong> or <strong>PV</strong> on deck rows (its caption strip, <strong>SRC</strong> or <strong>FX</strong>, shows which half the knobs control), a large <strong>M</strong> captioned <strong>TRAN</strong>, <strong>FX</strong> or <strong>MST</strong> on the MIXER page's Transitions and Master rows, and <strong>CLK</strong> on the Clock row. No row has a header bar over its knobs, so MIXER-page knobs are the same size as deck knobs.</p>
 <h3 id="performance-controls-side-wing-layout">Performance Controls &amp; Side-Wing Layout</h3>
 <p>To maximize vertical space in the matrix and keep the knobs comfortably clustered together:
 - <strong>Row Titles &amp; Side-Wing Controls</strong>: Row group titles (e.g. <code>DECK A</code>, <code>DECK A (FX)</code>) sit at the top-left of the row, level with the top of the knobs. The left- and right-wing controls sit below the title, with their bottom edge lined up with the bottom of the knobs, so short rows never push the controls up into the title. Every wing control (buttons, badges, generator/preset badge) is the same height.
@@ -1619,20 +1668,20 @@ Opening a deck in Edit shows the row for the Edit tab you are on (SRC or FX).</p
     - <strong>Double-Click Direct Numeric Entry</strong>: Double-click any macro knob face to open an inline text entry box. Type exact numerical values (e.g. <code>0.25</code>, <code>-1.5</code>, <code>42</code>) and press <code>Enter</code> to commit, or <code>Escape</code> to cancel. The typed value is what the parameter receives, so the knob's curve, invert and zone are taken into account (the readout shows the same value). For stepped or half-range bindings the knob snaps to the nearest position that gets closest.
     - <strong>In-Face Readouts</strong>: Hovering or dragging over a targetless or group-mode knob displays a subtle real-time value readout in the center of the knob face.
   - <strong>Right Wing</strong>:
-    - <strong>Randomize Die Button (<code>🎲</code>)</strong>: Randomizes the source's modulators and base values, its Gain, Deck Zoom / Deck Rotate and the FX chain's Dry/Wet (parameters with randomization turned on), with undo (when randomization is enabled). Positioned on Row 1 directly above the FX ON button.
+    - <strong>Randomize Die Button (<code>🎲</code>)</strong>: Randomizes the source's modulators and base values, its Gain, Deck Zoom / Deck Rotate, the FX chain's Dry/Wet and the inputs of the effects in its chain (parameters with randomization turned on), with undo of both the values and the knob positions (when randomization is enabled). Every stock source and most stock effects ship with random ranges on their look parameters (see Modulation, "Built-in random ranges"; an effect's Metaknob is never rolled), and the source knobs move with the roll. Positioned on Row 1 directly above the FX ON button.
     - <strong><code>[ FX ON ]</code></strong>: Turns the deck's FX chain on or off; lit while on. Positioned on Row 2 aligned with the FX row.
   - <strong>Drag-and-Drop</strong>: Dropping a deck preset (<code>.patch</code>, <code>.lsd</code>, <code>.json</code>) loads the visual preset; dropping a <code>.lsdfxchain</code> loads that FX chain onto the deck.
-- <strong>Whole-Rig Randomize (<code>[ ALL 🎲 ]</code>)</strong>: Positioned at the top right of the performance matrix tab strip, pushing undo state and invoking <code>mixer.randomizeAll()</code> across all decks simultaneously.
+- <strong>Whole-Rig Randomize (<code>[ ALL 🎲 ]</code>)</strong>: Positioned at the top right of the performance matrix tab strip, pushing undo state and invoking <code>mixer.randomizeAll()</code> across all decks (their effects included), the Master parameters and FX, and the transition simultaneously.
 - <strong>Master FX row</strong>: Left wing: the <code>FX</code>-captioned <code>M</code> badge, the chain name box and the chain controls line, as on a deck FX row; right wing: Master FX <code>[ FX ON ]</code>. Dropping a <code>.lsdfxchain</code> onto the <code>MASTER</code> badge loads it into Master FX.
 - <strong>Level faders on the deck tiles</strong> (the thin strip beside each preview badge) share their value with the Master MST knobs: move the fader and the knob follows, turn the knob and the fader follows, last mover wins. A fader drag also mutes non-MIDI modulation on it and makes a Soft Takeover MIDI/OSC mapping on it pick up again instead of jumping. The handle line marks the fader's own value; the filled bar is the live level after modulation.
 - <strong>Master MST row</strong>: The <code>M</code> badge carries an <code>MST</code> caption. Line 1 is the <code>Deck Levels &amp; Master</code> box (click to edit the levels, right-click for level resets) and a <code>100%</code> reset button; its gear opens Edit on the MST side tab's LEVELS section (the master level, then each deck's level), which shows this row together with the Clock row; the knobs are the Deck A / B / BG and Master levels. The crossfader is not here: it lives on the Transitions row (knob 1) and the Mixer panel.
-- <strong>Transitions (Row 2 in MASTER)</strong>: Left wing features a Transition Picker button displaying the active transition with modified indicator (<code>*</code>) — click it to pick from the transition list in the Library below — and Transition Queue stepping controls (<code>&lt;</code>, <code>N/Total</code>, <code>&gt;</code>); right wing hosts the transition randomize die button (<code>🎲</code>) on Row 1 (matching the deck rows). Transition presets (<code>.lsdtrans</code>) and shaders (<code>.fs</code>/<code>.isf</code>) can be dropped directly onto the picker button.
+- <strong>Transitions (Row 2 in MASTER)</strong>: Left wing features a Transition Picker button displaying the active transition with modified indicator (<code>*</code>) — click it to pick from the transition list in the Library below — and Transition Queue stepping controls (<code>&lt;</code>, <code>N/Total</code>, <code>&gt;</code>); right wing hosts the transition randomize die button (<code>🎲</code>) on Row 1 (matching the deck rows): it rolls the transition's inputs that have a random range, inside that range, and moves the TRANS knobs with them; Ctrl+Z undoes it. Transition presets (<code>.lsdtrans</code>) and shaders (<code>.fs</code>/<code>.isf</code>) can be dropped directly onto the picker button.
 - <strong>Clock &amp; Global (Row 4 in MASTER)</strong>: The two lines beside the <code>CLOCK</code> badge have the tempo controls from Preferences &gt; Tempo &amp; Sync, placed here for use mid-set:
   - <strong><code>[ MAN ]</code> / <code>[ AUDIO ]</code></strong>: clock source (manual tempo or the audio beat tracker).
   - <strong><code>[ LINK n ]</code></strong>: the third button of the top line, with the peer count while Ableton Link is on and dim while it is off. Click it to open Tempo &amp; Sync preferences.
-  - <strong>BPM readout</strong>: click it to open Tempo &amp; Sync preferences. The <strong>4 beat dots</strong> under it show the bar phase; the downbeat is cyan.
-  - <strong><code>[ TAP ]</code></strong>: tap tempo. Right-click for MIDI Learn. In Audio mode it nudges the detected tempo and phase.
-  - <strong><code>[ SNAP ]</code></strong>: snaps the beat phase to the downbeat.
+  - <strong>BPM readout</strong>: click it to open Tempo &amp; Sync preferences. The <strong>beat dots</strong> under it (one per beat of the bar, 4 by default) show the bar phase; the downbeat is cyan. Hover for the detector's confidence when Downbeat is on Auto.
+  - <strong><code>[ TAP ]</code></strong>: tap tempo. Right-click for MIDI Learn. In Audio mode it nudges the detected tempo and phase. The first tap of a run also marks beat 1 of the bar.
+  - <strong><code>[ SNAP ]</code></strong>: makes the beat nearest now beat 1 of the bar, snapping the beat phase and the bar line together. Press it on the one when the bar dots' cyan dot is in the wrong place. Preferences &gt; Tempo &amp; Sync &gt; <strong>Bar &amp; Downbeat</strong> sets the beats per bar and can let the app find beat 1 from the music (Downbeat: Auto); SNAP, or the first tap of a run, overrides it for 16 bars.
   - <strong>Twister clock knob</strong>: knob 13 on a Midi Fighter Twister pulses its LED on the beat (orange on the downbeat), shows the tempo on its ring and taps tempo when pushed. See <a href="../performance_controls/#twister-lights">Rings and LEDs</a>.
   - <strong><code>[ - ][ + ]</code></strong>: nudge the tempo by 0.5 BPM. The pair takes the space of one button, so MAN, AUDIO, LINK, TAP, SNAP and the pair make a tidy 3 x 2 grid.
   - <strong>Queue triggers (<code>QUEUE</code>)</strong>: right of the tempo controls, captions <code>A/B</code>, <code>A/B FX</code>, <code>BG</code>, <code>BG FX</code> and <code>TRN</code> over each queue's buttons: <code>[◀] [▶]</code>, with a play / pause button beside the caption on the A/B, BG and TRN queues (it toggles that queue's auto-advance and is lit while it runs; the FX queues have none). They are the same triggers as the queue rows of Edit's MST › CTRL tab: right-click a button for MIDI or OSC Learn, and a mapping made there shows on the CTRL row and the other way round.
@@ -1643,10 +1692,10 @@ Opening a deck in Edit shows the row for the Edit tab you are on (SRC or FX).</p
 identical to the Learn ring on Parameter rows. Send a CC message from any connected controller to map
 it immediately. Right-click again while armed to cancel.</p>
 <p>Interactive header controls in the Performance Matrix also support right-click MIDI &amp; OSC Learn:
-- <strong>Deck A and Deck B Badges</strong>: Right-click to Learn MIDI (<code>Global/snapDeckA</code>, <code>Global/snapDeckB</code>) or Learn OSC (<code>Mixer/snapDeckA</code>, <code>Mixer/snapDeckB</code>) to instantly snap the crossfader left or right.
-- <strong>Auto-Fade Button <code>[ AUTO ]</code> &amp; Fade Speed Badge</strong>: Right-click to Learn MIDI (<code>Global/autoFade</code>, <code>Mixer/xfadeSpeed</code>) or Learn OSC (<code>Mixer/xfadeSpeed</code>).
-- <strong>PlayQueue &amp; BG Queue <code>&lt;</code> and <code>&gt;</code></strong>: Right-click to Learn MIDI (<code>Global/queuePrev</code>, <code>Global/queueNext</code>, <code>Global/bgQueuePrev</code>, <code>Global/bgQueueNext</code>).
-- <strong>Transition Queue <code>&lt;</code> and <code>&gt;</code></strong>: Right-click to Learn MIDI (<code>Global/transQueuePrev</code>, <code>Global/transQueueNext</code>) or Learn OSC (<code>Mixer/transQueuePrev</code>, <code>Mixer/transQueueNext</code>).
+- <strong>Deck A and Deck B Badges</strong>: Right-click for MIDI Learn (<code>Global/snapDeckA</code>, <code>Global/snapDeckB</code>) or OSC Learn (<code>Mixer/snapDeckA</code>, <code>Mixer/snapDeckB</code>) to instantly snap the crossfader left or right.
+- <strong>Auto-Fade Button <code>[ AUTO ]</code> &amp; Fade Speed Badge</strong>: Right-click for MIDI Learn (<code>Global/autoFade</code>, <code>Mixer/xfadeSpeed</code>) or OSC Learn (<code>Mixer/xfadeSpeed</code>).
+- <strong>A/B Queue &amp; BG Queue <code>&lt;</code> and <code>&gt;</code></strong> (A/B Queue Prev / Next, BG Queue Prev / Next): Right-click for MIDI Learn (<code>Global/queuePrev</code>, <code>Global/queueNext</code>, <code>Global/bgQueuePrev</code>, <code>Global/bgQueueNext</code>).
+- <strong>Transition Queue <code>&lt;</code> and <code>&gt;</code></strong>: Right-click for MIDI Learn (<code>Global/transQueuePrev</code>, <code>Global/transQueueNext</code>) or OSC Learn (<code>Mixer/transQueuePrev</code>, <code>Mixer/transQueueNext</code>).
 Controls actively armed for MIDI learn display a pulsing cyan highlight border. Active MIDI assignments are shown in tooltips.</p>
 <h3 id="interacting-with-knobs">Interacting with knobs</h3>
 <ul>
@@ -1864,22 +1913,24 @@ with the parameter selected.</p>
 <h3 id="visual-generator-defaults">Visual Generator Defaults</h3>
 <p>When swapping sources on any deck (via the source badge or the empty-deck card), the incoming source's default configuration is resolved across three tiers:
 1. <strong>User Default</strong>: Custom parameter baselines, <code>globalAlpha</code>, and 4-knob macro layout saved in <code>library/generator_defaults/&lt;sourceId&gt;.json</code>.
-2. <strong>Curated Stock Default</strong>: Hand-curated 4-knob macro targets for bundled generators (<code>mandala</code>, <code>dynamic_spiral</code>, <code>icosa_h3</code>, <code>domain_warp_fluid</code>, <code>gyroid_hyperspace</code>, <code>celestial_engine</code>, <code>hyper_slice</code>, <code>chladni_cymatics</code>, <code>mandelbox</code>, <code>kifs</code>, <code>mandelbulb</code>, <code>pseudo_kleinian</code>, <code>apollonian</code>, <code>escape_time</code>, <code>nebula_volume</code>, <code>reaction_diffusion</code>, <code>fluid_ink</code>, <code>lenia</code>, <code>quasicrystal</code>, <code>thin_film</code>, <code>tunnel_scenes</code>, <code>video_feedback</code>, <code>hyperbolic_tiling</code>, <code>cyclic_ca</code>, <code>metaballs</code>, <code>wave_ripples</code>, <code>harmonograph</code>, <code>aurora_ribbons</code>, <code>isometric_voxels</code>, <code>halftone_matrix</code>, <code>kali_set</code>, <code>girih_stars</code>, <code>glitch_blocks</code>, <code>voronoi_cells</code>).
-3. <strong>Automated Heuristic Fallback</strong>: For third-party ISF shaders, continuous floats (e.g. speed, rate, zoom, scale, morph, depth, detail) are prioritized, discrete stepped selectors are filtered out, and speed/frequency parameters are shaped with exponential response curves.</p>
+2. <strong>Stock Default</strong>: the default shipped with each bundled generator: its 4-knob macro targets and its built-in audio and beat responses (<code>mandala</code>, <code>dynamic_spiral</code>, <code>icosa_h3</code>, <code>domain_warp_fluid</code>, <code>gyroid_hyperspace</code>, <code>celestial_engine</code>, <code>hyper_slice</code>, <code>chladni_cymatics</code>, <code>mandelbox</code>, <code>kifs</code>, <code>mandelbulb</code>, <code>pseudo_kleinian</code>, <code>apollonian</code>, <code>escape_time</code>, <code>nebula_volume</code>, <code>reaction_diffusion</code>, <code>fluid_ink</code>, <code>lenia</code>, <code>quasicrystal</code>, <code>thin_film</code>, <code>tunnel_scenes</code>, <code>video_feedback</code>, <code>hyperbolic_tiling</code>, <code>cyclic_ca</code>, <code>metaballs</code>, <code>wave_ripples</code>, <code>aurora_ribbons</code>, <code>isometric_voxels</code>, <code>halftone_matrix</code>, <code>kali_set</code>, <code>girih_stars</code>, <code>glitch_blocks</code>, <code>voronoi_cells</code>).
+3. <strong>Automated Heuristic Fallback</strong>: For third-party ISF shaders (nothing is written to disk; it is worked out again on every load until you save a default yourself), continuous floats (e.g. speed, rate, zoom, scale, morph, depth, detail) are prioritized, discrete stepped selectors are filtered out, and speed/frequency parameters are shaped with exponential response curves.</p>
 <p><strong>Bank Replacement Behavior</strong>: Applying a default replaces the resident 4-knob deck bank wholesale, identical to preset loading. Stored <code>Deck/*</code> targets are dynamically remapped to the target deck slot (e.g., <code>Deck A</code>, <code>Deck B</code>). Knobs are positioned via inverse-curve mapping so parameter values do not jump on load. Hardware MIDI mappings are stripped on save to avoid duplicate hardware CC collisions across decks.</p>
 <p><strong>How to Save or Reset Generator Defaults</strong>:
 - <strong>Right-click the generator badge</strong> on any deck row in the Perform view to open the context menu:
   - <code>Save as Default for &lt;Generator&gt;</code>: Saves current parameters, Gain, and 4-knob macro layout as the generator default.
   - <code>Apply Default Now</code>: Reapplies the default layout and parameters to the current deck.
-  - <code>Reset to Factory Default</code>: Deletes the user default file and restores curated/heuristic factory defaults.
+  - <code>Reset to Factory Default</code>: Deletes the user default file and restores the stock (or heuristic) default.
 - Alternatively, open the <strong>Save menu</strong> in Edit's monitor toolbar and select <code>Save as Default for &lt;Generator&gt;</code>.</p>
 <h3 id="explicit-isf-fx-defaults">Explicit ISF FX Defaults</h3>
 <p>A slot's Metaknob targets, knob order and parameter values can be saved as the effect's own default:
 - Tweaking parameters or targets during performance is purely temporary and does <strong>not</strong> silently overwrite defaults on disk.
 - <strong>Right-click a Metaknob row</strong> in Edit's SUPER KNOB &amp; METAKNOBS block:
-  - <code>Save as Default for &lt;Filter&gt;</code> saves this slot's Metaknob targets, knob order and parameter values into <code>library/isf_overrides/&lt;contentHash&gt;.json</code>. New copies of the effect start from it; slots already in chains keep their own.
-  - When a saved default exists, <code>Remove Saved Default for &lt;Filter&gt;</code> deletes it, so new copies go back to the curated/auto-mapped targets, and resets this slot to them too.
+  - <code>Save as Default for &lt;Filter&gt;</code> saves this slot's Metaknob targets, knob order, parameter values and modulators (not MIDI mappings) into <code>library/isf_overrides/&lt;contentHash&gt;.json</code>. New copies of the effect start from it; slots already in chains keep their own.
+  - When a saved default exists, <code>Remove Saved Default for &lt;Filter&gt;</code> deletes it, so new copies go back to the stock (or auto-mapped) default, and resets this slot to it too.
 - Targets themselves are edited in the slot's <strong>Metaknob targets</strong> block or on the Edit-row strip.</p>
+<h3 id="transition-defaults">Transition Defaults</h3>
+<p>The transition's <strong>⋮</strong> menu (on the Transitions row, and the kebab beside the transition picker in the Mixer TRANS tab) has <code>Save as Default for &lt;Transition&gt;</code>: it saves the running transition's parameter values and modulators (not MIDI mappings) the same way, keyed by shader content. Picking that transition from then on starts from it; saved <code>.lsdtrans</code> presets keep their own values. <code>Remove Saved Default for &lt;Transition&gt;</code> deletes it and resets the running transition to the built-in values and audio response.</p>
 <hr />
 <h2 id="shortcuts">Shortcuts</h2>
 <table>
@@ -1945,10 +1996,10 @@ with the parameter selected.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

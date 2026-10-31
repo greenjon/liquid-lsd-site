@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -1106,6 +1106,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licenses/SHADERS_LICENSE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licenses & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1758,6 +1785,13 @@ for how they work and where to edit them.</p>
 <li>Exiting Focus Mode restores Knob 1 to <code>SUPER</code> and Knobs 2–4 to <code>META</code>.</li>
 </ul>
 </li>
+<li><strong>Chain View</strong>:<ul>
+<li>Shows one row per FX slot with the deck's source row under them, so all three effects are playable at once, with the Browse list underneath. Open it from <strong>Chain View</strong> in any FX chain's <code>[⋮]</code> menu, or with the <strong>Chain</strong> button on the pair view's Browse header. Master has one too, with the Transitions row at the bottom.</li>
+<li>Rows 1-3 are <strong>FX1</strong>, <strong>FX2</strong> and <strong>FX3</strong>. Each always shows its own slot, whatever the deck's FX row was doing: knob 1 is the slot's Metaknob (tap to bypass), knobs 2-4 its parameters on that slot's page. Beside the knobs: the effect's name (click to point the Browse list at that slot), the chain's <code>[⋮]</code> menu, the slot's <code>Wet</code> slider and, when the effect has more than three parameters, <code>[◀ P1/N ▶]</code>. Touching a slot row's knob also points the Browse list at that slot. The deck's die and FX ON button are on the FX1 row.</li>
+<li><strong>Load</strong> (next to <strong>Chain</strong> on the Browse header) swaps the source row (row 4) for a load row, right above the list: the effect highlighted in the list, and three targets, <code>→ FX1</code>, <code>→ FX2</code>, <code>→ FX3</code>, that load it into that slot (Ctrl+Z undoes it). The slot rows don't move, so you can load an effect, play it, and compare it with the other two. Press <strong>Load</strong> again to get the source row back.</li>
+<li><code>Esc</code> (or <strong>Back</strong>) leaves Chain view in one press, back to your Perform page. A page tab or opening Edit leaves it too.</li>
+</ul>
+</li>
 <li><strong>Performance Matrix Tabs</strong>:<ul>
 <li>Deck FX chains are on each deck's FX row; Master FX is on the Master FX row, on the <strong>MIXER</strong> tab.</li>
 <li>The <strong>Transitions</strong> row includes a <code>[DICES]</code> die button to randomize transition parameters with undo support.</li>
@@ -1779,9 +1813,9 @@ for how they work and where to edit them.</p>
 <ol>
 <li><strong>In-Situ Right-Click Learn (Fastest)</strong>:</li>
 <li>Right-click any slider or variable label in the UI — including an LFO's <strong>Speed / Subdivision</strong>, <strong>Depth</strong>, <strong>Min/Max bounds</strong>, <strong>Asymmetry (Slope)</strong>, <strong>Morph</strong>, <strong>Hold</strong>, or a parameter's <strong>Initial Range (Base Value)</strong>.</li>
-<li>Select <strong>Learn MIDI Mapping (...)</strong> from the context menu. This is a controller mapping: it sets the value itself and is saved in your controller profile, not in the preset. The slider will pulse in cyan/blue while awaiting hardware input.</li>
+<li>Select <strong>MIDI Learn (...)</strong> from the context menu. This is a controller mapping: it sets the value itself and is saved in your controller profile, not in the preset. The slider will pulse in cyan/blue while awaiting hardware input.</li>
 <li>Move a knob, fader, or press a pad on your MIDI controller. Liquid LSD immediately maps the control, preserves your configured min/max limits, and saves the mapping to the active profile.</li>
-<li>If a macro knob currently drives that value (its slider shows the cyan lock and a <code>[K#]</code> badge), <strong>Learn MIDI</strong> is greyed out as "locked by K#": the knob rewrites the value every frame, so a mapping would do nothing. Release the target first (uncheck it in the macro editor), or map a different value.</li>
+<li>If a macro knob currently drives that value (its slider shows the cyan lock and a <code>[K#]</code> badge), <strong>MIDI Learn</strong> is greyed out as "locked by K#": the knob rewrites the value every frame, so a mapping would do nothing. Release the target first (uncheck it in the macro editor), or map a different value.</li>
 <li>
 <p>Right-click again and select <strong>Cancel MIDI Learn</strong> if needed.</p>
 </li>
@@ -1795,7 +1829,7 @@ for how they work and where to edit them.</p>
 <p><strong>Global Performance Actions</strong>:</p>
 </li>
 <li>
-<p>In <strong>Preferences → MIDI Controls</strong>, click <strong>Learn</strong> next to <em>Queue Advance A/B Next</em>, <em>Queue Step Back A/B Prev</em>, <em>BG Shader Advance</em>, <em>BG Step Back</em>, or <em>Tap Tempo</em>.</p>
+<p>In <strong>Preferences → MIDI Controls</strong>, click <strong>Learn</strong> next to <em>A/B Queue Next</em>, <em>A/B Queue Prev</em>, <em>BG Queue Next</em>, <em>BG Queue Prev</em>, <em>Transition Queue Next / Prev</em>, or <em>Tap Tempo Trigger</em>.</p>
 </li>
 <li>
 <p><strong>Modulator Variable Paths</strong>:</p>
@@ -1942,6 +1976,12 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
 <td>Link All: link or unlink all three slots</td>
 <td>-</td>
 </tr>
+<tr>
+<td><strong>Shift + tap on a deck's SRC knob</strong> (Master: a Transitions knob)</td>
+<td>Chain view on or off for that deck</td>
+<td>-</td>
+<td>-</td>
+</tr>
 </tbody>
 </table>
 <ul>
@@ -2005,13 +2045,31 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
 <td><strong>cursor</strong>: turn to move; tap applies, <strong>Shift +</strong> tap queues</td>
 </tr>
 <tr>
+<td><strong>Chain view, playing</strong></td>
+<td>leave Chain view</td>
+<td>toggle Link All; <strong>Shift +</strong> tap tempo</td>
+<td>next deck (<strong>Shift +</strong> prev), staying in Chain view</td>
+<td>open the <strong>Library</strong>; <strong>Shift +</strong> opens it on the FX tab</td>
+<td><strong>Load</strong> on (row 4 becomes the load row)</td>
+<td>normal knob (the source row's last knob)</td>
+</tr>
+<tr>
+<td><strong>Chain view, loading</strong></td>
+<td>leave Chain view</td>
+<td>toggle Link All; <strong>Shift +</strong> tap tempo</td>
+<td>next deck (<strong>Shift +</strong> prev), staying in loading</td>
+<td>step the <strong>pane</strong> (<strong>Shift +</strong> the tab)</td>
+<td><strong>Load</strong> off (the SRC row comes back); <strong>Shift +</strong> clears the targeted slot</td>
+<td><strong>cursor</strong>: turn to move, tap applies to the targeted slot</td>
+</tr>
+<tr>
 <td><strong>Library</strong></td>
 <td>leave Library</td>
 <td>toggle Link All; <strong>Shift +</strong> tap tempo</td>
 <td>next bank / page (<strong>Shift +</strong> prev)</td>
 <td>step the <strong>tab</strong> (<strong>Shift +</strong> prev)</td>
 <td>step <strong>pane</strong> (<strong>Shift +</strong> prev)</td>
-<td><strong>cursor</strong>: turn to move, tap to load</td>
+<td><strong>cursor</strong>: turn to move, tap to load; <strong>Shift +</strong> tap queues it (after the queue knob's cursor, see below)</td>
 </tr>
 </tbody>
 </table>
@@ -2022,10 +2080,15 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
 <li><strong>Right-top button:</strong> Steps through hardware banks / Perform pages (<strong>Shift + right-top</strong> steps backward).</li>
 <li><strong>Unsaved-changes prompt:</strong> when loading would discard edits on a deck, the prompt takes over the controller: <strong>left-top</strong> = Cancel, <strong>right-middle</strong> or <strong>knob 16 tap</strong> = Save, <strong>right-bottom</strong> or <strong>Shift + tap</strong> = Discard. Nothing else navigates until you answer.</li>
 <li><strong>Browsing a slot:</strong> moving never applies anything; only a tap does. Touch a knob of the row first; with none touched yet the button does nothing. When the row is on the current page the Library below simply starts applying to its slot; otherwise the Pair view opens. Knob 16 is the cursor. Knobs 9-15 do nothing (apart from the sends) while browsing (knobs 9-13 send the highlighted item, see below); knobs 1-8 keep controlling the first two rows on screen (the page's, or the pair view's two rows; they light in their rows' colours), so you can tweak a freshly loaded source or chain without stopping. Touching one of them points the browser at that row's slot. Touching a knob does not change the tab unless it moves the target, so it won't pull you off Queues or Macros. To pick for another deck, send the item there with knobs 9-12, use the quick switch, or stop with <strong>left-top</strong> first.</li>
+<li><strong>Chain view:</strong> <strong>Shift + tap</strong> any of a deck's SRC knobs (Master: a Transitions knob) to show that deck as Chain view: FX1, FX2 and FX3 in rows 1-3 and its SRC row in row 4, all 16 knobs live. The same gesture on the SRC row (row 4) leaves again, as does <strong>left-top</strong>. <strong>Right-bottom</strong> turns <strong>Load</strong> on and off. While loading, row 4 is the load row: <strong>knob 16</strong> is the cursor, as in every other browse mode (turn to move through the FX list, tap to apply the highlighted effect to the targeted slot), and a tap on <strong>knob 13, 14 or 15</strong> loads it into slot 1, 2 or 3 (Ctrl+Z undoes it); those three glow in their slot row's colour while the highlighted item can go in a slot. Knobs 1-12 stay on the slot rows the whole time, so you can play what you just loaded and compare it with the other two slots. There are no send knobs in Chain view. The bank buttons step to the next deck (A, B, BG, PV, Master) and keep you in Chain view.</li>
 <li><strong>Edit:</strong> Left-top closes Edit (collapsing the module bay back to the Faceplate, same as Esc); <strong>Shift + left-top</strong> toggles Edit mode for the touched row. Right-bottom opens the pair view for the last-touched knob's row.</li>
 <li><strong>Banks in the pair view:</strong> pressing a bank button walks the pairs instead of changing the page: a higher bank is the next pair (Deck A, B, BG, PV, Master, wrapping; the Master pair is Transitions + Master FX), a lower bank the previous one, so you can reach any deck's pair from the Twister alone. A pair is the two rows that share a half of a page, so the MIXER page's other half (Master MST + Clock) has no list to browse and no pair.</li>
 <li><strong>Quick switch:</strong> while browsing a slot, <strong>Shift + tap</strong> on knob 9-12 (A, B, BG, PV) or 13 (Master) moves to that deck without sending anything (in place when the page shows its rows, else its pair view).</li>
 <li><strong>Send knobs (Library and while browsing):</strong> tap a knob in row three to send the highlighted item to a deck: <strong>knob 9 = Deck A, knob 10 = Deck B, knob 11 = Deck BG, knob 12 = Deck PV</strong>; in the FX tab <strong>knob 13 = Master FX</strong>. A source or preset replaces the deck's content (with the usual unsaved-changes prompt), an FX chain replaces all three slots, and a single FX goes into the first empty slot (the last slot if all are full). From the Library the send only loads (you stay in the Library with your place kept, so you can send the next item straight away, and an FX send shows a toast with where it landed); Ctrl+Z undoes it. While browsing a slot the target follows the send (in place when its rows are on the page, else its pair view), so you can play what you just loaded while knob 16 keeps browsing; send again to move to another deck. A knob glows in its target's colour while the highlighted item can go there. They work on the Sources and FX lists only. Back returns to Perform.</li>
+<li><strong>Library view, knobs 1-8:</strong> the Library hides the page, so the first two rows of knobs play the source and FX rows of the deck you last sent to with knobs 9-13 (Master's Transitions and Master FX rows after a knob 13 send). Until you send anything they play <strong>Deck PV</strong>, where previews go, so you can audition an item and tweak it straight away. A coloured <strong>Knobs 1-8: Deck PV</strong> label on the Library's tab line says which deck it is, and the knobs light in its colours.</li>
+<li><strong>Library view, queue knobs 14 and 15:</strong> with the queues under the browser (the Library maximized, Sources, FX or Transitions tab), <strong>knob 14</strong> is the tab's main queue (A/B, A/B FX or Transitions) and <strong>knob 15</strong> its BG queue (BG or BG FX; dark on Transitions). Their columns are outlined on screen in the knobs' colours (mint and rose). <strong>Turn</strong> moves that queue's highlight (the first turn lands on the playing item); <strong>hold the knob down and turn</strong> to carry the highlighted item up or down, one row per click; <strong>tap</strong> uses it now (as a double-click does); <strong>Shift + tap</strong> removes it (a toast says what went, and Ctrl+Z puts it back). The ring shows the highlight's place in the queue and fills for a moment when items arrive. Hide the queues and the two knobs go dark.</li>
+<li><strong>Queueing at a place:</strong> <strong>Shift + tap knob 16</strong> puts the highlighted browser item (or the playlist under the tree cursor) <strong>after the highlight of the queue knob you touched last</strong>, and moves that highlight onto it, so a second item goes after the first. With the highlight on the playing item, the new item plays next. If you haven't touched a queue knob since opening the Library, it goes to the end of the main queue as before.</li>
+<li><strong>Auto-preview:</strong> <strong>Shift + tap knob 12</strong> (the PV send) turns it on: PV loads whatever the cursor rests on for 0.4 s, on the Sources and FX tabs, and knob 12 blinks. Tap again, or leave the Library, to stop. It pauses with a message while PV has unsaved changes (rather than asking mid-scroll), and an effect previews on whatever PV is playing, so send PV a source first.</li>
 <li><strong>Library:</strong> a preset or generator loads onto the deck the crossfader is moving away from, a BG queue item onto Deck BG, a transition onto the mixer. In the FX tab, a tap applies the item to the live deck (a single effect goes into the first empty slot, the last slot if all are full; a chain replaces the deck's chain) and <strong>Shift + tap</strong> adds it to the FX queue. Holding Shift, the side buttons add to the BG queue and step the tab and list backwards.</li>
 <li><strong>Unified browser:</strong> a fresh tab starts in the list. <strong>Right-bottom</strong> moves on to the queues and <strong>Shift +</strong> it goes back to the folder tree. In the tree, turning moves a cursor (an outline) over the visible folders and playlists without changing the list; a <strong>tap</strong> selects the folder or playlist under it, which fills the list and clears the list's selection. A playlist is just a tree entry, so there is no separate playlist pane.</li>
 <li>The FX queue transport commands (<code>fx.queue_next/prev</code>, <code>fx.bg_queue_next/prev</code>) have no free button in the built-in profile; map them in your own profile.</li>
@@ -2089,9 +2152,9 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
 <ol>
 <li><strong>In-Situ Right-Click Learn (Fastest)</strong>:</li>
 <li>Right-click any slider or variable label in the UI — including an LFO's <strong>Speed / Subdivision</strong>, <strong>Depth</strong>, <strong>Min/Max bounds</strong>, <strong>Asymmetry</strong>, a parameter's <strong>Initial Range (Base Value)</strong>, the crossfader, fade speed, or a deck/transition queue's <code>&lt;</code>/<code>&gt;</code> buttons.</li>
-<li>Select <strong>Learn OSC (...)</strong> from the context menu. The control will pulse in amber while awaiting input.</li>
+<li>Select <strong>OSC Learn (...)</strong> from the context menu. The control will pulse in amber while awaiting input.</li>
 <li>Move a fader, knob, or XY pad on your TouchOSC surface. Liquid LSD ignores the first packet from a new address (guarding against a controller's connect-time sync burst) and maps once a later packet actually moves the value, preserving your configured min/max limits and saving the mapping to the active profile.</li>
-<li>As with MIDI, <strong>Learn OSC</strong> is greyed out as "locked by K#" while an enabled macro knob target drives that value.</li>
+<li>As with MIDI, <strong>OSC Learn</strong> is greyed out as "locked by K#" while an enabled macro knob target drives that value.</li>
 <li>
 <p>Right-click again and select <strong>Cancel OSC Learn</strong> (or cancel from Preferences) if needed. Once mapped, the same context menu offers <strong>Clear OSC Mapping</strong> to remove it without leaving the performance view.</p>
 </li>
@@ -2099,7 +2162,7 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
 <p><strong>Manual Learn from Preferences</strong>:</p>
 </li>
 <li>Open <strong>Preferences → OSC Controls</strong>.</li>
-<li>Type or paste the target parameter or modulator path into the <strong>Learn OSC</strong> field:<ul>
+<li>Type or paste the target parameter or modulator path into the <strong>OSC Learn</strong> field:<ul>
 <li>Base parameters: <code>Mixer/crossfade</code>, <code>Deck A/geometry/zoom</code>, <code>Master/FX1/speed</code>.</li>
 <li>Modulator variables: <code>Deck A/geometry/zoom:mod/&lt;modulatorId&gt;/subdivision</code> (a numeric <code>:mod/0/...</code> is a legacy list position and still works).</li>
 </ul>
@@ -2133,7 +2196,7 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
   ]
 }
 </code></pre>
-<p>A page needs exactly 4 rows. Row names: <code>deck.A.src</code> and <code>deck.A.fx</code> (likewise <code>B</code>, <code>BG</code>, <code>PV</code>) for a deck's source row and FX row, <code>master.mix</code> and <code>master.fx</code> for Master's levels and Master FX, <code>trans</code>, <code>global</code>. A page of <code>deck.A.src</code>, <code>deck.A.fx</code>, <code>deck.B.src</code>, <code>deck.B.fx</code> shows both halves of both decks at once. A file whose <code>id</code> is <code>ab</code>, <code>bgpv</code>, <code>mixer</code> or <code>master</code> replaces that built-in page. Pages saved by an earlier version that name <code>deck.&lt;tag&gt;.srcfx</code> or <code>master</code> are skipped (the log says why): replace those rows with the split ones above. You can also manage pages in <strong>Preferences &gt; MIDI Controls &gt; Perform Pages</strong>: copy a built-in page to edit it, create a new page, rename it and pick each of its four rows from a list, or delete it again. Edits are saved at once. Each page shows its <strong>controller name</strong> (<code>perform.&lt;id&gt;</code>), the name a controller profile uses; it does not change when you rename the page. To get a different name, type one into <strong>Name for a copy</strong> and press <strong>Copy As New Page</strong>, then hide the original if you like. Untick <strong>Show in tab strip</strong> to hide a page's tab (a Twister bank that selects it still shows it, with a temporary tab while it is active); with more than five tabs they narrow to fit. Files with mistakes are skipped; the log says why. A controller profile can select your page with <code>perform.mine</code>.</p>
+<p>A page needs exactly 4 rows. Row names: <code>deck.A.src</code> and <code>deck.A.fx</code> (likewise <code>B</code>, <code>BG</code>, <code>PV</code>) for a deck's source row and FX row, <code>master.mix</code> and <code>master.fx</code> for Master's levels and Master FX, <code>trans</code>, <code>global</code>. Each FX slot also has a row of its own: <code>deck.A.fx1</code>, <code>deck.A.fx2</code>, <code>deck.A.fx3</code> (likewise for the other decks) and <code>master.fx1</code> to <code>master.fx3</code>. A slot row always shows its slot, whatever the chain's FX row is doing: knob 1 is the slot's Metaknob (tap to bypass), knobs 2-4 its parameters on the slot's own page (Shift + tap a parameter knob for the next page). A page of <code>deck.A.src</code>, <code>deck.A.fx</code>, <code>deck.B.src</code>, <code>deck.B.fx</code> shows both halves of both decks at once. A file whose <code>id</code> is <code>ab</code>, <code>bgpv</code>, <code>mixer</code> or <code>master</code> replaces that built-in page. Pages saved by an earlier version that name <code>deck.&lt;tag&gt;.srcfx</code> or <code>master</code> are skipped (the log says why): replace those rows with the split ones above. You can also manage pages in <strong>Preferences &gt; MIDI Controls &gt; Perform Pages</strong>: copy a built-in page to edit it, create a new page, rename it and pick each of its four rows from a list, or delete it again. Edits are saved at once. Each page shows its <strong>controller name</strong> (<code>perform.&lt;id&gt;</code>), the name a controller profile uses; it does not change when you rename the page. To get a different name, type one into <strong>Name for a copy</strong> and press <strong>Copy As New Page</strong>, then hide the original if you like. Untick <strong>Show in tab strip</strong> to hide a page's tab (a Twister bank that selects it still shows it, with a temporary tab while it is active); with more than five tabs they narrow to fit. Files with mistakes are skipped; the log says why. A controller profile can select your page with <code>perform.mine</code>.</p>
 
 
 
@@ -2183,10 +2246,10 @@ Each rotary mapping includes an editable <strong>Step</strong> multiplier to dia
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

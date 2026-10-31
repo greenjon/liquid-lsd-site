@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -735,6 +735,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licenses/SHADERS_LICENSE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licenses & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -857,6 +884,7 @@
 <ul>
 <li><strong>Pages.</strong> The hardware banks (or, in native mode, the top-right side button) step through the Perform pages: <strong>A/B</strong>, <strong>BG/PV</strong> and <strong>MIXER</strong>. The screen follows the hardware, and clicking a tab on screen moves the encoders to match.</li>
 <li><strong>Effects.</strong> On an FX row the first knob is the chain's Super Knob and the other three are the slots' Metaknobs. A tap on a knob's switch bypasses a slot, and <strong>Shift</strong> + tap focuses it so the whole row becomes that effect's parameters.</li>
+<li><strong>Chain view.</strong> <strong>Shift</strong> + tap a deck's source knob and the whole Twister becomes that deck: one row per FX slot, then its source row at the bottom, so all three effects are under your hands. The bottom-right side button turns Load on, which swaps the bottom row for loading: knob 16 scrolls the effect list, as it does in every browse mode, and knobs 13-15 load the highlighted effect into slot 1, 2 or 3.</li>
 <li><strong>Browsing.</strong> The side buttons open the Library and the source and effect pickers, so you can load a source or effect without touching the mouse.</li>
 <li><strong>Lights.</strong> Rings show each knob's value. Knob 13 on the MIXER page pulses on the beat, shows the tempo and taps tempo when pushed. In Pickup mode, an FX slot waiting for the Super Knob blinks amber.</li>
 <li><strong>Native mode.</strong> With the optional XT firmware, rings change style to suit each parameter and the switch LEDs show the row colour.</li>
@@ -865,7 +893,7 @@
 <h2 id="other-midi-controllers">Other MIDI controllers</h2>
 <ol>
 <li>Connect the controller and enable <strong>Preferences → MIDI Controls → Enable MIDI Subsystem</strong>. New devices are picked up without restarting.</li>
-<li><strong>Right-click</strong> the on-screen knob, slider or button you want to control. Choose <strong>Learn MIDI</strong>. It pulses while it waits.</li>
+<li><strong>Right-click</strong> the on-screen knob, slider or button you want to control. Choose <strong>MIDI Learn</strong>. It pulses while it waits.</li>
 <li>Move a knob or fader, or press a pad, on the controller. The two are now linked.</li>
 <li>Right-click again to cancel, or choose <strong>Clear MIDI Mapping</strong> to remove a link.</li>
 </ol>
@@ -875,7 +903,7 @@
 <ol>
 <li>Enable <strong>Preferences → OSC Controls → Enable OSC Server</strong>. It listens on UDP port <code>8000</code> and sends feedback on <code>9000</code>; both can be changed.</li>
 <li>In your app, set the target to this computer's IP address and the same ports.</li>
-<li>Right-click a control in Liquid LSD, choose <strong>Learn OSC</strong>, then move a control in the app.</li>
+<li>Right-click a control in Liquid LSD, choose <strong>OSC Learn</strong>, then move a control in the app.</li>
 </ol>
 <p>Macro knobs also answer <code>/macro/&lt;bank&gt;/knob/1</code> to <code>/8</code> with no mapping, and report their values back so a tablet layout stays in sync. OSC mappings are saved in profiles, one per app or layout. Details: <a href="../performance_controls/#osc-touchosc-control-surfaces">OSC / TouchOSC Control Surfaces</a>.</p>
 
@@ -927,10 +955,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>
